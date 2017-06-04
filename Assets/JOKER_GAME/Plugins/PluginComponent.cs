@@ -32,8 +32,12 @@ namespace Novel{
 
 			string arg_result = arg1 + arg2;
 
+			string testString = this.param ["var"];
+
 			//変数に結果を格納
 			StatusManager.variable.set (var_name, arg_result);
+			//これと同義
+			//StatusManager.variable.set (this.param["var"], arg_result);
 
 			//次のシナリオに進む処理
 			this.gameManager.nextOrder ();

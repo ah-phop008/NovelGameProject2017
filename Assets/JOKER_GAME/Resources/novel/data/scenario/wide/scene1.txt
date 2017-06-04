@@ -34,6 +34,8 @@
 [playbgm wait=false time=1 storage="music"]
 
 #俺
+[join var="f.test" arg1="プラグイン" arg2="テスト"]
+{f.test}[p]
 さて、、、なにやら新しいゲームエンジンができたとかいうから[p]
 
 来てみたものの、、、、[p]

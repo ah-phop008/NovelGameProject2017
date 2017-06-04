@@ -20,7 +20,7 @@
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
-!/LitJson.dll
-!/LitJson.dll.meta
-!/NCalc.dll
-!/NCalc.dll.meta
+/LitJson.dll
+/LitJson.dll.meta
+/NCalc.dll
+/NCalc.dll.meta

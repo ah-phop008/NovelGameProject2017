@@ -33,12 +33,20 @@
 
 [playbgm wait=false time=1 storage="music"]
 
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+
 #俺
 [join var="f.test" arg1="プラグイン" arg2="テスト"]
 {f.test}[p]
 さて、、、なにやら新しいゲームエンジンができたとかいうから[p]
-
+[live2d_show name="haru" x=3]
+;[live2d_show name="sabalu" x=-3]
 来てみたものの、、、、[p]
+[live2d_show name="sabalu" x=-3]
 誰もいないな。。。。[l]どうしようか。[p]
 
 [autosave]

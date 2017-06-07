@@ -1,13 +1,4 @@
-﻿/*
-
-Live2Dタグの仮
-Debug.Log ("ERROR ! Live2Dタグを使用するにはプラグインをインポートしてください");
-
-
-
-*/
-
-
+﻿
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -85,7 +76,22 @@ scale=Live2Dモデルの表示サイズを指定できます。つまり2と指�
 		public override void start ()
 		{
 
-			Debug.Log ("ERROR ! Live2Dタグを使用するにはプラグインをインポートしてください");
+			//			string name = this.param ["name"];
+			//			string tag = this.param ["tag"];
+
+			this.param ["className"] = "Live2d";
+
+			this.param ["scale_x"] = this.param ["scale"];
+			this.param ["scale_y"] = this.param ["scale"];
+			this.param ["scale_z"] = this.param ["scale"];
+
+			Image image = new Image (this.param);
+			this.gameManager.imageManager.addImage (image);
+
+			this.gameManager.nextOrder ();
+
+			//this.gameManager.scene.MessageSpeed = 0.02f;
+			//this.gameManager.scene.coroutineShowMessage (message);
 
 		}
 	}
@@ -124,8 +130,6 @@ y=中心からのy位置を指定します
 
 		public override void start ()
 		{
-			Debug.Log ("ERROR ! Live2Dタグを使用するにはプラグインをインポートしてください");
-
 			base.start ();
 		}
 	}
@@ -171,8 +175,6 @@ z=中心からのz位置を指定します
 
 		public override void start ()
 		{
-			Debug.Log ("ERROR ! Live2Dタグを使用するにはプラグインをインポートしてください");
-
 			base.start ();
 			this.gameManager.nextOrder ();
 
@@ -210,8 +212,6 @@ tag=識別するためのタグを指定します
 
 		public override void start ()
 		{
-			Debug.Log ("ERROR ! Live2Dタグを使用するにはプラグインをインポートしてください");
-
 
 			base.start ();
 			this.gameManager.nextOrder ();
@@ -264,9 +264,6 @@ name=削除するテキストオブジェクト名 all と入力することで�
 		public override void start ()
 		{
 
-			Debug.Log ("ERROR ! Live2Dタグを使用するにはプラグインをインポートしてください");
-
-
 			string name = this.param ["name"];
 
 			this.gameManager.imageManager.removeImage (name);
@@ -314,7 +311,8 @@ storage=モーションファイル名を指定してください
             this.originalParam = new Dictionary<string, string>() {
                 { "name","" },
                 { "tag",""},
-                { "storage",""}
+                { "storage",""},
+				{ "idle", ""}
 			};
 
         }
@@ -322,10 +320,26 @@ storage=モーションファイル名を指定してください
         public override void start()
         {
 
-			Debug.Log ("ERROR ! Live2Dタグを使用するにはプラグインをインポートしてください");
+            string name = this.param["name"];
+            string tag = this.param["tag"];
+			string storage = this.param["storage"];
+			string idle = this.param["idle"];
+            List<string> images = new List<string>();
+            if (tag != "")
+            {
+                images = this.gameManager.imageManager.getImageNameByTag(tag);
+            }
+            else
+            {
+                images.Add(name);
+            }
 
-
-           
+            foreach (string image_name in images)
+            {
+                Image image = this.gameManager.imageManager.getImage(image_name);
+				image.getObject().setMotion(storage, idle);
+            }
+            this.gameManager.nextOrder();
         }
     }
 }

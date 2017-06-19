@@ -53,7 +53,7 @@ public class fader : MonoBehaviour {
 		}
 		if(galnum>=1.8) {
 
-			Application.LoadLevel ("Player");
+			NovelSingleton.StatusManager.callJoker ("wide/libs/gallery","");
 
 		}
 		//load

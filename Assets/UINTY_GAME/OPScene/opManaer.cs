@@ -15,6 +15,6 @@ public class opManaer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!v.isPlaying || Input.GetMouseButtonDown(0))
-			SceneManager.LoadScene ("Player");
+			SceneManager.LoadScene ("title");
 	}
 }

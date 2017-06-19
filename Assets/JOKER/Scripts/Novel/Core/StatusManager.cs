@@ -473,6 +473,18 @@ namespace Novel{
 		
 		}
 
+		public void callJokerAdditive(string scenario_file,string target_name){
+			//マルチシーンを使ってjokerのシーンを追加で読み込む
+			StatusManager.nextFileName = scenario_file;
+			StatusManager.nextTargetName = target_name;
+			StatusManager.currentScenario = "";
+			//jumpから来たことを通知するためのパラメータが必要
+			UnityEngine.SceneManagement.SceneManager.LoadScene("Player", UnityEngine.SceneManagement.LoadSceneMode.Additive);
+			//Application.LoadLevel("Player");
+
+
+		}
+
 
 	}
 

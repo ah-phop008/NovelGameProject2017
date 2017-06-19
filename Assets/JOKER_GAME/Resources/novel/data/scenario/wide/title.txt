@@ -32,5 +32,5 @@
 *click_load
 [playse storage="start"]
 @anim name="button_load" scale=2.5 wait=true
-@sleepgame file="wide/libs/save" target="*loadstart"
+@sleepgame file="wide/libs/newSave" target="*loadstart"
 @jump scene=new target="*title"

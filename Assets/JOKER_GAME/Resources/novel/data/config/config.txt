@@ -4,7 +4,7 @@ title=“タイトルです”
 first_scenario = "first"
 
 ;セーブできるスロット数の上限を設定できます
-saveslot_max = 5
+saveslot_max = 6
 
 ;デフォルトのメッセージスピードを指定します
 messageSpeed = 0.02

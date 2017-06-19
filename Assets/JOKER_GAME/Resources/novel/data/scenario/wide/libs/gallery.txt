@@ -1,0 +1,118 @@
+﻿
+*g1
+;ギャラリー
+[bg_new name="background" layer="background" storage="title"]
+[bg_show name="background"]
+
+
+@image_new name="button_cg" tag="buttong" x=-7.0 y=-4.0  storage="gallery_cg" scale=1
+@image_new name="button_music" tag="buttong" x=3.5 y=-4.0  storage="gallery_music" scale=1
+@image_new name="button_sceneg" tag="buttong" x=0.0 y=-4.0 storage="gallery_scene" scale=1
+@image_new name="button_live2d" tag="buttong" x=-3.5 y=-4.0 storage="gallery_live2d" scale=1
+@image_new name="button_back" tag="buttong" x=7.0 y=-4.3 storage="gallery_back" scale_x=0.8 scale_y=0.8
+
+@show tag=buttong
+
+*deff
+[evt name="button_cg" act="click" target="*click_cg"]
+[evt name="button_music" act="click" target="*click_music"]
+[evt name="button_sceneg" act="click" target="*click_sceneg"]
+[evt name="button_live2d" act="click" target="*click_live2d"]
+[evt name="button_back" act="click" target="*click_back"]
+[s]
+
+*click_cg
+[playse storage="start"]
+@anim name="button_cg" scale=2.5 time=0.5
+@remove tag="cg1"
+@remove tag="cg2"
+@remove tag="cg3"
+@remove tag="cg4"
+@remove tag="cbutton"
+@image_new name="cg1" tag="cg1" x=-5.0 y=3.4  scale=0.3 storage="cg1"
+@image_new name="cg2" tag="cg1" x=-2.0 y=3.4 storage="cg2"
+@image_new name="cg3" tag="cg1" x=1.0 y=3.4 storage="cg3"
+@image_new name="cg4" tag="cg1" x=-5.0 y=1.4 storage="cg4"
+@image_new name="cg5" tag="cg1" x=-2.0 y=1.4 storage="cg5"
+@image_new name="cg6" tag="cg1" x=1.0 y=1.4 storage="cg6"
+@image_new name="cg7" tag="cg1" x=-5.0 y=-1.4 storage="cg7"
+@image_new name="cg8" tag="cg1" x=-2.0 y=-1.4 storage="cg8"
+@image_new name="cg9" tag="cg1" x=1.0 y=-1.4 storage="cg9"
+
+@image_new name="cg10" tag="cg2" x=-5.0 y=3.4 storage="cg10"
+@image_new name="cg11" tag="cg2" x=-2.0 y=3.4 storage="cg11"
+@image_new name="cg12" tag="cg2" x=1.0 y=3.4 storage="cg12"
+@image_new name="cg13" tag="cg2" x=-5.0 y=1.4 storage="cg13"
+@image_new name="cg14" tag="cg2" x=-2.0 y=1.4 storage="cg14"
+@image_new name="cg15" tag="cg2" x=1.0 y=1.4 storage="cg15"
+@image_new name="cg16" tag="cg2" x=-5.0 y=-1.4 storage="cg16"
+@image_new name="cg17" tag="cg2" x=-2.0 y=-1.4 storage="cg17"
+@image_new name="cg18" tag="cg2" x=1.0 y=-1.4 storage="cg18"
+
+@image_new name="cg19" tag="cg3" x=-5.0 y=3.4 storage="cg19"
+@image_new name="cg20" tag="cg3" x=-2.0 y=3.4 storage="cg20"
+
+@image_new name="cg21" tag="cg4" x=-5.0 y=3.4 storage="cg21"
+
+@image_new name="auto1" tag="cbuttons" x=4.0 y=3.4 storage="auto"
+@image_new name="auto2" tag="cbuttons" x=5.0 y=3.4 storage="auto"
+@image_new name="auto4" tag="cbuttons" x=5.0 y=3.0 storage="auto"
+@image_new name="auto3" tag="cbuttons" x=4.0 y=3.0 storage="auto"
+@image_hide tag="cg1" time=0.0
+@image_hide tag="cg2" time=0.0
+@image_hide tag="cg3" time=0.0
+@image_hide tag="cg4" time=0.0
+@image_show tag="cg1" time=0.1
+@image_show tag="cbuttons" time=0.1
+@anim name="button_cg" scale=1 time=0.5
+[evt name="auto1" act="click" target="*1stpage"]
+[evt name="auto2" act="click" target="*2ndpage"]
+[evt name="auto3" act="click" target="*3rdpage"]
+[evt name="auto4" act="click" target="*4thpage"]
+[s]
+*1stpage
+@image_hide tag="cg2" time=0.0
+@image_hide tag="cg3" time=0.0
+@image_hide tag="cg4" time=0.0
+@image_show tag="cg1" time= 0.1
+[s]
+*2ndpage
+@image_hide tag="cg1" time=0.0
+@image_hide tag="cg3" time=0.0
+@image_hide tag="cg4" time=0.0
+@image_show tag="cg2" time=0.1
+[s]
+*3rdpage
+@image_hide tag="cg1" time=0.0
+@image_hide tag="cg2" time=0.0
+@image_hide tag="cg4" time=0.0
+@image_show tag="cg3" time=0.1
+[s]
+*4thpage
+@image_hide tag="cg1" time=0.0
+@image_hide tag="cg2" time=0.0
+@image_hide tag="cg3" time=0.0
+@image_show tag="cg4" time=0.1
+[s]
+
+*click_music
+[playse storage="start"]
+@anim name="button_music" scale=2.5 time=0.5
+@anim name="button_music" scale=1 time=0.5
+[s]
+
+*click_sceneg
+[playse storage="start"]
+@anim name="button_sceneg" scale=2.5 time=0.5
+@anim name="button_sceneg" scale=1 time=0.5
+[s]
+*click_live2d
+[playse storage="start"]
+@anim name="button_live2d" scale=2.5 time=0.5
+@anim name="button_live2d" scale=1 time=0.5
+[s]
+
+*click_back
+[playse storage="start"]
+[awakegame]
+

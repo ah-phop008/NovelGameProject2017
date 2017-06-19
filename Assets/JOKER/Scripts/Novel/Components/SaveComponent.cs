@@ -105,6 +105,7 @@ name=ロードするセーブファイル名を指定します
 			string name = this.param ["name"];
 
 			StatusManager.nextLoad =name;
+			Debug.Log (name);
 			Application.LoadLevel("Player");
 
 			//this.gameManager.nextOrder ();

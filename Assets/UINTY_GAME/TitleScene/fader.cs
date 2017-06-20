@@ -9,19 +9,24 @@ public class fader : MonoBehaviour {
 		public bool gflag;
 		public bool lflag;
 		public bool oflag;
+		public bool bflag;
 	    float beta;
 		float alfa;
 		float galnum;
 		float loanum;
 		float optnum;
+		float bacnum;
 		float speed=0.01f;
 		float red, green, blue;
+		public GameObject gallerybuttons;
+		public GameObject ActiveButton;
 
 		void Start(){
 			sflag = true;
 			gflag = true;
 			lflag = true;
 			oflag = true;
+			bflag = true;
 			beta = 0;
 			galnum = 0;
 			loanum = 0;
@@ -52,8 +57,13 @@ public class fader : MonoBehaviour {
 			galnum += Time.deltaTime;
 		}
 		if(galnum>=1.8) {
+			gallerybuttons.gameObject.SetActive (true);
+			ActiveButton.gameObject.SetActive (false);
+			GetComponent<UnityEngine.UI.Image> ().color = new Color (red, blue, green, 0);
+			galnum=0;
+			alfa = 0;
+			gflag=true;
 
-			NovelSingleton.StatusManager.callJoker ("wide/libs/gallery","");
 
 		}
 		//load
@@ -69,7 +79,7 @@ public class fader : MonoBehaviour {
 			NovelSingleton.StatusManager.callJoker ("wide/libs/save", "*loadstart");
 		}
 
-		//load
+		//option
 		if (oflag) {
 		} 
 		else {
@@ -80,6 +90,25 @@ public class fader : MonoBehaviour {
 		if(optnum>=1.8) {
 
 			Application.LoadLevel ("Player");
+		}
+
+		//gback
+		if (bflag) {
+		} 
+		else {
+			GetComponent<UnityEngine.UI.Image> ().color = new Color (red, blue, green, alfa);
+			alfa += speed;
+			bacnum += Time.deltaTime;
+		}
+		if(bacnum>=1.8) {
+			gallerybuttons.gameObject.SetActive (false);
+			ActiveButton.gameObject.SetActive (true);
+			GetComponent<UnityEngine.UI.Image> ().color = new Color (red, blue, green, 0);
+			bacnum=0;
+			alfa = 0;
+			bflag=true;
+
+
 		}
 		}
 }

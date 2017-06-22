@@ -76,7 +76,7 @@ public class fader : MonoBehaviour {
 		}
 		if(loanum>=1.8) {
 
-			NovelSingleton.StatusManager.callJoker ("wide/libs/save", "*loadstart");
+			NovelSingleton.StatusManager.callJoker ("wide/libs/newSave", "*loadstart");
 		}
 
 		//option

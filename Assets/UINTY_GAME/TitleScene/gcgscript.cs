@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class gcgscript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	public void OnClick() {
 		
-	}
-	
-	// Update is called once per frame
-	void Update () {
 		
-	}
+}
 }

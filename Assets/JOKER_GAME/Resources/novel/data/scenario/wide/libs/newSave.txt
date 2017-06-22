@@ -60,10 +60,12 @@
 
 ;ロード画面
 
+;背景の定義、表示
 [bg_new name="background" layer="background" storage="save_load_background"]
 [bg_show name="background" ]
 
-@image_new storage="close" layer=ui name="button_close_save" x=5.2 y=4.0 scale=1.5
+;戻るボタン
+@image_new storage="close" layer=ui name="button_close_save" x=4.8 y=-4.0 scale_x=9.0 scale_y=2
 
 
 [calc exp="tmp.image_y=4.3"]
@@ -73,10 +75,13 @@
 
 [saveloop]
 
-
+;セーブボタンの座標
 [calc exp="tmp.image_y={tmp.image_y}-1.2"]
+;
 [calc exp="tmp.tm_y={tmp.tm_y}-1.2"]
+;そのシーンのテキストデータの座標
 [calc exp="tmp.text_y= {tmp.text_y}-60"]
+;セーブデータの保存日時の座標
 [calc exp="tmp.text_date_y={tmp.text_date_y}-60"]
 
 [trace exp="save"]

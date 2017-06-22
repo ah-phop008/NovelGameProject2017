@@ -1,0 +1,48 @@
+Initialize engine version: 5.6.1f1 (2860b30f0b54)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     1792 MB
+    Driver:   10.18.10.3338
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\Live2DUnity.dll (this message is harmless)
+Loading C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\Live2DUnity.dll into Unity Child Domain
+Platform assembly: C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\LitJson.dll (this message is harmless)
+Loading C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\LitJson.dll into Unity Child Domain
+Platform assembly: C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\NCalc.dll (this message is harmless)
+Loading C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\NCalc.dll into Unity Child Domain
+- Completed reload, in  0.762 seconds
+Platform assembly: C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\和喜\Documents\NovelGameProject2017\tst_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.700987 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 12.542209 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 300.
+Total: 0.536043 ms (FindLiveObjects: 0.051784 ms CreateObjectMapping: 0.074644 ms MarkObjects: 0.336835 ms  DeleteObjects: 0.071845 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 359.767883 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 397.
+Total: 0.675069 ms (FindLiveObjects: 0.054584 ms CreateObjectMapping: 0.056450 ms MarkObjects: 0.551439 ms  DeleteObjects: 0.010730 ms)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: f1c -> priority: 1 
+  Thread -> id: 1bd0 -> priority: 1 
+  Thread -> id: 188c -> priority: 1 
+  Thread -> id: 980 -> priority: 1 

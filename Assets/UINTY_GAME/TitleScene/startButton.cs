@@ -8,7 +8,6 @@ public class startButton : MonoBehaviour {
 	GameObject parent;
 	// Use this for initialization
 
-
 	public void OnClick() {
 		Debug.Log ("button click!");
 		parent = transform.parent.gameObject;
@@ -18,7 +17,7 @@ public class startButton : MonoBehaviour {
 			GameObject child = parent.transform.GetChild(i).gameObject;
 			if (child != null) {
 				//child.setActive(false);
-				child.GetComponent<Button> ().enabled = false;
+				child.GetComponent<Button> ().enabled=false;
 				Debug.Log (i);
 			}
 		}

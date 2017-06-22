@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class optionButton : MonoBehaviour {
-
-
 	public GameObject Panel;
 	GameObject parent;
 

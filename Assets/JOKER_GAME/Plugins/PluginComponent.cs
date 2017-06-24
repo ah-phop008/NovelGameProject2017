@@ -46,4 +46,29 @@ namespace Novel{
 
 	}
 
+	public class LogComponent:AbstractComponent
+	{
+		public LogComponent ()
+		{
+			//必須項目
+			this.arrayVitalParam = new List<string> {
+				"text"
+			};
+
+			this.originalParam = new Dictionary<string,string> () {
+				{"text",""}
+			};
+		}
+
+		public override void start ()
+		{
+
+			Debug.Log(this.param ["text"]);
+
+			//次のシナリオに進む処理
+			//this.gameManager.nextOrder ();
+
+		}
+	}
+
 }

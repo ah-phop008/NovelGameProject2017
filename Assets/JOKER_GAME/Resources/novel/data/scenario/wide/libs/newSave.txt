@@ -67,28 +67,47 @@
 ;戻るボタン
 @image_new storage="close" layer=ui name="button_close_save" x=4.8 y=-4.0 scale_x=9.0 scale_y=2
 
-
-[calc exp="tmp.image_y=4.3"]
+;変数定義
+;セーブボタンの座標
+[calc exp="tmp.image_y=3.2"]
+;
 [calc exp="tmp.tm_y=5.15"]
-[calc exp="tmp.text_date_y=240"]
-[calc exp="tmp.text_y=220"]
+;セーブデータの日付
+[calc exp="tmp.text_date_y=160"]
+;セーブデータの内容
+[calc exp="tmp.text_y=130"]
+;左か右かのフラグ
+[calc exp="f.i=0"]
 
 [saveloop]
 
-;セーブボタンの座標
-[calc exp="tmp.image_y={tmp.image_y}-1.2"]
-;
-[calc exp="tmp.tm_y={tmp.tm_y}-1.2"]
-;そのシーンのテキストデータの座標
-[calc exp="tmp.text_y= {tmp.text_y}-60"]
-;セーブデータの保存日時の座標
-[calc exp="tmp.text_date_y={tmp.text_date_y}-60"]
-
 [trace exp="save"]
 
-@image_new storage="load" layer=ui name="{save.name}" tag="save_button" x=4 y={tmp.image_y} scale=1.5
-@text_new name="text_date_{save.name}" anchor="MiddleLeft" cut=20 val="{save.date}" tag="samune" x=-200 y={tmp.text_date_y}
-@text_new name="text_{save.name}" anchor="MiddleLeft" cut=20 val="{save.title}" tag="samune" x=-200 y={tmp.text_y}
+[if exp="{f.i} == 0"]
+
+@image_new storage="load" layer=ui name="{save.name}" tag="save_button" x=-1.2 y={tmp.image_y} scale=1.5
+@text_new name="text_date_{save.name}" anchor="MiddleLeft" cut=20 val="{save.date}" color="000000" tag="samune" x=-230 y={tmp.text_date_y}
+@text_new name="text_{save.name}" anchor="MiddleLeft" cut=12 val="{save.title}" fontsize="18" color="000000" tag="samune" x=-230 y={tmp.text_y}
+[calc exp="f.i = 1"] 
+
+[else]
+
+@image_new storage="load" layer=ui name="{save.name}" tag="save_button" x=6.45 y={tmp.image_y} scale=1.5
+@text_new name="text_date_{save.name}" anchor="MiddleLeft" cut=20 val="{save.date}" color="000000" tag="samune" x=142 y={tmp.text_date_y}
+@text_new name="text_{save.name}" anchor="MiddleLeft" cut=12 val="{save.title}" fontsize="18" color="000000" tag="samune" x=142 y={tmp.text_y}
+[calc exp="f.i = 0"]
+[calc exp="tmp.image_y = {tmp.image_y} - 2.6"]
+[calc exp="tmp.text_date_y = {tmp.text_date_y} - 130"]
+[calc exp="tmp.text_y = {tmp.text_y} - 130"]
+
+[endif]
+
+
+;[trace exp="save"]
+
+;@image_new storage="load" layer=ui name="{save.name}" tag="save_button" x=4 y={tmp.image_y} scale=1.5
+;@text_new name="text_date_{save.name}" anchor="MiddleLeft" cut=20 val="{save.date}" color="000000" tag="samune" x=-200 y={tmp.text_date_y}
+;@text_new name="text_{save.name}" anchor="MiddleLeft" cut=20 val="{save.title}" color="000000" tag="samune" x=-200 y={tmp.text_y}
 
 
 
@@ -125,6 +144,8 @@
 
 [evt tag="save_button" act="click" target="*click_load" ]
 [evt name="button_close_save" act="click" target="close_load"]
+
+
 [s]
 
 
@@ -132,6 +153,7 @@
 ;ロード実行
 ;{evt.caller_name}がクリックされました[p]
 [load name="{evt.caller_name}"]
+
 [s]
 
 *close_load

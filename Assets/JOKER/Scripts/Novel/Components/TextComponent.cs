@@ -94,6 +94,8 @@ cut=数値を指定します。指定した文字数でカットします。
 				{ "color","FFFFFF" },
 				{ "fontsize","14" },
 				{ "cut","" },
+				//追加文、Horizontal OvrFlowの設定
+				{ "hori_over","0"}
 
 
 
@@ -117,6 +119,7 @@ cut=数値を指定します。指定した文字数でカットします。
 			this.param ["scale_z"] = this.param ["scale"];
 
 			Image image = new Image (this.param);
+
 			this.gameManager.imageManager.addImage (image);
 
 			this.gameManager.nextOrder ();

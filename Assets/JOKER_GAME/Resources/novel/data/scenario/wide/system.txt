@@ -23,9 +23,9 @@
 *click_system_button
 
 [if exp="{evt.caller_name}==button_save"]
-	@sleepgame file="wide/libs/save" target="*savestart"
+	@sleepgame file="wide/libs/newSave" target="*savestart"
 [elsif exp="{evt.caller_name}==button_load"]
-	@sleepgame file="wide/libs/save" target="*loadstart"
+	@sleepgame file="wide/libs/newSave" target="*loadstart"
 [elsif exp="{evt.caller_name}==button_auto"]
 ;autoの時間はコンフィグなどで設定できる
 	[autostart]

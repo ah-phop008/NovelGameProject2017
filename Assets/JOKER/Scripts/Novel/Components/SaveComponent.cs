@@ -173,6 +173,7 @@ page=ページ。つまり、numが5でpageが1なら５〜10までのセーブ�
 
 	public class SaveloopComponent:AbstractComponent
 	{
+		
 		public SaveloopComponent ()
 		{
 
@@ -253,6 +254,10 @@ title=セーブデータの列挙終了
 			};
 
 			this.originalParam = new Dictionary<string,string> () {
+				//追加
+				//セーブのページ移動ができるように変更
+				{ "num","5" }, //saveloopと同じ値を必ず代入
+				{ "page","0" },//saveloopと同じ値を必ず代入
 			};
 
 		}
@@ -263,12 +268,18 @@ title=セーブデータの列挙終了
 
 			int index = int.Parse (StatusManager.variable.get("save.index"));
 			int max_num = int.Parse (StatusManager.variable.get("save.max_num"));
-			//int max_index = int.Parse (StatusManager.variable.get("save.max_index"));
+			int max_index = int.Parse (StatusManager.variable.get("save.max_index"));
+			//値を代入
+			int num = int.Parse(this.param ["num"]);
+			int pagenum = int.Parse(this.param ["page"]);
 
 			index++;
 
 			//上限に来た場合は表示を止める
-			if (max_num <= index || max_num <= index) {
+			//元の文
+			//if (max_num <= index || max_num <= index) {
+			//追加
+			if (num * (pagenum + 1) <= index || max_num <= index) {
 				NovelSingleton.GameManager.nextOrder ();
 				return;
 			}

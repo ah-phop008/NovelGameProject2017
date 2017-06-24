@@ -65,7 +65,18 @@
 [bg_show name="background" ]
 
 ;戻るボタン
-@image_new storage="close" layer=ui name="button_close_save" x=4.8 y=-4.0 scale_x=9.0 scale_y=2
+@image_new storage="close" layer=ui tag="otherbutton" name="button_close_save" x=4.8 y=-4.0 scale_x=9.0 scale_y=2
+;ページスクロール
+[image_new storage="RightArrow_Button" layer=ui tag="otherbutton" name="right" x=1.5 y=-3.86 scale=1.2]
+[image_new storage="LeftArrow_Button" layer=ui tag="otherbutton" name="left" x=-1.2 y=-3.86 scale=1.2]
+
+;ボタン表示
+[image_show tag="otherbutton" time=0]
+;現在のページ
+[calc exp="f.pagenum=0"]
+
+
+*loadpage_update
 
 ;変数定義
 ;セーブボタンの座標
@@ -79,7 +90,9 @@
 ;左か右かのフラグ
 [calc exp="f.i=0"]
 
-[saveloop]
+
+
+[saveloop num="6" page={f.pagenum}]
 
 [trace exp="save"]
 
@@ -118,7 +131,7 @@
 [endif]
 */
 
-[end_saveloop]
+[end_saveloop num="6" page={f.pagenum}]
 
 @get_autosave var=auto
 
@@ -139,11 +152,15 @@
 [endif]
 
 [image_show  time=0 tag=save_button]
-@image_show name="button_close_save" time=0
+
 @image_show tag=samune time=0
 
 [evt tag="save_button" act="click" target="*click_load" ]
 [evt name="button_close_save" act="click" target="close_load"]
+
+;ページ移動ボタンのイベント
+[evt name="right" act="click" target="*moveright"]
+[evt name="left" act="click" target="*moveleft"]
 
 
 [s]
@@ -159,4 +176,53 @@
 *close_load
 [awakegame]
 [s]
+
+
+*moveright
+
+
+[calc exp="f.pagenum = {f.pagenum} + 1"]
+
+[if exp="{f.pagenum} == 3"]
+[calc exp="f.pagenum = 0"]
+[endif]
+
+[jump target="reload_button"]
+[s]
+
+*moveleft
+[calc exp="f.pagenum = {f.pagenum} - 1"]
+
+[if exp="{f.pagenum} == -1"]
+[calc exp="f.pagenum = 2"]
+[endif]
+
+[jump target="reload_button"]
+[s]
+
+*reload_button
+;更新するUIの前の状態を削除
+[image_remove name="save_0" ]
+[text_remove name="text_date_save_0" ]
+[text_remove name="text_save_0"]
+[image_remove name="save_1" ]
+[text_remove name="text_date_save_1" ]
+[text_remove name="text_save_1"]
+[image_remove name="save_2" ]
+[text_remove name="text_date_save_2" ]
+[text_remove name="text_save_2"]
+[image_remove name="save_3" ]
+[text_remove name="text_date_save_3" ]
+[text_remove name="text_save_3"]
+[image_remove name="save_4" ]
+[text_remove name="text_date_save_4" ]
+[text_remove name="text_save_4"]
+[image_remove name="save_5" ]
+[text_remove name="text_date_save_5" ]
+[text_remove name="text_save_5"]
+
+;ページ数とセーブファイルナンバーの更新
+[jump target="loadpage_update"]
+[s]
+
 ;-----------------------

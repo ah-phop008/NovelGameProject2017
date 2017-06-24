@@ -1,66 +1,79 @@
 ;-save ------------------
 *savestart
 
+
+;マクロ定義
+[macro name=reset_saveloop]
+
+[if exp="{f.pagenum} == 0"]
+;ページ0をリセット
+[image_remove name="save_0" ]
+[text_remove name="text_date_save_0" ]
+[text_remove name="text_save_0"]
+[image_remove name="save_1" ]
+[text_remove name="text_date_save_1" ]
+[text_remove name="text_save_1"]
+[image_remove name="save_2" ]
+[text_remove name="text_date_save_2" ]
+[text_remove name="text_save_2"]
+[image_remove name="save_3" ]
+[text_remove name="text_date_save_3" ]
+[text_remove name="text_save_3"]
+[image_remove name="save_4" ]
+[text_remove name="text_date_save_4" ]
+[text_remove name="text_save_4"]
+[image_remove name="save_5" ]
+[text_remove name="text_date_save_5" ]
+[text_remove name="text_save_5"]
+;-------------------------------------
+[elsif exp="{f.pagenum}==1"]
+;ページ1をリセット
+[image_remove name="save_6" ]
+[text_remove name="text_date_save_6" ]
+[text_remove name="text_save_6"]
+[image_remove name="save_7" ]
+[text_remove name="text_date_save_7" ]
+[text_remove name="text_save_7"]
+[image_remove name="save_8" ]
+[text_remove name="text_date_save_8" ]
+[text_remove name="text_save_8"]
+[image_remove name="save_9" ]
+[text_remove name="text_date_save_9" ]
+[text_remove name="text_save_9"]
+[image_remove name="save_10" ]
+[text_remove name="text_date_save_10" ]
+[text_remove name="text_save_10"]
+[image_remove name="save_11" ]
+[text_remove name="text_date_save_11" ]
+[text_remove name="text_save_11"]
+;-------------------------------------
+[elsif exp="{f.pagenum}==2"]
+;ページ2をリセット
+[image_remove name="save_12" ]
+[text_remove name="text_date_save_12" ]
+[text_remove name="text_save_12"]
+[image_remove name="save_13" ]
+[text_remove name="text_date_save_13" ]
+[text_remove name="text_save_13"]
+[image_remove name="save_14" ]
+[text_remove name="text_date_save_14" ]
+[text_remove name="text_save_14"]
+[image_remove name="save_15" ]
+[text_remove name="text_date_save_15" ]
+[text_remove name="text_save_15"]
+[image_remove name="save_16" ]
+[text_remove name="text_date_save_16" ]
+[text_remove name="text_save_16"]
+[image_remove name="save_17" ]
+[text_remove name="text_date_save_17" ]
+[text_remove name="text_save_17"]
+[endif]
+
+[endmacro]
+
+
 ;セーブ画面
 
-[bg_new name="background" layer="background" storage="save_load_background"]
-[bg_show name="background" ]
-
-@image_new storage="close" layer=ui name="button_close_save" x=5.2 y=4.0 scale=1.5
-
-[calc exp="tmp.image_y=4.3"]
-[calc exp="tmp.text_date_y=240"]
-[calc exp="tmp.text_y=220"]
-
-[saveloop]
-
-[calc exp="tmp.image_y={tmp.image_y}-1.2"]
-[calc exp="tmp.text_y= {tmp.text_y}-60"]
-[calc exp="tmp.text_date_y={tmp.text_date_y}-60"]
-
-[trace exp="save"]
-
-@image_new storage="save" layer=ui name="{save.name}" tag="save_button" x=4 y={tmp.image_y} scale=1.5
-@text_new name="text_date_{save.name}" fontsize="14" anchor="MiddleLeft" cut=20 val="{save.date}" tag="samune" x=-200 y={tmp.text_date_y}
-@text_new name="text_{save.name}" fontsize="14" anchor="MiddleLeft" cut=20 val="{save.title}" tag="samune" x=-200 y={tmp.text_y}
-
-/*
-[if exp="{save.img}!=''"]
-[image_new name="{save.name}_img" path=true storage="{save.img}" tag="save_button" x=-4 scale=0.25 y={tmp.tm_y} ]
-[else]
-[endif]
-*/
-
-[end_saveloop]
-
-[image_show  time=0 tag=save_button]
-@image_show name="button_close_save" time=0
-@image_show tag=samune time=0
-
-[evt tag="save_button" act="click" target="*click_save" ]
-[evt name="button_close_save" act="click" target="close_save"]
-[s]
-
-*click_save 
-;セーブ実行
-;{evt.caller_name}がクリックされました[p]
-;どうなってますか[p]
-[save name="{evt.caller_name}"]
-
-[jump scene=new target=*savestart]
-
-*close_save
-[awakegame]
-[s]
-;-----------------------
-
-
-;-load ------------------
-*loadstart
-
-;ロード画面
-
-;背景の定義、表示
 [bg_new name="background" layer="background" storage="save_load_background"]
 [bg_show name="background" ]
 
@@ -69,6 +82,8 @@
 ;ページスクロール
 [image_new storage="RightArrow_Button" layer=ui tag="otherbutton" name="right" x=1.5 y=-3.86 scale=1.2]
 [image_new storage="LeftArrow_Button" layer=ui tag="otherbutton" name="left" x=-1.2 y=-3.86 scale=1.2]
+;ページ番号
+[text_new name="page" val="1" fontsize=46  color="000000" x=7.0 y=-192]
 
 ;ボタン表示
 [image_show tag="otherbutton" time=0]
@@ -76,7 +91,8 @@
 [calc exp="f.pagenum=0"]
 
 
-*loadpage_update
+*savepage_update
+
 
 ;変数定義
 ;セーブボタンの座標
@@ -97,15 +113,13 @@
 [trace exp="save"]
 
 [if exp="{f.i} == 0"]
-
-@image_new storage="load" layer=ui name="{save.name}" tag="save_button" x=-1.2 y={tmp.image_y} scale=1.5
+@image_new storage="save" layer=ui name="{save.name}" tag="save_button" x=-1.2 y={tmp.image_y} scale=1.5
 @text_new name="text_date_{save.name}" anchor="MiddleLeft" cut=20 val="{save.date}" color="000000" tag="samune" x=-230 y={tmp.text_date_y}
 @text_new name="text_{save.name}" anchor="MiddleLeft" cut=12 val="{save.title}" fontsize="18" color="000000" tag="samune" x=-230 y={tmp.text_y}
 [calc exp="f.i = 1"] 
 
 [else]
-
-@image_new storage="load" layer=ui name="{save.name}" tag="save_button" x=6.45 y={tmp.image_y} scale=1.5
+@image_new storage="save" layer=ui name="{save.name}" tag="save_button" x=6.45 y={tmp.image_y} scale=1.5
 @text_new name="text_date_{save.name}" anchor="MiddleLeft" cut=20 val="{save.date}" color="000000" tag="samune" x=142 y={tmp.text_date_y}
 @text_new name="text_{save.name}" anchor="MiddleLeft" cut=12 val="{save.title}" fontsize="18" color="000000" tag="samune" x=142 y={tmp.text_y}
 [calc exp="f.i = 0"]
@@ -118,9 +132,238 @@
 
 ;[trace exp="save"]
 
-;@image_new storage="load" layer=ui name="{save.name}" tag="save_button" x=4 y={tmp.image_y} scale=1.5
-;@text_new name="text_date_{save.name}" anchor="MiddleLeft" cut=20 val="{save.date}" color="000000" tag="samune" x=-200 y={tmp.text_date_y}
-;@text_new name="text_{save.name}" anchor="MiddleLeft" cut=20 val="{save.title}" color="000000" tag="samune" x=-200 y={tmp.text_y}
+
+/*
+[if exp="{save.img}!=''"]
+[image_new name="{save.name}_img" path=true storage="{save.img}" tag="save_button" x=-4 scale=0.25 y={tmp.tm_y} ]
+[else]
+[endif]
+*/
+
+[end_saveloop num="6" page={f.pagenum}]
+
+@get_autosave var=auto
+
+[if exp="{auto.name!=''}"]
+
+
+[calc exp="tmp.image_y={tmp.image_y}-1.2"]
+[calc exp="tmp.text_y= {tmp.text_y}-60"]
+[calc exp="tmp.text_date_y={tmp.text_date_y}-60"]
+
+;自動セーブ
+@text_new name="text_auto" anchor="MiddleLeft" cut=20 val="自動セーブ" tag="samune" x=0.227 y=0.205
+@button_new storage="load" layer=ui name="{auto.name}" tag="save_button" x=4 y={tmp.image_y} scale=1.5
+@text_new name="text_date_{auto.name}" anchor="MiddleLeft" cut=20 val="{auto.date}" tag="samune" x=0.27 y={tmp.text_date_y}
+@text_new name="text_{auto.name}" anchor="MiddleLeft" cut=20 val="{auto.title}" tag="samune" x=0.27 y={tmp.text_y}
+
+
+[endif]
+
+[image_show  time=0 tag=save_button]
+
+;ページボタン更新
+[if exp="{f.pagenum} == 0"]
+[text_mod name="page" val="1"]
+[elsif exp="{f.pagenum} == 1"]
+[text_mod name="page" val="2"]
+[elsif exp="{f.pagenum} == 2"]
+[text_mod name="page" val="3"]
+[endif]
+[text_show name="page" time=0]
+
+@image_show tag=samune time=0
+
+[evt tag="save_button" act="click" target="*click_save" ]
+[evt name="button_close_save" act="click" target="close_save"]
+
+;ページ移動ボタンのイベント
+[evt name="right" act="click" target="*moverightS"]
+[evt name="left" act="click" target="*moveleftS"]
+
+
+[s]
+
+*click_save 
+;セーブ実行
+;{evt.caller_name}がクリックされました[p]
+;どうなってますか[p]
+[save name="{evt.caller_name}"]
+
+[jump scene=new target=*savestart]
+
+*close_save
+[awakegame]
+[s]
+
+;-------------------------------------------
+*moverightS
+[reset_saveloop]
+[calc exp="f.pagenum = {f.pagenum} + 1"]
+
+[if exp="{f.pagenum} == 3"]
+[calc exp="f.pagenum = 0"]
+[endif]
+
+[jump target="savepage_update"]
+[s]
+;-------------------------------------------
+*moveleftS
+[reset_saveloop]
+[calc exp="f.pagenum = {f.pagenum} - 1"]
+
+[if exp="{f.pagenum} == -1"]
+[calc exp="f.pagenum = 2"]
+[endif]
+
+[jump target="savepage_update"]
+[s]
+
+
+
+;-load ------------------
+*loadstart
+
+;マクロ定義
+[macro name=reset_saveloop]
+
+[if exp="{f.pagenum} == 0"]
+;ページ0をリセット
+[image_remove name="save_0" ]
+[text_remove name="text_date_save_0" ]
+[text_remove name="text_save_0"]
+[image_remove name="save_1" ]
+[text_remove name="text_date_save_1" ]
+[text_remove name="text_save_1"]
+[image_remove name="save_2" ]
+[text_remove name="text_date_save_2" ]
+[text_remove name="text_save_2"]
+[image_remove name="save_3" ]
+[text_remove name="text_date_save_3" ]
+[text_remove name="text_save_3"]
+[image_remove name="save_4" ]
+[text_remove name="text_date_save_4" ]
+[text_remove name="text_save_4"]
+[image_remove name="save_5" ]
+[text_remove name="text_date_save_5" ]
+[text_remove name="text_save_5"]
+;-------------------------------------
+[elsif exp="{f.pagenum}==1"]
+;ページ1をリセット
+[image_remove name="save_6" ]
+[text_remove name="text_date_save_6" ]
+[text_remove name="text_save_6"]
+[image_remove name="save_7" ]
+[text_remove name="text_date_save_7" ]
+[text_remove name="text_save_7"]
+[image_remove name="save_8" ]
+[text_remove name="text_date_save_8" ]
+[text_remove name="text_save_8"]
+[image_remove name="save_9" ]
+[text_remove name="text_date_save_9" ]
+[text_remove name="text_save_9"]
+[image_remove name="save_10" ]
+[text_remove name="text_date_save_10" ]
+[text_remove name="text_save_10"]
+[image_remove name="save_11" ]
+[text_remove name="text_date_save_11" ]
+[text_remove name="text_save_11"]
+;-------------------------------------
+[elsif exp="{f.pagenum}==2"]
+;ページ2をリセット
+[image_remove name="save_12" ]
+[text_remove name="text_date_save_12" ]
+[text_remove name="text_save_12"]
+[image_remove name="save_13" ]
+[text_remove name="text_date_save_13" ]
+[text_remove name="text_save_13"]
+[image_remove name="save_14" ]
+[text_remove name="text_date_save_14" ]
+[text_remove name="text_save_14"]
+[image_remove name="save_15" ]
+[text_remove name="text_date_save_15" ]
+[text_remove name="text_save_15"]
+[image_remove name="save_16" ]
+[text_remove name="text_date_save_16" ]
+[text_remove name="text_save_16"]
+[image_remove name="save_17" ]
+[text_remove name="text_date_save_17" ]
+[text_remove name="text_save_17"]
+[endif]
+
+[endmacro]
+
+
+;ロード画面
+
+;背景の定義、表示
+[bg_new name="background" layer="background" storage="save_load_background"]
+[bg_show name="background" ]
+
+;戻るボタン
+@image_new storage="close" layer=ui tag="otherbutton" name="button_close_save" x=4.8 y=-4.0 scale_x=9.0 scale_y=2
+;ページスクロール
+[image_new storage="RightArrow_Button" layer=ui tag="otherbutton" name="right" x=1.5 y=-3.86 scale=1.2]
+[image_new storage="LeftArrow_Button" layer=ui tag="otherbutton" name="left" x=-1.2 y=-3.86 scale=1.2]
+;ページ番号
+[text_new name="page" val="1" fontsize=46  color="000000" x=7.0 y=-192]
+
+;ボタン表示
+[image_show tag="otherbutton" time=0]
+;現在のページ
+[calc exp="f.pagenum=0"]
+
+
+*loadpage_update
+
+
+;変数定義
+;セーブボタンの座標
+[calc exp="tmp.image_y=3.2"]
+;
+[calc exp="tmp.tm_y=5.15"]
+;セーブデータの日付
+[calc exp="tmp.text_date_y=160"]
+;セーブデータの内容
+[calc exp="tmp.text_y=130"]
+;左か右かのフラグ
+[calc exp="f.i=0"]
+
+
+
+[saveloop num="6" page={f.pagenum}]
+
+[trace exp="save"]
+
+[if exp="{f.i} == 0"]
+@image_new storage="load" layer=ui name="{save.name}" tag="save_button" x=-1.2 y={tmp.image_y} scale=1.5
+@text_new name="text_date_{save.name}" anchor="MiddleLeft" cut=20 val="{save.date}" color="000000" tag="samune" x=-230 y={tmp.text_date_y}
+@text_new name="text_{save.name}" anchor="MiddleLeft" cut=12 val="{save.title}" fontsize="18" color="000000" tag="samune" x=-230 y={tmp.text_y}
+[calc exp="f.i = 1"] 
+;データの無いボタンは非表示(画面外へ)
+[if exp="{save.date} == "]
+[image_pos name="{save.name}" x=20]
+[endif]
+
+[else]
+@image_new storage="load" layer=ui name="{save.name}" tag="save_button" x=6.45 y={tmp.image_y} scale=1.5
+@text_new name="text_date_{save.name}" anchor="MiddleLeft" cut=20 val="{save.date}" color="000000" tag="samune" x=142 y={tmp.text_date_y}
+@text_new name="text_{save.name}" anchor="MiddleLeft" cut=12 val="{save.title}" fontsize="18" color="000000" tag="samune" x=142 y={tmp.text_y}
+[calc exp="f.i = 0"]
+[calc exp="tmp.image_y = {tmp.image_y} - 2.6"]
+[calc exp="tmp.text_date_y = {tmp.text_date_y} - 130"]
+[calc exp="tmp.text_y = {tmp.text_y} - 130"]
+;データの無いボタンは非表示(画面外へ)
+[if exp="{save.date} == "]
+[image_pos name="{save.name}" x=20]
+[endif]
+
+[endif]
+
+
+;[trace exp="save"]
+
+
 
 
 
@@ -153,13 +396,23 @@
 
 [image_show  time=0 tag=save_button]
 
+;ページボタン更新
+[if exp="{f.pagenum} == 0"]
+[text_mod name="page" val="1"]
+[elsif exp="{f.pagenum} == 1"]
+[text_mod name="page" val="2"]
+[elsif exp="{f.pagenum} == 2"]
+[text_mod name="page" val="3"]
+[endif]
+[text_show name="page" time=0]
+
 @image_show tag=samune time=0
 
 [evt tag="save_button" act="click" target="*click_load" ]
 [evt name="button_close_save" act="click" target="close_load"]
 
 ;ページ移動ボタンのイベント
-[evt name="right" act="click" target="*moveright"]
+[evt name="right" act="click" target="*moverightL"]
 [evt name="left" act="click" target="*moveleft"]
 
 
@@ -177,51 +430,26 @@
 [awakegame]
 [s]
 
-
-*moveright
-
-
+;-------------------------------------------
+*moverightL
+[reset_saveloop]
 [calc exp="f.pagenum = {f.pagenum} + 1"]
 
 [if exp="{f.pagenum} == 3"]
 [calc exp="f.pagenum = 0"]
 [endif]
 
-[jump target="reload_button"]
+[jump target="loadpage_update"]
 [s]
-
-*moveleft
+;-------------------------------------------
+*moveleftL
+[reset_saveloop]
 [calc exp="f.pagenum = {f.pagenum} - 1"]
 
 [if exp="{f.pagenum} == -1"]
 [calc exp="f.pagenum = 2"]
 [endif]
 
-[jump target="reload_button"]
-[s]
-
-*reload_button
-;更新するUIの前の状態を削除
-[image_remove name="save_0" ]
-[text_remove name="text_date_save_0" ]
-[text_remove name="text_save_0"]
-[image_remove name="save_1" ]
-[text_remove name="text_date_save_1" ]
-[text_remove name="text_save_1"]
-[image_remove name="save_2" ]
-[text_remove name="text_date_save_2" ]
-[text_remove name="text_save_2"]
-[image_remove name="save_3" ]
-[text_remove name="text_date_save_3" ]
-[text_remove name="text_save_3"]
-[image_remove name="save_4" ]
-[text_remove name="text_date_save_4" ]
-[text_remove name="text_save_4"]
-[image_remove name="save_5" ]
-[text_remove name="text_date_save_5" ]
-[text_remove name="text_save_5"]
-
-;ページ数とセーブファイルナンバーの更新
 [jump target="loadpage_update"]
 [s]
 

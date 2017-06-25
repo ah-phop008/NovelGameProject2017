@@ -78,7 +78,10 @@
 [bg_show name="background" ]
 
 ;戻るボタン
-@image_new storage="close" layer=ui tag="otherbutton" name="button_close_save" x=4.8 y=-4.0 scale_x=9.0 scale_y=2
+@image_new storage="modoru" layer=ui tag="otherbutton" name="button_close_save" x=4.8 y=-4.0
+;タイトルへボタン
+[image_new storage="ToTitle_button" layer=ui tag="otherbutton" name="totitle" x=-4.4 y=-4.0]
+
 ;ページスクロール
 [image_new storage="RightArrow_Button" layer=ui tag="otherbutton" name="right" x=1.5 y=-3.86 scale=1.2]
 [image_new storage="LeftArrow_Button" layer=ui tag="otherbutton" name="left" x=-1.2 y=-3.86 scale=1.2]
@@ -201,6 +204,8 @@
 
 [evt tag="save_button" act="click" target="*click_save" ]
 [evt name="button_close_save" act="click" target="close_save"]
+;タイトルへ
+[evt name="totitle" act="click" target="*title"]
 
 ;ページ移動ボタンのイベント
 [evt name="right" act="click" target="*moverightS"]
@@ -326,7 +331,9 @@
 [bg_show name="background" ]
 
 ;戻るボタン
-@image_new storage="close" layer=ui tag="otherbutton" name="button_close_save" x=4.8 y=-4.0 scale_x=9.0 scale_y=2
+@image_new storage="modoru" layer=ui tag="otherbutton" name="button_close_save" x=4.8 y=-4.0
+;タイトルへボタン
+[image_new storage="ToTitle_button" layer=ui tag="otherbutton" name="totitle" x=-4.4 y=-4.0]
 ;ページスクロール
 [image_new storage="RightArrow_Button" layer=ui tag="otherbutton" name="right" x=1.5 y=-3.86 scale=1.2]
 [image_new storage="LeftArrow_Button" layer=ui tag="otherbutton" name="left" x=-1.2 y=-3.86 scale=1.2]
@@ -467,7 +474,8 @@
 ;ページ移動ボタンのイベント
 [evt name="right" act="click" target="*moverightL"]
 [evt name="left" act="click" target="*moveleft"]
-
+;タイトルへ
+[evt name="totitle" act="click" target="*title"]
 
 [s]
 
@@ -507,3 +515,8 @@
 [s]
 
 ;-----------------------
+
+*title
+[loadunityscene name="title"]
+[s]
+

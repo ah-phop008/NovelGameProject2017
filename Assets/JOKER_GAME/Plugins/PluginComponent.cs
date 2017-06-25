@@ -71,4 +71,35 @@ namespace Novel{
 		}
 	}
 
+
+	public class LoadunitysceneComponent:AbstractComponent
+	{
+		public LoadunitysceneComponent ()
+		{
+
+			//必須項目
+			this.arrayVitalParam = new List<string> {
+				"name"
+			};
+
+			this.originalParam = new Dictionary<string,string> () {
+				{"name",""},
+			};
+
+		}
+
+
+		public override void start ()
+		{
+
+			string scene_name = this.param ["name"];
+
+			UnityEngine.SceneManagement.SceneManager.LoadScene (scene_name);
+			//次のシナリオに進む処理
+			this.gameManager.nextOrder ();
+
+		}
+
+	}
+
 }

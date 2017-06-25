@@ -85,6 +85,16 @@
 ;ページ番号
 [text_new name="page" val="1" fontsize=46  color="000000" x=7.0 y=-192]
 
+;セーブデータNOの定義
+[text_new name="no1" val="" color="000000" tag="save_num" fontsize=24 x=-293 y=188]
+[text_new name="no2" val="" color="000000" tag="save_num" fontsize=24 x=76 y=188]
+[text_new name="no3" val="" color="000000" tag="save_num" fontsize=24 x=-293 y=62]
+[text_new name="no4" val="" color="000000" tag="save_num" fontsize=24 x=76 y=62]
+[text_new name="no5" val="" color="000000" tag="save_num" fontsize=24 x=-293 y=-67]
+[text_new name="no6" val="" color="000000" tag="save_num" fontsize=24 x=76 y=-67]
+;セーブデータNOの表示
+[text_show tag="save_num" time=0]
+
 ;ボタン表示
 [image_show tag="otherbutton" time=0]
 ;現在のページ
@@ -105,6 +115,21 @@
 [calc exp="tmp.text_y=130"]
 ;左か右かのフラグ
 [calc exp="f.i=0"]
+
+;セーブデータNOの更新
+[calc exp="f.savno={f.pagenum}*6"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no1" val="{f.savno}"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no2" val="{f.savno}"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no3" val="{f.savno}"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no4" val="{f.savno}"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no5" val="{f.savno}"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no6" val="{f.savno}"]
 
 
 
@@ -308,6 +333,17 @@
 ;ページ番号
 [text_new name="page" val="1" fontsize=46  color="000000" x=7.0 y=-192]
 
+;セーブデータNOの定義
+[text_new name="no1" val="" color="000000" tag="save_num" fontsize=24 x=-293 y=188]
+[text_new name="no2" val="" color="000000" tag="save_num" fontsize=24 x=76 y=188]
+[text_new name="no3" val="" color="000000" tag="save_num" fontsize=24 x=-293 y=62]
+[text_new name="no4" val="" color="000000" tag="save_num" fontsize=24 x=76 y=62]
+[text_new name="no5" val="" color="000000" tag="save_num" fontsize=24 x=-293 y=-67]
+[text_new name="no6" val="" color="000000" tag="save_num" fontsize=24 x=76 y=-67]
+;セーブデータNOの表示
+[text_show tag="save_num" time=0]
+
+
 ;ボタン表示
 [image_show tag="otherbutton" time=0]
 ;現在のページ
@@ -329,6 +365,21 @@
 ;左か右かのフラグ
 [calc exp="f.i=0"]
 
+
+;セーブデータNOの更新
+[calc exp="f.savno={f.pagenum}*6"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no1" val="{f.savno}"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no2" val="{f.savno}"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no3" val="{f.savno}"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no4" val="{f.savno}"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no5" val="{f.savno}"]
+[calc exp="f.savno={f.savno}+1"]
+[text_mod name="no6" val="{f.savno}"]
 
 
 [saveloop num="6" page={f.pagenum}]
@@ -406,7 +457,9 @@
 [endif]
 [text_show name="page" time=0]
 
+
 @image_show tag=samune time=0
+
 
 [evt tag="save_button" act="click" target="*click_load" ]
 [evt name="button_close_save" act="click" target="close_load"]

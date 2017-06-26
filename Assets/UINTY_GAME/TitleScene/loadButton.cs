@@ -10,7 +10,6 @@ public class loadButton : MonoBehaviour {
 	GameObject parent;
 
 	public void onclick() {
-
 		parent = transform.parent.gameObject;
 		Panel.GetComponent<fader> ().lflag = false; 
 		for(int i=0; i< parent.transform.childCount; i++)

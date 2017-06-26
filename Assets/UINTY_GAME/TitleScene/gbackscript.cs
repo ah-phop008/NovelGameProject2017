@@ -6,16 +6,15 @@ using UnityEngine.UI;
 public class gbackscript : MonoBehaviour {
 
 	public GameObject Panel;
-	GameObject parent;
+	public GameObject disableman;
 
 	// Use this for initialization
 	// Update is called once per frame
 
-
 		public void OnClick() {
 			Debug.Log ("button click!");
-			parent = transform.parent.gameObject;
-			Panel.GetComponent<fader> ().bflag = false; 
+		Panel.GetComponent<fader> ().bflag = false; 
+		disableman.gameObject.SetActive (true);
 			
 }
 }

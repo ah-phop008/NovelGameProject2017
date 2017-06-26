@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class galleryButton : MonoBehaviour {
  	public GameObject Panel;
-	  GameObject parent;
+	public GameObject disableman;
 	// Use this for initialization
 	public void OnClick(){
-		parent = transform.parent.gameObject;
-		Panel.GetComponent<fader> ().gflag = false; 
+		
+		Panel.GetComponent<fader> ().gflag = false;
+		disableman.gameObject.SetActive (true);
+
 
 }
 }

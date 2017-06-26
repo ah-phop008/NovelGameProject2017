@@ -18,8 +18,9 @@ public class fader : MonoBehaviour {
 		float bacnum;
 		float speed=0.01f;
 		float red, green, blue;
-		public GameObject gallerybuttons;
 		public GameObject ActiveButton;
+		public GameObject galleryUI;
+		public GameObject disableman;
 
 		void Start(){
 			sflag = true;
@@ -46,7 +47,6 @@ public class fader : MonoBehaviour {
 		if(beta>=1.8) {
 
 			NovelSingleton.StatusManager.callJoker ("wide/scene1","");
-
 		}
 		//gallery
 		if (gflag) {
@@ -57,8 +57,9 @@ public class fader : MonoBehaviour {
 			galnum += Time.deltaTime;
 		}
 		if(galnum>=1.8) {
-			gallerybuttons.gameObject.SetActive (true);
 			ActiveButton.gameObject.SetActive (false);
+			disableman.gameObject.SetActive (false);
+			galleryUI.gameObject.SetActive (true);
 			GetComponent<UnityEngine.UI.Image> ().color = new Color (red, blue, green, 0);
 			galnum=0;
 			alfa = 0;
@@ -101,7 +102,8 @@ public class fader : MonoBehaviour {
 			bacnum += Time.deltaTime;
 		}
 		if(bacnum>=1.8) {
-			gallerybuttons.gameObject.SetActive (false);
+			galleryUI.gameObject.SetActive (false);
+			disableman.gameObject.SetActive (false);
 			ActiveButton.gameObject.SetActive (true);
 			GetComponent<UnityEngine.UI.Image> ().color = new Color (red, blue, green, 0);
 			bacnum=0;

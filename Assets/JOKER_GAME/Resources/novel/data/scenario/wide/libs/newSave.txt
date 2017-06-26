@@ -473,7 +473,7 @@
 
 ;ページ移動ボタンのイベント
 [evt name="right" act="click" target="*moverightL"]
-[evt name="left" act="click" target="*moveleft"]
+[evt name="left" act="click" target="*moveleftL"]
 ;タイトルへ
 [evt name="totitle" act="click" target="*title"]
 

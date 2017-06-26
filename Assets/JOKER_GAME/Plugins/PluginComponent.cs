@@ -46,4 +46,60 @@ namespace Novel{
 
 	}
 
+	public class LogComponent:AbstractComponent
+	{
+		public LogComponent ()
+		{
+			//必須項目
+			this.arrayVitalParam = new List<string> {
+				"text"
+			};
+
+			this.originalParam = new Dictionary<string,string> () {
+				{"text",""}
+			};
+		}
+
+		public override void start ()
+		{
+
+			Debug.Log(this.param ["text"]);
+
+			//次のシナリオに進む処理
+			//this.gameManager.nextOrder ();
+
+		}
+	}
+
+
+	public class LoadunitysceneComponent:AbstractComponent
+	{
+		public LoadunitysceneComponent ()
+		{
+
+			//必須項目
+			this.arrayVitalParam = new List<string> {
+				"name"
+			};
+
+			this.originalParam = new Dictionary<string,string> () {
+				{"name",""},
+			};
+
+		}
+
+
+		public override void start ()
+		{
+
+			string scene_name = this.param ["name"];
+
+			UnityEngine.SceneManagement.SceneManager.LoadScene (scene_name);
+			//次のシナリオに進む処理
+			this.gameManager.nextOrder ();
+
+		}
+
+	}
+
 }

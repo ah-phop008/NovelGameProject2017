@@ -15,7 +15,6 @@ public class test : MonoBehaviour {
 		GameObject g = Resources.Load ("Sprite") as GameObject;
 		Instantiate (g);
 		*/
-
 	}
 	
 	// Update is called once per frame

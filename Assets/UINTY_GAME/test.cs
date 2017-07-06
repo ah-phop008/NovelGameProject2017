@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class test : MonoBehaviour {
 
 	//int i;
+	public int[] i;
+
 	// Use this for initialization
 	void Start () {
 		/*
@@ -19,6 +21,17 @@ public class test : MonoBehaviour {
 	void Update () {
 
 
+		if (Input.GetKeyDown (KeyCode.A)) {
+			PlayerPrefsX.SetIntArray ("testArray", i);
+			Debug.Log ("save complete");
+		}
+		if (Input.GetKeyDown (KeyCode.D)) {
+			i = PlayerPrefsX.GetIntArray ("testArray");
+			for (int j = 0; j < i.Length; j++) Debug.Log (i[j]);
+			Debug.Log ("load complete");
+		}
+
+		/*
 		if (Input.GetKeyDown (KeyCode.A)) {
 			//SceneManager.LoadScene ("Player", LoadSceneMode.Additive);
 			NovelSingleton.StatusManager.callJoker("wide/libs/save", "loadstart");

@@ -135,6 +135,7 @@ namespace Novel
 			//dicConfigの中身をconfig に格納する
 			StatusManager.variable.replaceAll ("config", dicConfig);
 
+			//コンフィグのロード
 
 			Debug.Log ("config end");
 

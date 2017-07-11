@@ -15,7 +15,6 @@ public class CloseButton : MonoBehaviour {
 	}
 
 	void OnMouseDown(){
-
 		if (StatusManager.inUiClick == true) {
 			StatusManager.inUiClick = false;
 			return;
@@ -33,5 +32,4 @@ public class CloseButton : MonoBehaviour {
 		NovelSingleton.GameView.hideMessageWithoutNextOrder (0f);
 
 	}
-
 }

@@ -312,7 +312,9 @@ time=何秒間隔で自動的にストーリーが進むかを設定すること
 		public override void start ()
 		{
 
-			float time = float.Parse(this.param ["time"]);
+			//float time = float.Parse(this.param ["time"]);
+			//オートの待ち時間はコンフィグから参照
+			float time = SystemManager.AutoMessageWait;
 
 			//string time = this.param ["time"];
 			this.gameManager.scene.startAuto(time);

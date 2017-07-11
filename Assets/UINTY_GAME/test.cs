@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class test : MonoBehaviour {
 
 	//int i;
+	public float messpeed;
 	public int[] i;
 
 	// Use this for initialization
@@ -22,13 +23,14 @@ public class test : MonoBehaviour {
 
 
 		if (Input.GetKeyDown (KeyCode.A)) {
-			PlayerPrefsX.SetIntArray ("testArray", i);
-			Debug.Log ("save complete");
+			SystemManager.LoadSystemData ();
 		}
 		if (Input.GetKeyDown (KeyCode.D)) {
-			i = PlayerPrefsX.GetIntArray ("testArray");
-			for (int j = 0; j < i.Length; j++) Debug.Log (i[j]);
-			Debug.Log ("load complete");
+			SystemManager.InitSystemData ();
+		}
+
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			SystemManager.messageSpeed = messpeed;
 		}
 
 		/*

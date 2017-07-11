@@ -132,4 +132,11 @@ public class SystemManager : MonoBehaviour {
 		PlayerPrefsX.SetBoolArray ("ClearFlg", ClearFlag);
 		Debug.Log ("ClearFlgをセーブしました");
 	}
+	public static void SaveOption () {
+		//optionのセーブ
+		PlayerPrefs.SetFloat("messageSpeed", messageSpeed);
+		Debug.Log ("messageSpeedをセーブしました");
+		PlayerPrefs.SetFloat ("AutoMessageWait", AutoMessageWait);
+		Debug.Log ("AutoMessageWaitをセーブしました");
+	}
 }

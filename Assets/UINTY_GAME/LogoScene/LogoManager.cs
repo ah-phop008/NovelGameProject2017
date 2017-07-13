@@ -19,6 +19,8 @@ public class LogoManager : MonoBehaviour {
 		LogoMark = this.GetComponent<Image> ();
 		c = new Color (255, 255, 255, 0);
 		LogoMark.sprite = logo [i];
+		//システムデータのロード
+		SystemManager.LoadSystemData();
 	}
 	
 	// Update is called once per frame

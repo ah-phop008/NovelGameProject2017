@@ -52,6 +52,9 @@ public class SceneInit : MonoBehaviour {
 		//グローバルコンフィグ読み込み
 		this.gameManager.saveManager.loadGlobal ();
 
+		//messageSpeedの更新(SystemManager.messageSpeedより)
+		this.gameManager.scene.messageSpeed = SystemManager.messageSpeed;
+
 		if (StatusManager.nextLoad != "") {
 
 			string next_load = StatusManager.nextLoad;
@@ -83,7 +86,8 @@ public class SceneInit : MonoBehaviour {
 		}else {
 
 			//初回起動時
-			this.messageSpeed = float.Parse (this.gameManager.getConfig ("messageSpeed"));
+			//this.messageSpeed = float.Parse (this.gameManager.getConfig ("messageSpeed"));
+			this.messageSpeed = SystemManager.messageSpeed;
 
 			StatusManager.variable.replaceAll ("global", this.gameManager.globalSetting.globalVar);
 
@@ -248,7 +252,8 @@ public class SceneInit : MonoBehaviour {
 
 
 		StatusManager.isMessageShowing = false;
-		this.messageSpeed = float.Parse(this.gameManager.getConfig ("messageSpeed"));
+		//this.messageSpeed = float.Parse(this.gameManager.getConfig ("messageSpeed"));
+		this.messageSpeed = SystemManager.messageSpeed;
 
 		this.gameManager.nextOrder ();
 
@@ -306,6 +311,7 @@ public class SceneInit : MonoBehaviour {
 			StartCoroutine("ClickButton");
 
 		}
+			
 
 
 		/*
@@ -409,8 +415,8 @@ public class SceneInit : MonoBehaviour {
 	//文字速度とかも変更しないと
 	public void stopSkip(){
 		StatusManager.FlagSkiiping = false;
-		this.MessageSpeed = float.Parse(this.gameManager.getConfig ("messageSpeed"));
-
+		//this.MessageSpeed = float.Parse(this.gameManager.getConfig ("messageSpeed"));
+		this.MessageSpeed = SystemManager.messageSpeed;
 	}
 
 	//オートを開始させる

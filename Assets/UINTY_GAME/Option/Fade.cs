@@ -47,5 +47,4 @@ public class Fade : MonoBehaviour {
 		for (int i = 0; i < obj.Length; i++) obj [i].color = new Color (obj [i].color.r, obj [i].color.g, obj [i].color.b, 1);
 		fadeout = true;
 	}
-
 }

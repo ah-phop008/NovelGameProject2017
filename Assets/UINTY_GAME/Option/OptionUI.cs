@@ -34,6 +34,7 @@ public class OptionUI : MonoBehaviour {
 		obj = option.GetComponentsInChildren<Button> ();
 		for (int i = 0; i < obj.Length; i++) obj [i].enabled = false;
 		option.GetComponent <Fade> ().fade_out ();
+
 	}
 
 	void Update () {

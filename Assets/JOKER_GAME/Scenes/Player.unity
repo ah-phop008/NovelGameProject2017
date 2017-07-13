@@ -601,6 +601,11 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 223759141507805318, guid: 4aa4d89acc4e2e341a7f09c9c2093dda,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4aa4d89acc4e2e341a7f09c9c2093dda, type: 2}
   m_IsPrefabParent: 0
@@ -792,9 +797,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.000349164
+    y: 0.00072047114
     width: 1
-    height: 0.9993017
+    height: 0.99855906
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

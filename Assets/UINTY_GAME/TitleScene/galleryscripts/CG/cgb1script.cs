@@ -43,6 +43,10 @@ public class cgb1script : MonoBehaviour {
 		onGallery = true;
 	}
 
+	void change() {
+		onGallery = false;
+	}
+
 	void Update() {
 		if (onGallery) {
 			if (helloCGb) {

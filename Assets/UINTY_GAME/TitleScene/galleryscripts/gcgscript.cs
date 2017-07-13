@@ -10,6 +10,7 @@ public class gcgscript : MonoBehaviour {
 	float dispeed = -0.05f;
 	public GameObject CGobjects;
 
+
 	void Start() {
 		onGallery = true;
 		hontai = GetComponent<Image> ().color;

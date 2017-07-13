@@ -5,6 +5,7 @@ using UnityEngine;
 public class bgmStopping : MonoBehaviour {
 	public AudioSource AudioSource;
 	public GameObject musicObjects;
+	public GameObject maincamera;
 	bool yesno;
 
 	void Start() {
@@ -13,9 +14,11 @@ public class bgmStopping : MonoBehaviour {
 
 
 	public void OnClick() {
+		maincamera.SendMessage ("stopmaintheme");
 		yesno = true;
 		this.AudioSource.Play ();
 		musicObjects.BroadcastMessage ("stopbgm");
+
 
 	}
 

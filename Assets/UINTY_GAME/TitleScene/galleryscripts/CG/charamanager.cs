@@ -12,8 +12,10 @@ public class charamanager : MonoBehaviour {
 	float dispeed=-0.05f;
 	bool onGallery;
 	Color hontai;
+	bool changetime;
 
 	void Start() {
+		changetime = false;
 		hontai.r = GetComponent<Image> ().color.r;
 		hontai.g = GetComponent<Image> ().color.g;
 		hontai.b = GetComponent<Image> ().color.b;
@@ -25,6 +27,11 @@ public class charamanager : MonoBehaviour {
 
 	void helloGallery() {
 		onGallery = true;
+	}
+
+	void change() {
+		onGallery = false;
+		changetime = true;
 	}
 
 	public void OnClick() {
@@ -58,7 +65,11 @@ public class charamanager : MonoBehaviour {
 				GetComponent<Image> ().color = new Color (hontai.r, hontai.g, hontai.b, hontai.a);
 			} else {
 				onGallery = true;
-
+				if (changetime) {
+					CGobjects.gameObject.SetActive (false);
+					changetime = false;
+				} else {
+				}
 			}
 		}
 }

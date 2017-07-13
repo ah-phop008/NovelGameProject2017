@@ -8,6 +8,8 @@ public class gmusicscript : MonoBehaviour {
 	Color hontai;
 	bool onGallery;
 	float dispeed = -0.05f;
+	public GameObject musicobjects;
+	public GameObject insiders;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,15 @@ public class gmusicscript : MonoBehaviour {
 		hontai = GetComponent<Image> ().color;
 		
 	}
+
+	public void OnClick() {
+		insiders.BroadcastMessage ("change");
+		musicobjects.gameObject.SetActive (true);
+
+
+
+	}
+
 
 	void byeGallery() {
 		onGallery = false;

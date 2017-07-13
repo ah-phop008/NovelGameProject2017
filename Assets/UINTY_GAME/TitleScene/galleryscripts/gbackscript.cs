@@ -8,6 +8,7 @@ public class gbackscript : MonoBehaviour {
 	float dispeed = -0.05f;
 	Color hontai;
 	bool onGallery;
+	public GameObject maincamera;
 	public GameObject Panel;
 	public GameObject disableman;
 	public GameObject galleryUI;
@@ -22,6 +23,7 @@ public class gbackscript : MonoBehaviour {
 
 		public void OnClick() {
 			Debug.Log ("button click!");
+			maincamera.SendMessage ("startmaintheme");
 		   galleryUI.BroadcastMessage ("byeGallery");
 		    
 			

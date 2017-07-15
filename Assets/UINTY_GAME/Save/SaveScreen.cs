@@ -6,8 +6,9 @@ using Novel;
 
 public class SaveScreen : MonoBehaviour {
 
-	public int pagenum = 0;
+	public int pageNum = 0;
 	int savedataNum;
+	public bool LoadMode = true;
 
 	SaveData[] data = new SaveData[6];
 
@@ -15,8 +16,9 @@ public class SaveScreen : MonoBehaviour {
 	void Start () {
 		for (int i = 0; i < 6; i++) { 
 			data [i] = new SaveData ();
-			data[i].GetSavedataText (transform.Find ("data" + (i + 1)).gameObject);
+			data[i].GetSavedataText (transform.Find ("data/data" + (i + 1)).gameObject);
 		}
+		putSavedata ((int)pageNum);
 	}
 	
 	// Update is called once per frame
@@ -25,14 +27,56 @@ public class SaveScreen : MonoBehaviour {
 	}
 
 	//セーブデータの情報を取得
-	void putSavedata (int pagenum) {
+	void putSavedata (int num) {
 		string name;
 		SaveObject obj;
 		for (int i = 0; i < 6; i++) {
-			name = "save_" + (pagenum * 6 + i + 1);
+			name = "save_" + (num * 6 + i + 1);
 			obj = NovelSingleton.SaveManager.getSaveData (name);
+			data [i].num.text = "" + (num * 6 + i + 1);
+
+			if (obj == null) {
+				data [i].chapter.text = "";
+				data [i].date.text = "";
+				data [i].detail.text = "データがありません";
+			} else {
+				data [i].chapter.text = obj.chapter;
+				data [i].date.text = "" + obj.date;
+				data [i].detail.text = obj.currentMessage;
+			}
 		}
 	}
+
+	//ページ切り替え時にデータを更新
+	public void UpdateSavedata () {
+		if (pageNum > 2) {
+			pageNum = 0;
+		} else if (pageNum < 0) {
+			pageNum = 2;
+		}
+		putSavedata (pageNum);
+	}
+
+
+	public void ChangeStoL () {
+		//ロードモードへ
+		Texture2D tex = Resources.Load ("load.png") as Texture2D;
+		UnityEngine.UI.Image[] objs = this.transform.Find ("SaveLoad").gameObject.GetComponentsInChildren<UnityEngine.UI.Image> ();
+		for (int i = 0; i < objs.Length; i++) {
+			objs [i].sprite = Sprite.Create (tex, new Rect (0, 0, tex.width, tex.height), Vector2.zero);
+		}
+		//backgroundも変更
+	}
+	public void ChangeLtoS () {
+		//セーブモードへ
+		Texture2D tex = Resources.Load ("save.png") as Texture2D;
+		UnityEngine.UI.Image[] objs = this.transform.Find ("SaveLoad").gameObject.GetComponentsInChildren<UnityEngine.UI.Image> ();
+		for (int i = 0; i < objs.Length; i++) {
+			objs [i].sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), Vector2.zero);
+		}
+		//backgroundも変更
+	}
+
 
 
 }

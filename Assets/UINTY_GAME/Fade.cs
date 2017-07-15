@@ -39,7 +39,7 @@ public class Fade : MonoBehaviour {
 			fadeCounter += fadeSpeed;
 			Bluckout.GetComponent<Image> ().color = new Color (0, 0, 0, fadeCounter);
 			if (fadeCounter >= 1) bluckout = false;
-			Debug.Log("UU");
+	
 		}
 	}
 

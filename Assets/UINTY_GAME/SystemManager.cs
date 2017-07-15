@@ -20,6 +20,8 @@ public class SystemManager : MonoBehaviour {
 	public static float messageSpeed;
 	public static float AutoMessageWait;
 
+	public static string chapterName = "";
+
 
 
 

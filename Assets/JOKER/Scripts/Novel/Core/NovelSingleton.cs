@@ -16,7 +16,6 @@ namespace Novel{
 		private static EventManager eventManager;
 		private static SaveManager saveManager;
 
-
 		// コンストラクタです。(外部からのアクセス不可)
 		private NovelSingleton()
 		{

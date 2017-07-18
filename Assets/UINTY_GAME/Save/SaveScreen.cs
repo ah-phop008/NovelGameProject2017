@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using Novel;
 
 public class SaveScreen : MonoBehaviour {
-
 	public int pageNum = 0;
 	int savedataNum;
 	public bool LoadMode = true;
@@ -57,40 +56,19 @@ public class SaveScreen : MonoBehaviour {
 		putSavedata (pageNum);
 	}
 
+	class SaveData {
+		public Text num;
+		public Text chapter;
+		public Text date;
+		public Text detail;
 
-	public void ChangeStoL () {
-		//ロードモードへ
-		Texture2D tex = Resources.Load ("load.png") as Texture2D;
-		UnityEngine.UI.Image[] objs = this.transform.Find ("SaveLoad").gameObject.GetComponentsInChildren<UnityEngine.UI.Image> ();
-		for (int i = 0; i < objs.Length; i++) {
-			objs [i].sprite = Sprite.Create (tex, new Rect (0, 0, tex.width, tex.height), Vector2.zero);
+		public void GetSavedataText (GameObject obj) {
+			this.num = obj.transform.Find ("Num").gameObject.GetComponent<Text> ();
+			this.chapter = obj.transform.Find ("Chapter").gameObject.GetComponent<Text> ();
+			this.date = obj.transform.Find ("date").gameObject.GetComponent<Text> ();
+			this.detail = obj.transform.Find ("detail").gameObject.GetComponent<Text> ();
 		}
-		//backgroundも変更
 	}
-	public void ChangeLtoS () {
-		//セーブモードへ
-		Texture2D tex = Resources.Load ("save.png") as Texture2D;
-		UnityEngine.UI.Image[] objs = this.transform.Find ("SaveLoad").gameObject.GetComponentsInChildren<UnityEngine.UI.Image> ();
-		for (int i = 0; i < objs.Length; i++) {
-			objs [i].sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), Vector2.zero);
-		}
-		//backgroundも変更
-	}
-
-
 
 }
 
-public class SaveData {
-	public Text num;
-	public Text chapter;
-	public Text date;
-	public Text detail;
-
-	public void GetSavedataText (GameObject obj) {
-		this.num = obj.transform.Find ("Num").gameObject.GetComponent<Text> ();
-		this.chapter = obj.transform.Find ("Chapter").gameObject.GetComponent<Text> ();
-		this.date = obj.transform.Find ("date").gameObject.GetComponent<Text> ();
-		this.detail = obj.transform.Find ("detail").gameObject.GetComponent<Text> ();
-	}
-}

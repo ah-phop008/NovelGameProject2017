@@ -69,10 +69,6 @@ public class SaveUI : MonoBehaviour {
 		changeSLmode = true;
 	}
 
-	public void StartSaveLoad () {
-
-	}
-		
 
 	void startFadeout () {
 		savecanv = GameObject.Find ("SaveCanvas");
@@ -89,13 +85,13 @@ public class SaveUI : MonoBehaviour {
 
 	}
 
-	void startChangeSLmode () {
+	/*void startChangeSLmode () {
 		savecanv = GameObject.Find ("SaveCanvas");
 		bobj = savecanv.GetComponentsInChildren<Button> ();
 		for (int i = 0; i < bobj.Length; i++) bobj [i].enabled = false;
 
 
-	}
+	}*/
 
 	void ChangingSL () {
 		if (savecanv.GetComponent<SaveScreen> ().LoadMode) {

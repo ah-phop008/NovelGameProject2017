@@ -3,74 +3,76 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class charamanager : MonoBehaviour {
-	
-	public GameObject cgp6;
+
+public class LbgmStopping : MonoBehaviour {
+	public AudioSource AudioSource;
+	public GameObject musicObjects;
+	public GameObject maincamera;
 	public GameObject CGobjects;
-	GameObject parent;
 	float speed=0.05f;
 	float dispeed=-0.05f;
 	bool onGallery;
 	Color hontai;
+	bool yesno;
+
+
 
 
 	void Start() {
 		onGallery = true;
+		yesno = false;
 		hontai.r = GetComponent<Image> ().color.r;
 		hontai.g = GetComponent<Image> ().color.g;
 		hontai.b = GetComponent<Image> ().color.b;
 	}
 
-	void byeGallery() {
-		onGallery = false;
+
+	public void OnClick() {
+		maincamera.SendMessage ("stopmaintheme");
+		yesno = true;
+		this.AudioSource.Play ();
+		CGobjects.BroadcastMessage ("stopbgm");
+
+
 	}
 
-	void helloGallery() {
-		onGallery = true;
-	}
-
-	void cgchange() {
+	void mschange() {
 		//onGallery = false;
 		//changetime = true;
 		hontai.a=0;
 		GetComponent<Image> ().color = new Color (hontai.r, hontai.g, hontai.b, hontai.a);
-		//CGobjects.gameObject.SetActive (false);
-	}
-
-	public void OnClick() {
-		CGobjects.BroadcastMessage ("zero");
-		cgp6.gameObject.SetActive (true);
-		parent = transform.parent.gameObject;
-		for(int i=0; i< parent.transform.childCount; i++)
-		{
-			GameObject child = parent.transform.GetChild(i).gameObject;
-			if (child != null) {
-				//child.setActive(false);
-				child.GetComponent<Button> ().enabled=true;
-				Debug.Log (i);
-			}
-			GetComponent<Button> ().enabled = false;
+		musicObjects.gameObject.SetActive (false);
 
 	}
+
+	void stopbgm() {
+		if (yesno) {
+			yesno = false;
+		}
+		else{
+			this.AudioSource.Stop ();
+		}
 	}
-		
+
 	void Update() {
 		if (onGallery) {
 			if (hontai.a < 1.28) {
-
+				Debug.Log ("ononon");
 				GetComponent<Image> ().color = new Color (hontai.r, hontai.g, hontai.b, hontai.a);
 				hontai.a += speed;
 			}
-		}
-		else {
+		}else {
 			if (hontai.a > 0) {
+				Debug.Log ("ofofof");
 				hontai.a += dispeed;
 				GetComponent<Image> ().color = new Color (hontai.r, hontai.g, hontai.b, hontai.a);
 			} else {
 				onGallery = true;
 
-
 			}
 		}
-}
+	}
+
+
+
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class gscenescript : MonoBehaviour {
+	public GameObject insiders;
+	public GameObject movieObjects;
 	float speed=0.05f;
 	Color hontai;
 	bool onGallery;
@@ -14,6 +16,13 @@ public class gscenescript : MonoBehaviour {
 		onGallery = true;
 		hontai = GetComponent<Image> ().color;
 		
+	}
+	public void onclick() {
+		insiders.BroadcastMessage ("cgchange");
+		insiders.BroadcastMessage ("mschange");	
+		movieObjects.gameObject.SetActive (true);
+
+
 	}
 
 	void byeGallery() {

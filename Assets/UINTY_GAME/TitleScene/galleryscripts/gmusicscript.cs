@@ -19,8 +19,11 @@ public class gmusicscript : MonoBehaviour {
 	}
 
 	public void OnClick() {
-		insiders.BroadcastMessage ("change");
+		insiders.BroadcastMessage ("cgchange");
+		insiders.BroadcastMessage ("mvchange");	
 		musicobjects.gameObject.SetActive (true);
+
+
 
 
 

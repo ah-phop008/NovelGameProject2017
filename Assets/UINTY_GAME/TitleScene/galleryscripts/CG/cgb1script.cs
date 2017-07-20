@@ -43,8 +43,10 @@ public class cgb1script : MonoBehaviour {
 		onGallery = true;
 	}
 
-	void change() {
-		onGallery = false;
+	void cgchange() {
+		//onGallery = false;
+		hontai.a=0;
+		GetComponent<Image> ().color = new Color (hontai.r, hontai.g, hontai.b, hontai.a);
 	}
 
 	void Update() {

@@ -9,6 +9,7 @@ public class gcgscript : MonoBehaviour {
 	bool onGallery;
 	float dispeed = -0.05f;
 	public GameObject CGobjects;
+	public GameObject insiders;
 
 
 	void Start() {
@@ -17,10 +18,11 @@ public class gcgscript : MonoBehaviour {
 	}
 
 	public void OnClick() {
-		
+
+		insiders.BroadcastMessage ("mschange");	
+		insiders.BroadcastMessage ("mvchange");	
 		CGobjects.gameObject.SetActive (true);
-		
-		
+			
 		
 }
 

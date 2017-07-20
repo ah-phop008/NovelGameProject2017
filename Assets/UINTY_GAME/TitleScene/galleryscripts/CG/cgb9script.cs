@@ -13,12 +13,10 @@ public class cgb9script : MonoBehaviour {
 	float pts=0f;
 	bool onGallery;
 	bool helloCGb;
-	bool changetime;
 	Color hontai;
 	// Use this for initialization
 
 	void Start() {
-		changetime = false;
 		hontai.a = 0;
 		onGallery = true;
 		helloCGb = true;
@@ -50,9 +48,10 @@ public class cgb9script : MonoBehaviour {
 		onGallery = true;
 	}
 
-	void change() {
-		onGallery = false;
-		changetime = true;
+	void cgchange() {
+		hontai.a=0;
+		GetComponent<Image> ().color = new Color (hontai.r, hontai.g, hontai.b, hontai.a);
+		CGobjects.gameObject.SetActive (false);
 	}
 
 	void Update() {

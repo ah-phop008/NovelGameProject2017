@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class Fade : MonoBehaviour {
 
-	public float fadeSpeed;
-	public float fadeCounter;
+	public float fadeSpeed = 0.1f;
+	public float fadeCounter = 0;
 	Image[] obj;
 	private bool fadein = false;
 	private bool fadeout = false;
+	private bool bluckout = false;
+
+	private GameObject Bluckout;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +26,8 @@ public class Fade : MonoBehaviour {
 			for (int i = 0; i < obj.Length; i++) {
 				obj [i].color = new Color (obj [i].color.r, obj [i].color.g, obj [i].color.b, fadeCounter);
 			}
-			if (fadeCounter >= 1) fadein = false;
+			if (fadeCounter >= 1)
+				fadein = false;
 
 		} else if (fadeout) {
 			fadeCounter -= fadeSpeed;
@@ -31,6 +35,11 @@ public class Fade : MonoBehaviour {
 				obj [i].color = new Color (obj [i].color.r, obj [i].color.g, obj [i].color.b, fadeCounter);
 			}
 			if (fadeCounter <= 0) fadeout = false;
+		} else if (bluckout) {
+			fadeCounter += fadeSpeed;
+			Bluckout.GetComponent<Image> ().color = new Color (0, 0, 0, fadeCounter);
+			if (fadeCounter >= 1) bluckout = false;
+	
 		}
 	}
 
@@ -46,5 +55,14 @@ public class Fade : MonoBehaviour {
 		obj = GetComponentsInChildren<Image> ();
 		for (int i = 0; i < obj.Length; i++) obj [i].color = new Color (obj [i].color.r, obj [i].color.g, obj [i].color.b, 1);
 		fadeout = true;
+	}
+
+	public void bluck_out () {
+		fadeCounter = 0f;
+		fadeSpeed = 0.02f;
+		Bluckout = Instantiate(Resources.Load ("bluckout") as GameObject);
+		Bluckout.transform.parent = this.transform;
+		Bluckout.transform.SetAsLastSibling ();
+		bluckout = true;
 	}
 }

@@ -33,10 +33,14 @@ public class test : MonoBehaviour {
 			SystemManager.messageSpeed = messpeed;
 		}
 
-		/*
-		if (Input.GetKeyDown (KeyCode.A)) {
-			//SceneManager.LoadScene ("Player", LoadSceneMode.Additive);
-			NovelSingleton.StatusManager.callJoker("wide/libs/save", "loadstart");
+		if (Input.GetKeyDown (KeyCode.S)) {
+			Debug.Log ("save:save_5");
+			NovelSingleton.SaveManager.save ("save_5");
+		}
+		if (Input.GetKeyDown (KeyCode.L)) {
+			StatusManager.nextLoad = "save_5";
+			Debug.Log ("load:save_5");
+			Application.LoadLevel("Player");
 
 		}
 		if (Input.GetKeyDown (KeyCode.B)) {
@@ -46,6 +50,7 @@ public class test : MonoBehaviour {
 			StartCoroutine("Loop",0.1f);
 
 		}
+
 
 		/*
 		if (Input.GetMouseButtonDown (1)) {

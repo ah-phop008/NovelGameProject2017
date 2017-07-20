@@ -36,6 +36,7 @@ namespace Novel
 		public string description ="";
 		public string date = "";
 		public string currentMessage ="";
+		public string chapter = "";
 
 		public bool visibleMessageFrame = true;
 		public bool enableNextOrder =true;
@@ -188,6 +189,8 @@ namespace Novel
 			sobj.title = NovelSingleton.GameManager.scene.messageForSaveTitle;
 			sobj.date = DateTime.Now.ToString ("yyyy/MM/dd HH:mm:ss");
 			sobj.currentMessage = NovelSingleton.GameManager.scene.messageForSaveTitle;
+			//チャプター情報を保存できるように
+			sobj.chapter = SystemManager.chapterName;
 
 			sobj.dicImage = NovelSingleton.GameManager.imageManager.dicImage;
 			sobj.dicTag   = NovelSingleton.GameManager.imageManager.dicTag;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StartUI : MonoBehaviour {
+public class UiStart : MonoBehaviour {
 
 	GameObject option;
 	GameObject savecanv;
@@ -25,14 +25,20 @@ public class StartUI : MonoBehaviour {
 			if (savecanv.GetComponent<Fade> ().fadeCounter >= 1) {
 				fadeinSaveLoad = false;
 
-
 				if (!savecanv.GetComponent <SaveScreen> ().LoadMode) {
+					//startSave()で無効化したコンポーネントを有効化、透過率を0に設定
 					Image img;
 					for (int i = 0; i < 6; i++) {
 						img = savecanv.transform.Find ("SaveLoad").Find ("button" + (i + 1)).Find ("limg").gameObject.GetComponent <Image> ();
 						img.color = new Color (img.color.r, img.color.g, img.color.b, 0);
 						img.enabled = true;
 					}
+					img = savecanv.transform.Find ("switchLS").Find ("toSave").gameObject.GetComponent <Image> ();
+					img.color = new Color (img.color.r, img.color.g, img.color.b, 0);
+					img.enabled = true;
+					img = savecanv.transform.Find ("Load_background").gameObject.GetComponent <Image> ();
+					img.color = new Color (img.color.r, img.color.g, img.color.b, 0);
+					img.enabled = true;
 				}
 			}
 		}
@@ -61,6 +67,15 @@ public class StartUI : MonoBehaviour {
 		savecanv.GetComponent <Canvas> ().enabled = true;
 		savecanv.GetComponent <Fade> ().fade_in ();
 		savecanv.GetComponent <SaveScreen> ().LoadMode = true;
+		//ボタンのTargetGrapicを変更
+		savecanv.GetComponent<SaveScreen> ().ChangeButtonImg ();
+
+		//ロードに使うUIを表示, 91行目の処理に対する処置
+		for (int i = 0; i < 6; i++) {
+			savecanv.transform.Find ("SaveLoad").Find ("button" + (i + 1)).Find ("limg").gameObject.GetComponent <Image> ().enabled = true;
+		}
+		savecanv.transform.Find("switchLS").Find("toSave").gameObject.GetComponent <Image> ().enabled = true;
+		savecanv.transform.Find("Load_background").gameObject.GetComponent <Image> ().enabled = true;
 	}
 
 	public void startSave () {
@@ -74,9 +89,14 @@ public class StartUI : MonoBehaviour {
 		savecanv.GetComponent <Canvas> ().enabled = true;
 		savecanv.GetComponent <Fade> ().fade_in ();
 		savecanv.GetComponent <SaveScreen> ().LoadMode = false;
+		//ボタンのTargetGrapicを変更
+		savecanv.GetComponent<SaveScreen> ().ChangeButtonImg ();
 
+		//セーブに使うUIの上にあるものが、Fade.csの処理で非透明になるのを防ぐ
 		for (int i = 0; i < 6; i++) {
 			savecanv.transform.Find ("SaveLoad").Find ("button" + (i + 1)).Find ("limg").gameObject.GetComponent <Image> ().enabled = false;
 		}
+		savecanv.transform.Find("switchLS").Find("toSave").gameObject.GetComponent <Image> ().enabled = false;
+		savecanv.transform.Find("Load_background").gameObject.GetComponent <Image> ().enabled = false;
 	}
 }

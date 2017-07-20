@@ -15,7 +15,9 @@ public class SaveUI : MonoBehaviour {
 	GameObject savecanv;
 
 	Image ChangeButton;
+	Image background;
 	Image[] LoadImg = new Image[6];
+
 	float changeCounter = 0;
 
 
@@ -28,30 +30,51 @@ public class SaveUI : MonoBehaviour {
 	public void back () {
 		fadeout = true;
 		startFadeout ();
+		if (!savecanv.GetComponent <SaveScreen> ().LoadMode) {
+			for (int i = 0; i < 6; i++) {
+				savecanv.transform.Find ("SaveLoad").Find ("button" + (i + 1)).Find ("limg").gameObject.GetComponent <Image> ().enabled = false;
+			}
+			savecanv.transform.Find ("switchLS").Find ("toSave").gameObject.GetComponent <Image> ().enabled = false;
+			savecanv.transform.Find ("Load_background").gameObject.GetComponent <Image> ().enabled = false;
+		}
 	}
 
-	public void right () {
+
+	public void goPage1 () {
 		GameObject obj = GameObject.Find ("SaveCanvas");
-		obj.GetComponent<SaveScreen> ().pageNum++;
+		obj.GetComponent<SaveScreen> ().pageNum = 0;
 		obj.GetComponent<SaveScreen> ().UpdateSavedata ();
 	}
-	public void left () {
+	public void goPage2 () {
 		GameObject obj = GameObject.Find ("SaveCanvas");
-		obj.GetComponent<SaveScreen> ().pageNum--;
+		obj.GetComponent<SaveScreen> ().pageNum = 1;
 		obj.GetComponent<SaveScreen> ().UpdateSavedata ();
 	}
+	public void goPage3 () {
+		GameObject obj = GameObject.Find ("SaveCanvas");
+		obj.GetComponent<SaveScreen> ().pageNum = 2;
+		obj.GetComponent<SaveScreen> ().UpdateSavedata ();
+	}
+	public void goPage4 () {
+		GameObject obj = GameObject.Find ("SaveCanvas");
+		obj.GetComponent<SaveScreen> ().pageNum = 3;
+		obj.GetComponent<SaveScreen> ().UpdateSavedata ();
+	}
+
+
 
 	public void SwitchSL () {
 		savecanv = GameObject.Find ("SaveCanvas");
+		ChangeButton = GameObject.Find ("switchLS").transform.Find ("toSave").gameObject.GetComponent<Image> ();
+		background = savecanv.transform.Find ("Load_background").gameObject.GetComponent<Image> ();
+
 		//ボタン無効化
 		bobj = savecanv.GetComponentsInChildren<Button> ();
 		for (int i = 0; i < bobj.Length; i++) bobj [i].enabled = false;
 		if (savecanv.GetComponent<SaveScreen> ().LoadMode) {
 			//セーブ画面へ
 			savecanv.GetComponent<SaveScreen> ().LoadMode = false;
-			string path;
 			for (int i = 0; i < 6; i++) {
-				//path = "SaveLoad/button_" + 
 				LoadImg[i] = savecanv.transform.Find ("SaveLoad").Find ("button" + (i + 1)).Find ("limg").gameObject.GetComponent <Image> ();
 				LoadImg[i].color = new Color (LoadImg[i].color.r, LoadImg[i].color.g, LoadImg[i].color.b, 1);
 			}
@@ -67,6 +90,7 @@ public class SaveUI : MonoBehaviour {
 			changeCounter = 0;
 		}
 		changeSLmode = true;
+		savecanv.GetComponent<SaveScreen> ().ChangeButtonImg ();
 	}
 
 
@@ -98,7 +122,10 @@ public class SaveUI : MonoBehaviour {
 			changeCounter += 0.1f;
 			for (int i = 0; i < LoadImg.Length; i++) {
 				LoadImg [i].color = new Color (LoadImg[i].color.r, LoadImg[i].color.g, LoadImg[i].color.b, changeCounter);
+
 			}
+			ChangeButton.color = new Color (ChangeButton.color.r, ChangeButton.color.g, ChangeButton.color.b, changeCounter);
+			background.color = new Color (background.color.r, background.color.g, background.color.b, changeCounter);
 			if (changeCounter >= 1) {
 				//切り替え終了
 				for (int i = 0; i < bobj.Length; i++) bobj [i].enabled = true;
@@ -110,6 +137,8 @@ public class SaveUI : MonoBehaviour {
 			for (int i = 0; i < LoadImg.Length; i++) {
 				LoadImg [i].color = new Color (LoadImg[i].color.r, LoadImg[i].color.g, LoadImg[i].color.b, changeCounter);
 			}
+			ChangeButton.color = new Color (ChangeButton.color.r, ChangeButton.color.g, ChangeButton.color.b, changeCounter);
+			background.color = new Color (background.color.r, background.color.g, background.color.b, changeCounter);
 			if (changeCounter <= 0) {
 				//切り替え終了
 				for (int i = 0; i < bobj.Length; i++) bobj [i].enabled = true;
@@ -118,6 +147,9 @@ public class SaveUI : MonoBehaviour {
 		}
 
 	}
+
+
+
 
 	void Update () {
 		if (fadeout) {

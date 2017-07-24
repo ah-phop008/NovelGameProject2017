@@ -20,7 +20,7 @@ public class SaveScreen : MonoBehaviour {
 	void Start () {
 		for (int i = 0; i < 6; i++) { 
 			data [i] = new SaveData ();
-			data[i].GetSavedataText (transform.Find ("data/data" + (i + 1)).gameObject);
+			data[i].SetSavedataTextComponent (transform.Find ("data/data" + (i + 1)).gameObject);
 
 			button [i] = transform.Find ("SaveLoad").Find ("button" + (i + 1)).gameObject.GetComponent<Button> ();
 			simg[i] = transform.Find ("SaveLoad").Find ("button" + (i + 1)).Find("simg").gameObject.GetComponent<UnityEngine.UI.Image> ();
@@ -107,7 +107,7 @@ public class SaveScreen : MonoBehaviour {
 		public Text date;
 		public Text detail;
 
-		public void GetSavedataText (GameObject obj) {
+		public void SetSavedataTextComponent (GameObject obj) {
 			this.num = obj.transform.Find ("Num").gameObject.GetComponent<Text> ();
 			this.chapter = obj.transform.Find ("Chapter").gameObject.GetComponent<Text> ();
 			this.date = obj.transform.Find ("date").gameObject.GetComponent<Text> ();

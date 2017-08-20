@@ -21,7 +21,7 @@ public class test : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
+		/*
 		if (Input.GetKeyDown (KeyCode.A)) {
 			SystemManager.LoadSystemData ();
 		}
@@ -43,12 +43,23 @@ public class test : MonoBehaviour {
 			Application.LoadLevel("Player");
 
 		}
-		if (Input.GetKeyDown (KeyCode.B)) {
+*/
+		if (Input.GetKeyDown (KeyCode.F)) {
 			StatusManager.enableNextOrder = true;
 
 			StatusManager.FlagSkiiping = true;
 			StartCoroutine("Loop",0.1f);
 
+		}
+		if (Input.GetKeyDown (KeyCode.A)) {
+			StatusManager.FlagAuto = true;
+			StartCoroutine("Loop",SystemManager.AutoMessageWait);
+
+		}
+
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			
+			transform.SetAsLastSibling ();
 		}
 
 

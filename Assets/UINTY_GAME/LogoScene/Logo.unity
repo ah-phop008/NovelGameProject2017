@@ -190,8 +190,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logo:
   - {fileID: 21300000, guid: 36eca68b9e1511c41959dbf66500bac6, type: 3}
-  - {fileID: 21300000, guid: c71b525706ecddd4ca8c0a952eb84b39, type: 3}
-  - {fileID: 21300000, guid: a7a1f1ec12ae23c4fa3d94d9d8be768f, type: 3}
   - {fileID: 21300000, guid: 007d379b7a9504e4b817d24b87bec382, type: 3}
   fadeTime: 2
   showTime: 2

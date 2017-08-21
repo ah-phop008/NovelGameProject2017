@@ -1714,6 +1714,7 @@ MonoBehaviour:
   movieObjects: {fileID: 441772433}
   OPmovie: {fileID: 1974643900}
   clickToBack: {fileID: 1109591684}
+  maincamera: {fileID: 1575386784}
   ALL: {fileID: 1207346644}
 --- !u!114 &398494364
 MonoBehaviour:
@@ -6224,6 +6225,7 @@ MonoBehaviour:
   ALL: {fileID: 1207346644}
   click: {fileID: 1109591684}
   VideoSource: {fileID: 1974643900}
+  maincamera: {fileID: 1575386784}
 --- !u!114 &1109591687
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class OPstarter1 : MonoBehaviour {
 	public GameObject movieObjects;
 	public GameObject OPmovie;
 	public GameObject clickToBack;
+	public GameObject maincamera;
 	public GameObject ALL;
 	float speed=0.05f;
 	float dispeed=-0.05f;
@@ -27,6 +28,7 @@ public class OPstarter1 : MonoBehaviour {
 
 
 	public void OnClick() {
+		maincamera.SendMessage ("stopmaintheme");
 		OPmovie.gameObject.SetActive (true);
 		clickToBack.gameObject.SetActive (true);
 		ALL.gameObject.SetActive (false);

@@ -7,12 +7,12 @@ public class charamanager : MonoBehaviour {
 	
 	public GameObject cgp6;
 	public GameObject CGobjects;
+	public GameObject frame;
 	GameObject parent;
 	float speed=0.05f;
 	float dispeed=-0.05f;
 	bool onGallery;
 	Color hontai;
-
 
 	void Start() {
 		onGallery = true;
@@ -38,6 +38,7 @@ public class charamanager : MonoBehaviour {
 	}
 
 	public void OnClick() {
+		CGobjects.BroadcastMessage ("cyaframe");
 		CGobjects.BroadcastMessage ("zero");
 		cgp6.gameObject.SetActive (true);
 		parent = transform.parent.gameObject;
@@ -50,6 +51,7 @@ public class charamanager : MonoBehaviour {
 				Debug.Log (i);
 			}
 			GetComponent<Button> ().enabled = false;
+			frame.SetActive (true);
 
 	}
 	}

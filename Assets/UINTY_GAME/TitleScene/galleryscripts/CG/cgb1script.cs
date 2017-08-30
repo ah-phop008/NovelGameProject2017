@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class cgb1script : MonoBehaviour {
 	public GameObject cgf1;
 	public GameObject CGobjects;
+	public GameObject character;
+	public GameObject comback;
+	public GameObject comment;
 	float speed = 0.05f;
 	float dispeed = -0.05f;
 	Color hontai;
@@ -30,6 +33,22 @@ public class cgb1script : MonoBehaviour {
 
 	}
 
+	public void Pointishere() {
+
+		character.gameObject.SetActive (true);
+		comback.gameObject.SetActive (true);
+		comment.gameObject.SetActive (true);
+
+
+	}
+
+	public void Pointisgone() {
+
+		character.gameObject.SetActive (false);
+		comback.gameObject.SetActive (false);
+		comment.gameObject.SetActive (false);
+
+	}
 
 	public void OnClick() {
 		cgf1.gameObject.SetActive (true);

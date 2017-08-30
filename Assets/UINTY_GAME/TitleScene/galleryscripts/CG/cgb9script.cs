@@ -8,6 +8,9 @@ public class cgb9script : MonoBehaviour {
 	public GameObject CGobjects;
 	public GameObject cgpX;
 	public GameObject disableman;
+	public GameObject character;
+	public GameObject comback;
+	public GameObject comment;
 	float speed = 0.05f;
 	float dispeed = -0.05f;
 	float pts=0f;
@@ -35,6 +38,18 @@ public class cgb9script : MonoBehaviour {
 
 	}
 
+	public void Pointishere() {
+		character.gameObject.SetActive (true);
+		comback.gameObject.SetActive (true);
+		comment.gameObject.SetActive (true);
+
+	}
+
+	public void Pointisgone() {
+		character.gameObject.SetActive (false);
+		comback.gameObject.SetActive (false);
+		comment.gameObject.SetActive (false);
+	}
 
 	public void OnClick() {
 		cgf1.gameObject.SetActive (true);

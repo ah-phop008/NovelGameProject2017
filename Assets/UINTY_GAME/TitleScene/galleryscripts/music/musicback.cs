@@ -21,7 +21,13 @@ public class musicback : MonoBehaviour {
 		hontai.b = GetComponent<Image> ().color.b;
 	}
 
+	void byeGallery() {
+		onGallery = false;
+	}
 
+	void helloGallery() {
+		onGallery = true;
+	}
 
 
 	void mschange() {

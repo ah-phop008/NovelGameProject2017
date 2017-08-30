@@ -27,6 +27,14 @@ public class LbgmStopping : MonoBehaviour {
 	}
 
 
+
+	void byeGallery() {
+		onGallery = false;
+	}
+
+	void helloGallery() {
+		onGallery = true;
+	}
 	public void OnClick() {
 		maincamera.SendMessage ("stopmaintheme");
 		yesno = true;

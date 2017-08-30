@@ -25,6 +25,14 @@ public class bgmStopping : MonoBehaviour {
 		hontai.b = GetComponent<Image> ().color.b;
 	}
 
+	void byeGallery() {
+		onGallery = false;
+	}
+
+	void helloGallery() {
+		onGallery = true;
+	}
+
 
 	public void OnClick() {
 		maincamera.SendMessage ("stopmaintheme");

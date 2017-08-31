@@ -15,6 +15,8 @@ public class receiver : MonoBehaviour {
 	}
 	void mvchange() {
 	}
+	void deletecover() {
+	}
 
 	// Update is called once per frame
 	void Update () {

@@ -9,6 +9,8 @@ public class bgmStopping : MonoBehaviour {
 	public GameObject musicObjects;
 	public GameObject maincamera;
 	public GameObject CGobjects;
+	public GameObject cover;
+	public GameObject insiders;
 	float speed=0.05f;
 	float dispeed=-0.05f;
 	bool onGallery;
@@ -35,6 +37,8 @@ public class bgmStopping : MonoBehaviour {
 
 
 	public void OnClick() {
+		insiders.BroadcastMessage ("deletecover");
+		cover.gameObject.SetActive (true);
 		maincamera.SendMessage ("stopmaintheme");
 		yesno = true;
 		this.AudioSource.Play ();

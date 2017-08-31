@@ -11,6 +11,7 @@ public class gcgscript : MonoBehaviour {
 	public GameObject CGobjects;
 	public GameObject insiders;
 	public GameObject disableman;
+	Button[] bt;
 
 
 	void Start() {
@@ -23,9 +24,14 @@ public class gcgscript : MonoBehaviour {
 		insiders.BroadcastMessage ("mschange");	
 		insiders.BroadcastMessage ("mvchange");	
 		CGobjects.gameObject.SetActive (true);
+		bt = CGobjects.GetComponentsInChildren <Button> ();
+		for (int i = 0; i < bt.Length; i++) {
+			bt [i].enabled = true;
+
 			
 		
-}
+		}
+	}
 
 	void byeGallery() {
 		onGallery = false;

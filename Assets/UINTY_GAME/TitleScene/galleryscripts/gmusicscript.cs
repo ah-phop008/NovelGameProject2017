@@ -30,6 +30,8 @@ public class gmusicscript : MonoBehaviour {
 	}
 
 
+
+
 	void byeGallery() {
 		onGallery = false;
 	}

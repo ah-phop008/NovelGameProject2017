@@ -13,21 +13,25 @@ public class gbackscript : MonoBehaviour {
 	public GameObject disableman;
 	public GameObject galleryUI;
 
+	GameObject ButtonParent;
+
 	// Use this for initialization
 	void Start() {
 		onGallery = true;
 		hontai = GetComponent<Image> ().color;
+		ButtonParent = GameObject.Find ("CGobjects");
 	}
 
 	// Update is called once per frame
 
-		public void OnClick() {
-			Debug.Log ("button click!");
-			maincamera.SendMessage ("startmaintheme");
-		   galleryUI.BroadcastMessage ("byeGallery");
-		    
-			
-}
+	public void OnClick() {
+		disableman.SetActive (true);
+		Debug.Log ("button click!");
+		maincamera.SendMessage ("startmaintheme");
+		galleryUI.BroadcastMessage ("byeGallery");
+		ButtonParent.GetComponent<unableee> ().ButtonOff();
+	}
+
 	void byeGallery() {
 		onGallery = false;
 	}

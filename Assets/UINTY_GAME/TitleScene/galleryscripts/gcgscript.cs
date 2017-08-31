@@ -10,6 +10,7 @@ public class gcgscript : MonoBehaviour {
 	float dispeed = -0.05f;
 	public GameObject CGobjects;
 	public GameObject insiders;
+	public GameObject disableman;
 
 
 	void Start() {
@@ -47,6 +48,7 @@ public class gcgscript : MonoBehaviour {
 				hontai.a += dispeed;
 				GetComponent<Image> ().color = new Color (hontai.r, hontai.g, hontai.b, hontai.a);
 			} else {
+				disableman.SetActive (false);
 				onGallery = true;
 
 			}

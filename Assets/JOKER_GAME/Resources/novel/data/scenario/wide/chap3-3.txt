@@ -1,0 +1,84 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="room"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="music"]
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+
+屋上から教室に戻ると、既にホームルームが終わっていた。[p]
+
+新学期の教室は慣れていない分普段よりも入りにくい雰囲気だ。[p]
+
+新しい友達作りや高２デビューでみんな忙しそうだが、オレには無関係だ。[p]
+
+窓際の一番後ろの席だったからひっそりと生活しやすいのは不幸中の幸いだ。[p]
+
+#？？？
+「今日のホームルーム、教室にいなかったわよね？」[p]
+
+[live2d_show name="haru" x=3]
+[live2d_show name="sabalu" x=-3]
+#蛍
+「え？ああ…」[p]
+
+#？？？
+「これ、プリント。園芸委員からの文化祭に関するアンケートだから」[p]
+
+#蛍
+「あぁ、ありがとう」[p]
+
+#？？？
+「ここの席、よく景色が見えるのね」[p]
+#
+集め終わったと思われるアンケートを抱えて窓の外を見つめながら言った。[p]
+
+#？？？
+「私、明るい空って好きじゃないの」[p]
+
+#？？？
+「どこまで続いているのかわからない空に[r]
+見透かされている感じがするから」[p]
+
+#？？？
+「なんだか怖くて」[p]
+
+#蛍
+「特に何も考えてないかな。ここにいても暇だし」[p]
+
+#？？？
+「余計な話をしてしまってごめんなさい。[r]
+プリント、目を通しておいてもらえると嬉しい」[p]
+
+#蛍
+「分かった」[p]
+#
+プリントを一枚だけ渡して、オレの席から離れていった。[p]
+
+園芸委員って言ってたけどクラスには興味がないし名前が分からない。[p]
+
+文化祭、か。[p]
+
+今年は仕事もあるし面倒くさいな。[p]
+
+
+
+
+
+
+@jump file=wide/chap3-3 scene=new

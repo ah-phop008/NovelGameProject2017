@@ -1,0 +1,59 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="room"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="music"]
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+
+[live2d_show name="haru" x=3]
+[live2d_show name="sabalu" x=-3]
+
+#蛍
+「ごめん、光。昼食食べる時間、短くなって」[p]
+
+#光
+「別にいいよ。オレが蛍と食べたいだけだから。[r]
+ところで学級委員、どうだった？大変そう？」[p]
+
+#蛍
+「パートナーとか組まされた。めんどくさそうだ…」[p]
+
+#光
+「蛍が委員会とかやるの、珍しい」[p]
+
+#蛍
+「できるだけ、そういうのはやりたくないからな、面倒だし」[p]
+
+#光
+「でも、どうしてもって言われて引き受けちゃうの、蛍っぽい」[p]
+#光
+「なんだかんだで、優しいよな、蛍は」[p]
+
+#蛍
+「別に、優しくなんか…」[p]
+
+#光
+「でも、無理はするなよ」[p]
+
+#蛍
+「無理なんてするわけないだろ…」[p]
+
+
+
+@jump file=wide/chap3-1 scene=new

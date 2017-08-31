@@ -43,7 +43,7 @@ public class fader : MonoBehaviour {
 		}
 		if(beta>=1.8) {
 
-			NovelSingleton.StatusManager.callJoker ("wide/scene1","");
+			NovelSingleton.StatusManager.callJoker ("wide/chap1-1","");
 		}
 	
 		//load

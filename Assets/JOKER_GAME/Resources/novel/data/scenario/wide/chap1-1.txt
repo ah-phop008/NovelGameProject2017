@@ -1,0 +1,86 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="room"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="music"]
+
+
+今年の桜も咲き、春が来た。[r]
+オレは霞ヶ丘高校の二年生に進級する。[p]
+
+９歳の頃に起きたあの事件以来、
+[l]オレは幼馴染の光以外と新しい関係を[l][r]
+築くことはなくなった。[p]
+
+あの時から、代り映えはしないが、平和な毎日。[r]
+けれど、今年は今までとは何かが違うような、[r]
+何かが大きく変わってしまうような、[p]
+
+漠然とした不安をオレは感じていた。[r]
+いつもの通学路を見上げると、あの時のように、[r]
+不気味なほど綺麗な桜が、オレを見下ろしていた。[p]
+
+#光
+「おーい！蛍！」[p]
+;ここでキャラ表示
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+[live2d_show name="haru" x=3]
+[live2d_show name="sabalu" x=-3]
+
+#蛍
+「ああ、光」[p]
+#光
+「クラス替え、どうだった？オレは、A組だったんだけど」[p]
+#蛍
+「オレは、B組。っていうことは、別々だな。」[p]
+#光
+「そうか…。クラスがお前と別になるの、初めてだな」[p]
+#蛍
+「…心配なのか？」[p]
+#光
+「心配だよ。お前、オレ以外に友達つくろうとしないから…」[p]
+#蛍
+「大丈夫だって。友達なんてお前以外に必要ないし…」[p]
+#光
+「はぁ…」[p]
+#
+光は大きくため息をついた。[p]
+#モブ先生
+「それでは、みなさん、自己紹介してください」[p]
+#
+教室に入ると、既に新学期の自己紹介がはじまっていた。[r]
+田舎のそんなに大きくない高校のはずなのに、[l][r]
+クラス替えをした途端見たことのない顔ばかりだ。[p]
+
+…それともオレが覚えていないだけか。[p]
+
+#モブ先生
+「遅れて入ってきたそこの君、名前は？」[p]
+
+#蛍
+「雨宮蛍です」[p]
+
+#モブ先生
+「雨宮くんね、君の席は窓際のそこの席だよ」[p]
+#
+好奇の目で見つめるクラスの連中の視線をかわし、[r]
+オレは先生が指し示した窓際の席に座った。[p]
+
+
+@jump file=wide/chap1-2 scene=new

@@ -1,0 +1,82 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="room"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="music"]
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+
+朝
+[live2d_show name="haru" x=3]
+;[live2d_show name="sabalu" x=-3]
+#光
+「おはよう、蛍」[p]
+
+;[live2d_show name="haru" x=3]
+[live2d_show name="sabalu" x=-3]
+#蛍
+「…はよ」[p]
+
+#光
+「今日も学級委員の集まりがあるの？」[p]
+
+#蛍
+「いや、今日はない
+けど、ホームルームで学祭について話さないといけない」[p]
+
+#光
+「そっか。学祭ももう二か月後か。うちの学祭、六月だしね[r]
+そういえば、他のクラスが出し物を決めて準備しているところを見たな」[p]
+
+#蛍
+「…学祭…めんどくさい…」[p]
+
+#光
+「あ、今日、昼に部活の集まりがあるみたいだから、一緒にご飯食べられないんだけど…」[p]
+
+#蛍
+「ああ…、適当に食べるから、大丈夫」[p]
+
+#光
+「適当って、どうせまた一人で屋上で食べるつもりだろ」[p]
+
+#蛍
+「……………」[p]
+
+#光
+「オレがいないときはいつも一人で弁当食べてるだろ」[p]
+
+#蛍
+「うるさい…」[p]
+
+#光
+「ってもうこんな時間か。急がないと、一限に間に合わないな」[p]
+
+#蛍
+「…別に間に合わなかったら、屋上にいればいいだけだろ」[p]
+
+#光
+「授業はちゃんと出ろって言ってるだろ…」[p]
+
+#蛍
+「間に合ったらな」[p]
+
+
+
+
+@jump file=wide/chap3-2 scene=new

@@ -1,4 +1,4 @@
-@call file=wide/libs/utils
+﻿@call file=wide/libs/utils
 [bg_new name="background" storage="room"]
 [bg_show name="background"]
 

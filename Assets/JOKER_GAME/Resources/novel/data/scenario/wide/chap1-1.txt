@@ -37,7 +37,7 @@
 ;ここでキャラ表示
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="haru" storage="Mei2"]
 [live2d_new name="sabalu" storage="sabalu"]
 
 [live2d_show name="haru" x=3]

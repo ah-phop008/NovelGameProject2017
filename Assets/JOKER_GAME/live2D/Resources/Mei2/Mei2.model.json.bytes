@@ -1,0 +1,14 @@
+{
+	"type": "Live2D Model Setting",
+	"name": "Mei2",
+	"model": "Mei2/Mei2.moc",
+	"textures": [
+		"Mei2/Mei2.2048/texture_00.png"
+	],
+	"motions": {
+		"idle": [
+				{"file":"Mei2/motions/sample.mtn", "fade_in":2000, "fade_out":2000}
+		]
+	}
+
+}

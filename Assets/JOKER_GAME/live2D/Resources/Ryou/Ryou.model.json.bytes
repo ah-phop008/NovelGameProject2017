@@ -1,0 +1,16 @@
+{
+	"type": "Live2D Model Setting",
+	"name": "Ryou",
+	"model": "Ryou/Ryou.moc",
+	"textures": [
+		"Ryou/Ryou.2048/texture_00.png"
+	],
+	"motions":
+	{
+		"idle":
+			[
+				{"file":"Ryou/motions/sample.mtn","fade_in":2000, "fade_out":2000}
+			
+			]
+	}
+}

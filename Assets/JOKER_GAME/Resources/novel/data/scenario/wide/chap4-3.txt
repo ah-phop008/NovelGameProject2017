@@ -1,0 +1,81 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="rouka"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="09_kurai"]
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+
+いつもの帰り道を、ぼんやりと歩く。[p]
+目の前の大きな背中を道しるべに、薄暗い道を進んでいた。[p]
+
+
+[live2d_show name="haru" x=3]
+[live2d_show name="sabalu" x=-3]
+#光
+「…今日、何かあったのか？」[p]
+
+#
+光が、いつになく真剣そうな顔で尋ねてきた。[p]
+
+#蛍
+「え………」[p]
+
+#光
+「いつもと、様子が違う」[p]
+
+#蛍
+「やっぱ、光は、わかるんだな…」[p]
+
+#光
+「分かるよ、お前のことなら。何年お前と一緒にいると思ってるんだよ」[p]
+
+#蛍
+「そうだな…」[p]
+「…久しぶりに、嫌な夢をみたんだ」[p]
+
+#光
+「嫌な夢って、あの時の…？」[p]
+
+#蛍
+「あぁ…。なんでだろうな。[r]
+もう何年も…、小学校を卒業してから、見ることはなかったんだけどな…」[p]
+
+#光
+「………大丈夫か？」[p]
+
+#蛍
+「大丈夫…。ただ、ただ…嫌な予感がする……」[p]
+「実は、今年の春から、ずっと嫌な予感がしてたんだ。具体的には言えないけど、[r]
+何か起きるような気がする」[p]
+
+#光
+「…気にするなよ。何があっても、オレは絶対お前のそばにいるから」[p]
+「何があっても、オレがお前を守るから…」[p]
+
+#
+ざぁぁぁぁぁぁぁっと風が吹いた。[p]
+あの時も通った、桜並木の道だ。[r]
+けれど、桜はもう咲いていない。[p]
+
+
+
+
+
+
+@jump file=wide/chap5-1 scene=new

@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="room"]
+[bg_new name="background" storage="rouka"]
 [bg_show name="background"]
 
 ;メッセージ表示
@@ -14,7 +14,7 @@
 
 
 
-[playbgm wait=false time=1 storage="music"]
+[playbgm wait=false time=1 storage="06_asa"]
 
 ;Live2dテスト
 [live2d_new name="haru" storage="haru"]
@@ -56,6 +56,8 @@
 A組の右端の扉が開いた。[r]
 中から、光と、A組だと思われる女子が出てきた。[p]
 
+@stopbgm wait=false
+@playbgm storage="09_kurai" 
 #光
 「帰るぞ、蛍」[p]
 ;[live2d_show name="haru" x=3]

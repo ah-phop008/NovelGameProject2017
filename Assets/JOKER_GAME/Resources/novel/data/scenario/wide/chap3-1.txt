@@ -14,7 +14,7 @@
 
 
 
-[playbgm wait=false time=1 storage="music"]
+[playbgm wait=false time=1 storage="04_sannbyousi"]
 
 ;Live2dテスト
 [live2d_new name="haru" storage="haru"]
@@ -36,7 +36,7 @@
 「今日も学級委員の集まりがあるの？」[p]
 
 #蛍
-「いや、今日はない
+「いや、今日はない[r]
 けど、ホームルームで学祭について話さないといけない」[p]
 
 #光

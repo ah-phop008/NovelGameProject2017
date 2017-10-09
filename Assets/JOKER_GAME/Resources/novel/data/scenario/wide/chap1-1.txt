@@ -14,7 +14,7 @@
 
 
 
-[playbgm wait=false time=1 storage="music"]
+[playbgm wait=false time=1 storage="01_kanasii"]
 
 
 今年の桜も咲き、春が来た。[r]
@@ -32,6 +32,8 @@
 いつもの通学路を見上げると、あの時のように、[r]
 不気味なほど綺麗な桜が、オレを見下ろしていた。[p]
 
+@stopbgm time=0.5
+@playbgm storage="08_nitijou"
 #光
 「おーい！蛍！」[p]
 ;ここでキャラ表示

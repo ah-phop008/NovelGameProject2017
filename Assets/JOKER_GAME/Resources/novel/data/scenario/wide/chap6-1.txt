@@ -1,0 +1,62 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="room"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="09_kurai"]
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+
+[live2d_show name="haru" x=3]
+;[live2d_show name="sabalu" x=-3]
+#蛍
+「……皆働いてるな……」[p]
+
+#
+いつものように、文化祭の準備をサボっていたオレは、屋上から学校の敷地を眺めていた。[p]
+文化祭もついにあと一週間に迫り、校庭では文化祭に使われるアーチなどが作られている。[p]
+屋上から見える、一人一人の人間の動きを、観察するように眺めていると、視界の端で人影が大きく動く。視線を人影の方に向けると、校庭の花壇の近くに見たことのある少女が倒れていた。[p]
+
+#蛍
+「あれは……！」[p]
+
+#
+急いで階段を降りて、花壇へ向かう。[p]
+
+#蛍
+「おい！大丈夫か…！？」[p]
+
+;[live2d_show name="haru" x=3]
+[live2d_show name="sabalu" x=-3]
+
+#椛
+「う…」[p]
+
+#蛍
+「くそ…！昨日あんな夢見たばっかなのに…！胸糞悪い…！」[p]
+
+#
+倒れている少女を抱きかかえ、オレは走り出した。[p]
+
+
+
+
+
+
+
+
+@jump file=wide/chap6-2 scene=new

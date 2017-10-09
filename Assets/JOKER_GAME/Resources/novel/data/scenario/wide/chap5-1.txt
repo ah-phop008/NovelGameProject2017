@@ -1,0 +1,66 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="room"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="06_asa"]
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+
+教室の中がいつになく慌ただしい。[p]
+6月に入り、文化祭まで３週間を切ったせいか、オレのようなやる気のない人間を除いた学校中のほとんど全ての人間が、廊下や校庭、教室をせわしく動き回っている。[p]
+
+
+[live2d_show name="haru" x=3]
+[live2d_show name="sabalu" x=-3]
+
+#モブ女
+「雨宮くん！暇なら衣装係を手伝ってくれない？」[p]
+
+#蛍
+「…オレはパス。学級委員の仕事があるし」[p]
+
+#モブ女
+「ええ～～～～～ちょっとぐらい手伝ってくれてもいいのに！」[p]
+
+#
+素っ気なく断ったオレに、名前も知らないクラスメイトの女子が不満を漏らす。[p]
+
+@stopbgm time=0.5
+@playbgm storage="01_kanasii"
+#？？？
+「あの…、衣装、作ってきたのだけれど…」[p]
+
+#
+不満げな女子に、消えそうなか細い声がかかる。[r]
+声のする方を見ると、そこには長い銀髪の少女が衣装らしきものを持って立っていた。[p]
+
+#モブ女
+「あ、ああ！ありがとう、雪雫さん」[p]
+
+#
+オレに声をかけてきた女子は、形だけの礼を言って衣装だけを受け取り、別の女子のグループの輪の中に入って行った。[r]
+雪雫さんと呼ばれていた少女は、一人取り残されその場に佇んでいた。[p]
+その時の寂しそうな笑顔が、やけに印象的だった。[p]
+
+
+
+
+
+
+
+@jump file=wide/chap5-2 scene=new

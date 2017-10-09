@@ -1,0 +1,77 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="room"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="09_kurai"]
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+足元に母さんが倒れている。[p]
+そっと触れると、指に血がこびりつく。[r]
+息はまだある。[p]
+
+（まだ、間に合う…）[p]
+
+（そうだ…、そうだ…、）[p]
+
+
+[live2d_show name="haru" x=3]
+#蛍
+「病院、病院に電話しなきゃ…」[p]
+
+#
+黒電話の受話器をとり、119番にダイヤルを回す。[p]
+
+プルルルルルルルルル……[p]
+
+#蛍
+「あの、お母さんを…お母さんを助けてください！」[p]
+「お願いします！お母さんを…！」[p]
+「お母さんが、死にそうなんです…！」[p]
+「助けてください…！」[p]
+
+#
+気が付くと、薄暗い廊下に立っていた。[p]
+目の前の部屋の「手術中」と書かれた赤い文字が爛々と光っている。[p]
+何分か、何時間か、オレは文字を見つめつづけた。[r]
+ふ、と光が消えて、中から白衣をまとった男が出てくる。[p]
+
+オレは、男が言葉を発するのをじっと待っていた。[p]
+
+男が、口を開こうとする。[p]
+
+その口元を、凝視する。[p]
+
+#蛍
+「お母さんを…っ…助けてくださいっ…！」[p]
+
+#
+男の言葉を聞くのが、急に怖くなって、遮るように声を出した。[p]
+
+
+#医者
+「残念ですが…、お母さんは………」[p]
+
+「助かりませんでした」[p]
+
+
+
+
+
+
+
+@jump file=wide/chap6-1 scene=new

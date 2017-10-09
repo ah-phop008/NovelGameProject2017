@@ -14,7 +14,7 @@
 
 
 
-[playbgm wait=false time=1 storage="music"]
+[playbgm wait=false time=1 storage="08_nitijou"]
 
 ;Live2dテスト
 [live2d_new name="haru" storage="haru"]
@@ -25,7 +25,7 @@
 
 新学期の教室は慣れていない分普段よりも入りにくい雰囲気だ。[p]
 
-新しい友達作りや高２デビューでみんな忙しそうだが、オレには無関係だ。[p]
+新しい友達作りや高２デビューでみんな忙しそうだが、オレには無関係だ。[r]
 
 窓際の一番後ろの席だったからひっそりと生活しやすいのは不幸中の幸いだ。[p]
 
@@ -74,11 +74,11 @@
 
 文化祭、か。[p]
 
-今年は仕事もあるし面倒くさいな。[p]
+今年は仕事もあるし面倒だな。[p]
 
 
 
 
 
 
-@jump file=wide/chap3-3 scene=new
+@jump file=wide/chap4-1 scene=new

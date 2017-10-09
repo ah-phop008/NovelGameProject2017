@@ -1,0 +1,88 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="rouka"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="06_asa"]
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+
+今日も授業をサボろうと、屋上を目指して廊下を進む。[p]
+
+
+[live2d_show name="haru" x=3]
+[live2d_show name="sabalu" x=-3]
+
+#瞭
+「おい、雨宮」[p]
+
+ふいに後ろから名前を呼ばれ、振り返ると、先生が立っていた。[p]
+
+#蛍
+「…なんでしょうか？」[p]
+
+#瞭
+「なんでしょうかじゃないだろう。今は授業中のはずなんだが。[r]
+君はなんでこの時間に廊下を歩いているんだ？」[p]
+
+#蛍
+「授業がだるいので」[p]
+
+#瞭
+「…全く。…しょうがないな」[p]
+
+#蛍
+「見逃してくれるんですか？」[p]
+
+#瞭
+「授業を聞く気も出る気もない奴を強制的に授業に出させても無意味だろう」[p]
+「それに、噂に聞くと、君は委員会の仕事はそこそここなしているみたいだしな」[p]
+
+#蛍
+「はぁ…」[p]
+
+#瞭
+「君は、授業にはあまり出てないみたいだが…、部活には興味はないのか？」[p]
+
+#蛍
+「…ありませんね」[p]
+
+#瞭
+「そうか。それは残念だな…。君は、体育の授業には最近出ていないと聞いたが、[r]
+
+体力測定の結果は素晴らしかったようじゃないか」[p]
+
+#蛍
+「そんなことありませんよ。買いかぶりすぎです」[p]
+
+#瞭
+「君にその気があったら、是非ともわたしの部活に入ってもらいたかったな」[p]
+
+#蛍
+「……。先生が顧問を務めている部活…、陸上部でしたっけ？」[p]
+
+#瞭
+「そうだよ。まぁ、もし興味が出たらまた声をかけてくれ」[p]
+
+#蛍
+「はぁ…」[p]
+
+
+
+
+
+@jump file=wide/chap4-2 scene=new

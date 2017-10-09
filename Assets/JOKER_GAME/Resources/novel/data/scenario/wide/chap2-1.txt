@@ -14,7 +14,7 @@
 
 
 
-[playbgm wait=false time=1 storage="music"]
+[playbgm wait=false time=1 storage="06_asa"]
 
 ;Live2dテスト
 [live2d_new name="haru" storage="haru"]

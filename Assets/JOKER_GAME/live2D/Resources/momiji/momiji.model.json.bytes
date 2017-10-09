@@ -1,0 +1,16 @@
+{
+	"type": "Live2D Model Setting",
+	"name": "momiji",
+	"model": "momiji/momiji.moc",
+	"textures": [
+		"momiji/momiji.2048/texture_00.png"
+	],
+	"motions":
+	{
+		"idle":
+			[
+				{"file":"momiji/motions/sample.mtn","fade_in":2000, "fade_out":2000}
+			
+			]
+	}
+}

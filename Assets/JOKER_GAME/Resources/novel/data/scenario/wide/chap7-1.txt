@@ -1,0 +1,110 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="room"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="07_string"]
+
+;Live2dテスト
+[live2d_new name="haru" storage="haru"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+
+文化祭当日[p]
+
+[live2d_show name="haru" x=3]
+[live2d_show name="sabalu" x=-3]
+
+#光
+「おはよう、蛍」[p]
+
+#蛍
+「…はよ」[p]
+
+#光
+「ついに文化祭だな。蛍のクラスは演劇だっけ？」[p]
+
+#蛍
+「あぁ」[p]
+
+#光
+「今日、オレと色々周らないか？」[p]
+
+
+
+
+
+#
+
+[image_new name="112" storage="112" scale=0.86]
+[image_new name="113" storage="113" scale=0.86]
+[image_new name="114" storage="114" scale=0.86]
+
+[select_new text="「あぁ、いいぜ」" target=*select_b1 ]
+[select_new text="「いや、一人で周る」" target=*select_b2 ]
+[select_new text="「めんどうだから、どこにも行かない」" target=*select_b3 ]
+[select_new text="「眠いから、屋上で寝る」" target=*select_b4 ]
+[select_new text="「今日は委員会の仕事があるんだ」" target=*select_b5 ]
+
+[select_show sound=click ]
+
+[s]
+
+
+*select_b1
+光ルート[p]
+@jump target=*commonbase
+
+
+*select_b2
+[live2d_hide name="haru"]
+[live2d_hide name="sabalu"]
+@image_show name="114"
+瞭ルート[p]
+@jump target=*char1
+
+*select_b3
+[live2d_hide name="haru"]
+[live2d_hide name="sabalu"]
+@image_show name="113"
+雪雫ルート[p]
+@jump target=*char3
+
+*select_b4
+[live2d_hide name="haru"]
+[live2d_hide name="sabalu"]
+@image_show name="112"
+芽依ルート[p]
+@jump target=*commonbase
+
+
+*select_b5
+千秋ルート[p]
+@jump target=*commonbase
+
+
+
+
+*commonbase
+
+@jump file=wide/chap7-1 scene=new
+
+*char1
+
+@jump file=wide/ryou_chap1-1 scene=new
+
+*char3
+
+@jump file=wide/3chara01 scene=new
+

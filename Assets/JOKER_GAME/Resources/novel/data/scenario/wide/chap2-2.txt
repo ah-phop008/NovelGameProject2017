@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="room"]
+[bg_new name="background" storage="rouka"]
 [bg_show name="background"]
 
 ;メッセージ表示
@@ -14,7 +14,7 @@
 
 
 
-[playbgm wait=false time=1 storage="music"]
+[playbgm wait=false time=1 storage="05_yuttari"]
 
 ;Live2dテスト
 [live2d_new name="haru" storage="haru"]
@@ -42,6 +42,9 @@
 
 #蛍
 「しつれいします……」[p]
+
+@bg_mod storage="room"
+
 #
 木造の古びた扉をゆっくりと開けると、[r]
 新学期のはじまりを感じさせる慌ただしさで先生たちが、[r]
@@ -71,6 +74,8 @@
 #
 先生の机の上に置いてあるプリントを人数分数え、職員室を出る。[p]
 出ようとした、その瞬間、[p]
+
+@bg_mod storage="rouka"
 
 #千秋
 「キャッ！あぶな…」[p]
@@ -139,6 +144,8 @@
 そう言って、光が隣を歩く。[p]
 こいつは昔から、オレに対してとても過保護だ。[r]
 そんなところに、助けられることも多いのだが。[p]
+
+@bg_mod storage="room"
 #
 114教室に着くと、出遅れたのか、もう既に委員会が始まっていた。[p]
 空いている席に適当に座ると、隣の席に座っていた女の子が、[r]

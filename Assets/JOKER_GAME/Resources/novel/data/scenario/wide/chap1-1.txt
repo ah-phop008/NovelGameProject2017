@@ -39,16 +39,21 @@
 ;ここでキャラ表示
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="haru" storage="Mei" ]
 [live2d_new name="sabalu" storage="sabalu"]
-
 [live2d_show name="haru" x=3]
 [live2d_show name="sabalu" x=-3]
 
+
 #蛍
 「ああ、光」[p]
+
+[live2d_motion storage="mesads.mtn" name="haru" idle="ON"]
+
+
 #光
 「クラス替え、どうだった？オレは、A組だったんだけど」[p]
+[live2d_motion storage="meidle.mtn" name="haru" idle="ON"]
 #蛍
 「オレは、B組。っていうことは、別々だな。」[p]
 #光

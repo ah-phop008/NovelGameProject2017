@@ -1,0 +1,18 @@
+{
+	"type": "Live2D Model Setting",
+	"name": "chiaki",
+	"model": "chiaki/chiaki.moc",
+	"textures": [
+		"chiaki/chiaki.2048/texture_00.png"
+	],
+
+
+"motions":
+	{
+		"idle":
+			[
+				{"file":"chiaki/motions/idle1.mtn","fade_in":2000, "fade_out":2000}
+			
+			]
+	}	
+}

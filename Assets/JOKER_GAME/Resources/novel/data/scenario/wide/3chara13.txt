@@ -1,0 +1,30 @@
+﻿@call file=wide/libs/utils
+[bg_new name="background" storage="rouka"]
+[bg_show name="background"]
+
+;メッセージ表示
+[showmessage]
+[call file=wide/system target="*system_setting_buttons"]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"] 
+
+
+;---------------キャラ定義
+
+
+
+
+[playbgm wait=false time=1 storage="07_string"]
+
+;Live2dテスト
+[live2d_new name="haru" storage="Momiji"]
+[live2d_new name="sabalu" storage="sabalu"]
+
+
+
+
+
+
+
+@jump file=wide/3chara02 scene=new
+

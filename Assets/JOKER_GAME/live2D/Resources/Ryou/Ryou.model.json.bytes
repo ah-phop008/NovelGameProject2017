@@ -5,12 +5,50 @@
 	"textures": [
 		"Ryou/Ryou.2048/texture_00.png"
 	],
-	"motions":
+
+
+			"motions":
 	{
 		"idle":
 			[
-				{"file":"Ryou/motions/sample.mtn","fade_in":2000, "fade_out":2000}
+				{"file":"Ryou/motions/ryidle.mtn","fade_in":2000, "fade_out":2000}
 			
+			],
+		"ryidle":
+			[
+						{"file":"Ryou/motions/ryidle.mtn","fade_in":500,"fade_out":500}
+			],
+
+		"ryidles":
+			[
+						{"file":"Ryou/motions/ryidles.mtn","fade_in":500,"fade_out":500}
+			],
+		"rysads":
+			[
+						{"file":"Ryou/motions/rysads.mtn","fade_in":500,"fade_out":500}
+			],
+		"rysad":
+			[
+						{"file":"Ryou/motions/rysad.mtn","fade_in":500,"fade_out":500}
+			],
+		"ryhands":
+			[
+						{"file":"Ryou/motions/ryhands.mtn","fade_in":500,"fade_out":500}
+			],
+		"ryhutu":
+			[
+						{"file":"Ryou/motions/ryhutu.mtn","fade_in":500,"fade_out":500}
+			],
+		"ryhutus":
+			[
+						{"file":"Ryou/motions/ryhutus.mtn","fade_in":500,"fade_out":500}
 			]
+
+
+
+
 	}
+	
+
+
 }

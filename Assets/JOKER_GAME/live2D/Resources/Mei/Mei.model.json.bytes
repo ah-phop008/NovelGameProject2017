@@ -3,15 +3,49 @@
 	"name": "Mei.model",
 	"model": "Mei/Mei.moc",
 	"textures": [
-		"Mei.2048/texture_00.png"
+		"Mei/Mei.2048/texture_00.png"
 	],
 	"motions":
 	{
 		"idle":
 			[
-				{"file":"Mei/motions/sample.mtn","fade_in":2000, "fade_out":2000}
+				{"file":"Mei/motions/meidle.mtn","fade_in":2000, "fade_out":2000}
 			
+			],
+		"meidle":
+			[
+						{"file":"Mei/motions/meidle.mtn","fade_in":500,"fade_out":500}
+			],
+		"meidles":
+			[
+						{"file":"Mei/motions/meidles.mtn","fade_in":500,"fade_out":500}
+			],
+		"mehappy":
+			[
+						{"file":"Mei/motions/mehappy.mtn","fade_in":500,"fade_out":500}
+			],
+		"mehappys":
+			[
+						{"file":"Mei/motions/mehappys.mtn","fade_in":500,"fade_out":500}
+			],
+		"memad":
+			[
+						{"file":"Mei/motions/memad.mtn","fade_in":500,"fade_out":500}
+			],
+		"memads":
+			[
+						{"file":"Mei/motions/memads.mtn","fade_in":500,"fade_out":500}
+			],
+		"mesad":
+			[
+						{"file":"Mei/motions/mesad.mtn","fade_in":500,"fade_out":500}
+			],
+		"mesads":
+			[
+						{"file":"Mei/motions/mesads.mtn","fade_in":500,"fade_out":500}
 			]
+
+
 	}	
 
 }

@@ -17,7 +17,7 @@
 [playbgm wait=false time=1 storage="07_string"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="haru" storage="Momiji"]
 [live2d_new name="sabalu" storage="sabalu"]
 
 
@@ -28,9 +28,6 @@
 
 ;背景　廊下
 
-;[live2d_show name="haru" x=3]
-[live2d_show name="sabalu" x=-3]
-
 学校全体が、特別な時間を楽しもうとしている生徒の[r]
 生き生きとした笑顔で溢れている。[p]
 
@@ -40,12 +37,8 @@
 木に囲まれていて静かな場所はやっぱり落ち着く。[p]
 
 早く終わらないかな。[p]
-
  
 ;雪雫表示
-
-[live2d_show name="haru" x=3]
-;[live2d_show name="sabalu" x=-3]
 
 #？？？
 「ねぇ、少し時間ある？」[p]
@@ -280,11 +273,11 @@
 オレらしくないこと言っちゃったけど、[r]
 嬉しそうだし、よかったかな。[p]
 
-;雪雫の表示消す 
+;雪雫の表示消す
 
-学校で話しかけられるなんて久しぶりだったな。[p] 
+学校で話しかけられるなんて久しぶりだったな。[p]
 
-また暇になった。[p] 
+また暇になった。[p]
 
 …早退して裏山で休もう。[p]
 

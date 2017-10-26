@@ -17,15 +17,14 @@
 [playbgm wait=false time=1 storage="07_string"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="haru" storage="Momiji"]
 [live2d_new name="sabalu" storage="sabalu"]
+
 
 
 ;タイトル　体育の時間
 
 ;背景　校庭
-;[live2d_show name="haru" x=3]
-[live2d_show name="sabalu" x=-3]
 
 #
 梅雨を迎え最近は雨続きだったが、[r]
@@ -67,11 +66,8 @@
 探してみると、校庭の片隅の木陰に座って[r]
 テニスコートを眺めている雪雫がいた。[p]
 
-[live2d_show name="haru" x=3]
-;[live2d_show name="sabalu" x=-3]
-
 #体育教師
-「それじゃあタイム測るから二人一組になって！」[p]
+「それじゃあタイム測るから2人1組になって！」[p]
 
 #
 光とペアになりオレが先に走ることになった。[p]

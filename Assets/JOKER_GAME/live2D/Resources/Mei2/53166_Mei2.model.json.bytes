@@ -1,0 +1,24 @@
+{
+	"type": "Live2D Model Setting",
+	"name": "53166_Mei2.model",
+	"model": "Mei2/53166_Mei2.moc",
+	"textures": [
+		"Mei2/53166_Mei2.2048/texture_00.png"
+	],
+	"motions":
+	{
+		"idle":
+			[
+				{"file":"Mei2/motions/mecya.mtn","fade_in":2000,"fade_out":2000}
+			],
+		"mecya":
+			[
+						{"file":"Mei2/motions/mecya.mtn","fade_in":500,"fade_out":500}
+			],
+		"mecyas":
+			[
+						{"file":"Mei2/motions/mecyas.mtn","fade_in":500,"fade_out":500}
+			]
+
+
+}

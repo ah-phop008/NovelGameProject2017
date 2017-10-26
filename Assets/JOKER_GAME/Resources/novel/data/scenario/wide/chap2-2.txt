@@ -19,6 +19,8 @@
 ;Live2dテスト
 [live2d_new name="haru" storage="haru"]
 [live2d_new name="sabalu" storage="sabalu"]
+[live2d_new name="Ryou" storage="Ryou"]
+[live2d_new name="Ryou" storage="chiaki"]
 
 
 
@@ -29,12 +31,19 @@
 薄いモヤのような霧が目の前を隠すように高校を覆っている。[p]
 [live2d_show name="haru" x=3]
 [live2d_show name="sabalu" x=-3]
+
+
+
 #蛍
 「光は野球部の練習があるんだっけ？」[p]
 
 #光
 「ああ。オレは校庭の方に行くから、[r]
 お前は学級委員の仕事、頑張れよ」[p]
+
+
+
+[live2d_hide name="sabalu" x=-3]
 #
 下駄箱の前で、校庭に向かう光と別れた後、[r]
 オレは早速学級委員の仕事をこなすために、[r]
@@ -52,6 +61,9 @@
 
 #蛍
 「すみません。２年Ｂ組の担任の先生はいらっしゃるでしょうか…」[p]
+
+
+[live2d_show name="Ryou" x=-3]
 
 #瞭
 「2年B組？私が今年度から受け持つクラスだな」[p]
@@ -71,11 +83,15 @@
 
 #蛍
 「分かりました」[p]
+[live2d_hide name="Ryou" x=-3]
+
 #
 先生の机の上に置いてあるプリントを人数分数え、職員室を出る。[p]
 出ようとした、その瞬間、[p]
 
 @bg_mod storage="rouka"
+
+[live2d_show name="chiaki" x=-3]
 
 #千秋
 「キャッ！あぶな…」[p]
@@ -96,6 +112,10 @@
 
 #千秋
 「大丈夫、ですから！…失礼します」[p]
+
+[live2d_hide name="chiaki" x=-3]
+
+
 #
 素っ気なく返事をすると、職員室の中に入っていった。[p]
 この時間に職員室に来るということは、同じ学級委員だろうか。[p]

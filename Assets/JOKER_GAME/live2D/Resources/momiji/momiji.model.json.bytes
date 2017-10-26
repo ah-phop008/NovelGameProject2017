@@ -5,12 +5,35 @@
 	"textures": [
 		"momiji/momiji.2048/texture_00.png"
 	],
-	"motions":
+
+
+"motions":
 	{
 		"idle":
 			[
-				{"file":"momiji/motions/sample.mtn","fade_in":2000, "fade_out":2000}
+				{"file":"momiji/motions/moidle.mtn","fade_in":2000, "fade_out":2000}
 			
+			],
+		"moidle":
+			[
+						{"file":"momiji/motions/moidle.mtn","fade_in":500,"fade_out":500}
+			],
+
+		"moidles":
+			[
+						{"file":"momiji/motions/moidles.mtn","fade_in":500,"fade_out":500}
+			],
+		"mosads":
+			[
+						{"file":"momiji/motions/mosads.mtn","fade_in":500,"fade_out":500}
+			],
+		"mosad":
+			[
+						{"file":"momiji/motions/mosad.mtn","fade_in":500,"fade_out":500}
 			]
+
+		
+
+
 	}
 }

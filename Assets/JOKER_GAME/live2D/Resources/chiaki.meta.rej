@@ -1,0 +1,11 @@
+diff a/Assets/JOKER_GAME/live2D/Resources/chiaki.meta b/Assets/JOKER_GAME/live2D/Resources/chiaki.meta	(rejected hunks)
+@@ -0,0 +1,9 @@
++fileFormatVersion: 2
++guid: c545055b1e7af9d419a2fba1a6aab0e1
++folderAsset: yes
++timeCreated: 1509068070
++licenseType: Free
++DefaultImporter:
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 

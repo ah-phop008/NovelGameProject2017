@@ -3,7 +3,9 @@
 	"name": "chiaki",
 	"model": "chiaki/chiaki.moc",
 	"textures": [
-		"chiaki/chiaki.2048/texture_00.png"
+		"chiaki/chiaki.2048/texture_00.png",
+		"chiaki/chiaki.2048/texture_01.png",
+		"chiaki/chiaki.2048/texture_02.png"
 	],
 
 
@@ -51,3 +53,4 @@
 
 			}	
 }
+

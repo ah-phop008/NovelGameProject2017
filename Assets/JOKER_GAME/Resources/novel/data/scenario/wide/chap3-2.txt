@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="room"]
+[bg_new name="background" storage="rouka"]
 [bg_show name="background"]
 
 ;メッセージ表示
@@ -17,95 +17,98 @@
 [playbgm wait=false time=1 storage="05_yuttari"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="Mei" storage="Mei"]
 [live2d_new name="sabalu" storage="sabalu"]
 
 
 一人で屋上への階段を上る。[r]
+@bg_mod storage="rooftop_noon"
 屋上の隅を陣取って弁当を食べ始めると、扉が開く音がした。[p]
 
 
-[live2d_show name="haru" x=3]
-[live2d_show name="sabalu" x=-3]
-
+[live2d_show name="Mei" x=-3 scale=4]
+[live2d_show name="sabalu" x=3]
+[live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
 #芽依
 「あれ、先客がいた」[p]
-
+[live2d_motion storage="meidle.mtn" name="Mei" idle="ON"]
 #蛍
 「………」[p]
-
+[live2d_motion storage="mehappys.mtn" name="Mei" idle="ON"]
 #芽依
 「ねぇ、わたしも一緒にご飯食べていい？」[p]
-
+[live2d_motion storage="mehappy.mtn" name="Mei" idle="ON"]
 #蛍
 「…勝手にしてください」[p]
-
+[live2d_motion storage="mesads.mtn" name="Mei" idle="ON"]
 #芽依
 「冷たいなぁ…。あなた、何年生？名前は？」[p]
+[live2d_motion storage="meidle.mtn" name="Mei" idle="ON"]
 
 #蛍
 「はぁ……。人の名前を聞く前に、そちらから名乗ったらどうですか…」[p]
-
+[live2d_motion storage="mehappys.mtn" name="Mei" idle="ON"]
 #芽依
 「私は木内芽依。三年生だよ」[p]
-
+[live2d_motion storage="mehappy.mtn" name="Mei" idle="ON"]
 #蛍
 「…オレは、雨宮蛍。2年B組です」[p]
 
+[live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
 #芽依
 「へぇ。二年生ね。いつもここで一人で食べてるの？」[p]
-
+[live2d_motion storage="meidle.mtn" name="Mei" idle="ON"]
 #蛍
 「いつもは幼馴染と食べてますけど…」[p]
-
+[live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
 #芽依
 「蛍くんは部活何やってるの？」[p]
-
+[live2d_motion storage="meidle.mtn" name="Mei" idle="ON"]
 #蛍
 「ほ…蛍くん……」[p]
-
+[live2d_motion storage="mesads.mtn" name="Mei" idle="ON"]
 #芽依
 「あ、名前呼ぶの駄目？」[p]
-
+[live2d_motion storage="mesad.mtn" name="Mei" idle="ON"]
 #蛍
 「いや、別に気にしませんけど…。部活は、やってませんよ。中学の頃もやってませんでしたし」[p]
-
+[live2d_motion storage="mehappys.mtn" name="Mei" idle="ON"]
 #芽依
 「じゃ、帰宅部だね」[p]
-
+[live2d_motion storage="mehappy.mtn" name="Mei" idle="ON"]
 #蛍
 「そういう先輩は何部なんですか？」[p]
-
+[live2d_motion storage="mesads.mtn" name="Mei" idle="ON"]
 #芽依
 「わたし…、私は、バレーボール部、だったけど…」[p]
-
+[live2d_motion storage="mesad.mtn" name="Mei" idle="ON"]
 #蛍
 「だったけど…？」[p]
-
+[live2d_motion storage="mesads.mtn" name="Mei" idle="ON"]
 #芽依
 「…やる気がなくなってやめちゃったんだよね…」[p]
-
+[live2d_motion storage="mesad.mtn" name="Mei" idle="ON"]
 #蛍
 「………」[p]
 
 #
 （鐘の音）[p]
-
+[live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
 #芽依
 「チャイム鳴ちゃった…。戻らなきゃ…」[p]
-
+[live2d_motion storage="meidle.mtn" name="Mei" idle="ON"]
 #蛍
 「…そうですね」[p]
-
+[live2d_motion storage="mesads.mtn" name="Mei" idle="ON"]
 #芽依
 「また会える…？」[p]
-
+[live2d_motion storage="mesad.mtn" name="Mei" idle="ON"]
 #蛍
 「…大体ここで、授業サボってるので」[p]
-
+[live2d_motion storage="mehappys.mtn" name="Mei" idle="ON"]
 #芽依
 「そっか。じゃあ、また会えるね」[p]
-
+[live2d_motion storage="mehappy.mtn" name="Mei" idle="ON"]
 
 
 

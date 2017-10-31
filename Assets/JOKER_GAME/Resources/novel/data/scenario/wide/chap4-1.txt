@@ -17,67 +17,66 @@
 [playbgm wait=false time=1 storage="06_asa"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="Ryou" storage="Ryou" scale=4]
 [live2d_new name="sabalu" storage="sabalu"]
 
 
 今日も授業をサボろうと、屋上を目指して廊下を進む。[p]
 
 
-[live2d_show name="haru" x=3]
-[live2d_show name="sabalu" x=-3]
+
+[live2d_show name="sabalu" x=3]
 
 #瞭
 「おい、雨宮」[p]
-
+[live2d_show name="Ryou" x=-3]
 ふいに後ろから名前を呼ばれ、振り返ると、先生が立っていた。[p]
 
 #蛍
 「…なんでしょうか？」[p]
-
+[live2d_motion storage="rysads.mtn" name="Ryou" idle="ON"]
 #瞭
 「なんでしょうかじゃないだろう。今は授業中のはずなんだが。[r]
 君はなんでこの時間に廊下を歩いているんだ？」[p]
-
+[live2d_motion storage="rysad.mtn" name="Ryou" idle="ON"]
 #蛍
 「授業がだるいので」[p]
-
+[live2d_motion storage="rysads.mtn" name="Ryou" idle="ON"]
 #瞭
 「…全く。…しょうがないな」[p]
-
+[live2d_motion storage="rysad.mtn" name="Ryou" idle="ON"]
 #蛍
 「見逃してくれるんですか？」[p]
-
+[live2d_motion storage="ryidles.mtn" name="Ryou" idle="ON"]
 #瞭
 「授業を聞く気も出る気もない奴を強制的に授業に出させても無意味だろう」[p]
 「それに、噂に聞くと、君は委員会の仕事はそこそここなしているみたいだしな」[p]
-
+[live2d_motion storage="ryidle.mtn" name="Ryou" idle="ON"]
 #蛍
 「はぁ…」[p]
-
+[live2d_motion storage="ryhutus.mtn" name="Ryou" idle="ON"]
 #瞭
 「君は、授業にはあまり出てないみたいだが…、部活には興味はないのか？」[p]
-
+[live2d_motion storage="ryhutu.mtn" name="Ryou" idle="ON"]
 #蛍
 「…ありませんね」[p]
-
+[live2d_motion storage="rysads.mtn" name="Ryou" idle="ON"]
 #瞭
 「そうか。それは残念だな…。君は、体育の授業には最近出ていないと聞いたが、[r]
-
 体力測定の結果は素晴らしかったようじゃないか」[p]
-
+[live2d_motion storage="rysad.mtn" name="Ryou" idle="ON"]
 #蛍
 「そんなことありませんよ。買いかぶりすぎです」[p]
-
+[live2d_motion storage="ryidles.mtn" name="Ryou" idle="ON"]
 #瞭
 「君にその気があったら、是非ともわたしの部活に入ってもらいたかったな」[p]
-
+[live2d_motion storage="ryidle.mtn" name="Ryou" idle="ON"]
 #蛍
 「……。先生が顧問を務めている部活…、陸上部でしたっけ？」[p]
-
+[live2d_motion storage="ryhutus.mtn" name="Ryou" idle="ON"]
 #瞭
 「そうだよ。まぁ、もし興味が出たらまた声をかけてくれ」[p]
-
+[live2d_motion storage="ryhutu.mtn" name="Ryou" idle="ON"]
 #蛍
 「はぁ…」[p]
 

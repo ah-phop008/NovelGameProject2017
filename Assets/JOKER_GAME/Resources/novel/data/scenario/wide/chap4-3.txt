@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="rouka"]
+[bg_new name="background" storage="schoolroad_night"]
 [bg_show name="background"]
 
 ;メッセージ表示
@@ -17,7 +17,7 @@
 [playbgm wait=false time=1 storage="09_kurai"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="Mei" storage="Mei" scale=4]
 [live2d_new name="sabalu" storage="sabalu"]
 
 
@@ -25,49 +25,51 @@
 目の前の大きな背中を道しるべに、薄暗い道を進んでいた。[p]
 
 
-[live2d_show name="haru" x=3]
+[live2d_show name="Mei" x=3]
 [live2d_show name="sabalu" x=-3]
+[live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
 #光
 「…今日、何かあったのか？」[p]
-
+[live2d_motion storage="meidle.mtn" name="Mei" idle="ON"]
 #
 光が、いつになく真剣そうな顔で尋ねてきた。[p]
 
 #蛍
 「え………」[p]
-
+[live2d_motion storage="mesads.mtn" name="Mei" idle="ON"]
 #光
 「いつもと、様子が違う」[p]
-
+[live2d_motion storage="mesad.mtn" name="Mei" idle="ON"]
 #蛍
 「やっぱ、光は、わかるんだな…」[p]
-
+[live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
 #光
 「分かるよ、お前のことなら。何年お前と一緒にいると思ってるんだよ」[p]
-
+[live2d_motion storage="meidle.mtn" name="Mei" idle="ON"]
 #蛍
 「そうだな…」[p]
 「…久しぶりに、嫌な夢をみたんだ」[p]
-
+[live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
 #光
 「嫌な夢って、あの時の…？」[p]
-
+[live2d_motion storage="mesad.mtn" name="Mei" idle="ON"]
 #蛍
 「あぁ…。なんでだろうな。[r]
 もう何年も…、小学校を卒業してから、見ることはなかったんだけどな…」[p]
-
+[live2d_motion storage="mesads.mtn" name="Mei" idle="ON"]
 #光
 「………大丈夫か？」[p]
-
+[live2d_motion storage="mesad.mtn" name="Mei" idle="ON"]
 #蛍
 「大丈夫…。ただ、ただ…嫌な予感がする……」[p]
 「実は、今年の春から、ずっと嫌な予感がしてたんだ。具体的には言えないけど、[r]
 何か起きるような気がする」[p]
-
+[live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
 #光
 「…気にするなよ。何があっても、オレは絶対お前のそばにいるから」[p]
 「何があっても、オレがお前を守るから…」[p]
-
+[live2d_motion storage="meidle.mtn" name="Mei" idle="ON"]
+@playse storage="wind" wait=false
 #
 ざぁぁぁぁぁぁぁっと風が吹いた。[p]
 あの時も通った、桜並木の道だ。[r]

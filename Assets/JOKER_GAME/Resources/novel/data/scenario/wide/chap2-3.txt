@@ -17,39 +17,42 @@
 [playbgm wait=false time=1 storage="04_sannbyousi"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="Ryou" storage="Ryou" scale=4]
 [live2d_new name="sabalu" storage="sabalu"]
 
 
-[live2d_show name="haru" x=3]
-[live2d_show name="sabalu" x=-3]
+[live2d_show name="Ryou" x=-3]
+[live2d_show name="sabalu" x=3]
 
 #蛍
 「ごめん、光。昼食食べる時間、短くなって」[p]
-
+[live2d_motion storage="ryhutus.mtn" name="Ryou" idle="ON"]
 #光
 「別にいいよ。オレが蛍と食べたいだけだから。[r]
 ところで学級委員、どうだった？大変そう？」[p]
+[live2d_motion storage="ryhutu.mtn" name="Ryou" idle="ON"]
 
 #蛍
 「パートナーとか組まされた。めんどくさそうだ…」[p]
-
+[live2d_motion storage="ryhutus.mtn" name="Ryou" idle="ON"]
 #光
 「蛍が委員会とかやるの、珍しい」[p]
+[live2d_motion storage="ryhutu.mtn" name="Ryou" idle="ON"]
 
 #蛍
 「できるだけ、そういうのはやりたくないからな、面倒だし」[p]
-
+[live2d_motion storage="ryhutus.mtn" name="Ryou" idle="ON"]
 #光
 「でも、どうしてもって言われて引き受けちゃうの、蛍っぽい」[p]
 #光
 「なんだかんだで、優しいよな、蛍は」[p]
-
+[live2d_motion storage="ryhutu.mtn" name="Ryou" idle="ON"]
 #蛍
 「別に、優しくなんか…」[p]
-
+[live2d_motion storage="ryidles.mtn" name="Ryou" idle="ON"]
 #光
 「でも、無理はするなよ」[p]
+[live2d_motion storage="ryidle.mtn" name="Ryou" idle="ON"]
 
 #蛍
 「無理なんてするわけないだろ…」[p]

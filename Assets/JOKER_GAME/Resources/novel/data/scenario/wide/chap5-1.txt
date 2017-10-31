@@ -17,7 +17,7 @@
 [playbgm wait=false time=1 storage="06_asa"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="Momiji" storage="Momiji"]
 [live2d_new name="sabalu" storage="sabalu"]
 
 
@@ -25,8 +25,8 @@
 6月に入り、文化祭まで３週間を切ったせいか、オレのようなやる気のない人間を除いた学校中のほとんど全ての人間が、廊下や校庭、教室をせわしく動き回っている。[p]
 
 
-[live2d_show name="haru" x=3]
-[live2d_show name="sabalu" x=-3]
+;[live2d_show name="haru" x-=3]
+[live2d_show name="sabalu" x=3]
 
 #モブ女
 「雨宮くん！暇なら衣装係を手伝ってくれない？」[p]
@@ -42,9 +42,11 @@
 
 @stopbgm time=0.5
 @playbgm storage="01_kanasii"
+@live2d_show name="Momiji" x=-3
+[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #？？？
 「あの…、衣装、作ってきたのだけれど…」[p]
-
+[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 #
 不満げな女子に、消えそうなか細い声がかかる。[r]
 声のする方を見ると、そこには長い銀髪の少女が衣装らしきものを持って立っていた。[p]

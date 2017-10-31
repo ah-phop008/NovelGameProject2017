@@ -17,7 +17,7 @@
 [playbgm wait=false time=1 storage="06_asa"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="Ryou" storage="Ryou" scale=4]
 [live2d_new name="sabalu" storage="sabalu"]
 
 
@@ -34,40 +34,53 @@
 
 #蛍
 「もしもし。」[p]
-[live2d_show name="haru" x=3]
+[live2d_show name="Ryou" x=3]
 ;[live2d_show name="sabalu" x=-3]
-
+[live2d_motion storage="ryhutus.mtn" name="Ryou" idle="ON"]
 #光
 「あ、蛍？もう顔合わせ終わった？今どこにいる？」[p]
+[live2d_motion storage="ryhutu.mtn" name="Ryou" idle="ON"]
 #蛍
 「今？A組の教室の前にいるけど…」[p]
 
+[live2d_motion storage="ryidles.mtn" name="Ryou" idle="ON"]
 #光
 「は！？それならそうと早く言えよ！」[p]
+[live2d_motion storage="ryidle.mtn" name="Ryou" idle="ON"]
 
 #蛍
 「いや、だって、お前友達と話してたから……」[p]
 
+[live2d_motion storage="rysads.mtn" name="Ryou" idle="ON"]
 #光
 「そんなの、お前に比べたら…」[p]
+
+[live2d_motion storage="rysad.mtn" name="Ryou" idle="ON"]
+@live2d_hide name="Ryou"
 #
 光がなにか言うが、急に接続が不安定になり、通話が切れる。[r]
 スマートフォンをスラックスのポケットにしまった瞬間、[l][r]
 A組の右端の扉が開いた。[r]
 中から、光と、A組だと思われる女子が出てきた。[p]
 
+@live2d_show name="Ryou"
+
 @stopbgm wait=false
 @playbgm storage="09_kurai" 
+[live2d_motion storage="ryidles.mtn" name="Ryou" idle="ON"]
 #光
 「帰るぞ、蛍」[p]
+[live2d_motion storage="ryidle.mtn" name="Ryou" idle="ON"]
 ;[live2d_show name="haru" x=3]
 [live2d_show name="sabalu" x=-3]
 
 #モブ女
 「光くん！これから皆でカラオケに行くんだけど光くんも…」[p]
 
+[live2d_motion storage="ryhutus.mtn" name="Ryou" idle="ON"]
 #光
 「ごめん、オレ、こいつと帰るから」[p]
+[live2d_motion storage="ryhutu.mtn" name="Ryou" idle="ON"]
 #
 光がにこやかに笑って断ると、女子が頬を染めた。[r]
 俗にいうイケメンに分類される光の笑顔に中てられた女子が、[l][r]
@@ -85,15 +98,19 @@ A組の右端の扉が開いた。[r]
 
 #蛍
 「……お前、さっきから何怒ってんだよ」[p]
-
+[live2d_motion storage="ryidles.mtn" name="Ryou" idle="ON"]
 #光
 「やっぱ、蛍には分かるんだな」[p]
+[live2d_motion storage="ryidle.mtn" name="Ryou" idle="ON"]
 
 #蛍
 「当たり前だろ。何年一緒にいると思ってんだよ」[p]
 
+[live2d_motion storage="ryhutus.mtn" name="Ryou" idle="ON"]
 #光
 「10年だな」[p]
+[live2d_motion storage="ryhutu.mtn" name="Ryou" idle="ON"]
+@playse storage="wind" wait=false
 #
 ザアアアアアア、と風が吹いて散りかけた桜の花弁が舞った。[r]
 光が橋の欄干に肘を置き、川の先に沈む夕陽を眺め、目を細める。[l][r]
@@ -102,21 +119,27 @@ A組の右端の扉が開いた。[r]
 あの頃の自分と、今の自分、別人のように変わってしまった。[r]
 でも、隣に光がいる、それだけは変わらない。[p]
 
+[live2d_motion storage="ryidles.mtn" name="Ryou" idle="ON"]
 #光
 「無理するなよ。何かあったらすぐオレに言ってくれ」[p]
+[live2d_motion storage="ryidle.mtn" name="Ryou" idle="ON"]
 
 #蛍
 「…ありがとな。けど、大丈夫だ。オレはお前以外の友達なんて[r]
 いらないし、もう誰も信用しない。もう誰も好きにもならない」[p]
 
+[live2d_motion storage="rysads.mtn" name="Ryou" idle="ON"]
 #光
 「だから、心配なんだろ」[p]
+[live2d_motion storage="rysad.mtn" name="Ryou" idle="ON"]
 
 #蛍
 「今までそれで生きてこれたんだ。これからだって…」[p]
 
+[live2d_motion storage="rysads.mtn" name="Ryou" idle="ON"]
 #光
 「…なんか、悪い予感がするんだ…」[p]
+[live2d_motion storage="ryidle.mtn" name="Ryou" idle="ON"]
 
 光が細めた目をゆっくりと開いた。[p]
 

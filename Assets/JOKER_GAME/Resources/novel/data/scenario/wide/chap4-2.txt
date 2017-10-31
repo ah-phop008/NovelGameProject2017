@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="room"]
+[bg_new name="background" storage="livingroom_evening"]
 [bg_show name="background"]
 
 ;メッセージ表示
@@ -17,7 +17,7 @@
 [playbgm wait=false time=1 storage="01_kanasii"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="chiaki" storage="chiaki" scale=4]
 [live2d_new name="sabalu" storage="sabalu"]
 
 
@@ -26,7 +26,7 @@
 先ほどまで感じていた寝苦しさのせいか、まるで夢を見ているかのように、意識がぼんやりとしている。[p]
 汗をぬぐおうと、手を頬にあてる。[p]
 その瞬間、頬にべったりとした液体がこびりついた。[p]
-
+@image_new name="redskull25" storage="redskull25" scale=3
 （これは……）[p]
 
 （これは何だ……？）[p]
@@ -34,7 +34,7 @@
 心臓が、うるさいぐらいに音をたてる。[p]
 ゆっくりと、おそるおそる、自分の顔の前で、手を開く。[r]
 視界に映ったのは、赤い、赤い、[p]
-
+@image_show name="redskull25"
 （赤………？）[p]
 
 #蛍
@@ -60,7 +60,7 @@
 
 
 ;[live2d_show name="haru" x=3]
-[live2d_show name="sabalu" x=-3]
+[live2d_show name="sabalu" x=0]
 
 #蛍
 「母さん……………………………………？」[p]
@@ -71,24 +71,25 @@
 
 
 
-[live2d_show name="haru" x=3]
-;[live2d_show name="sabalu" x=-3]
 @stopbgm time=0.5
 #千秋
 「先輩！せーーーんぱい！起きてくださいよ！」[p]
+@image_hide name="redskull25"
+@live2d_hide name="sabalu"
+@bg_mod storage="seitokai_evening"
 @playbgm storage="08_nitijou"
 
 #
 は、と目が覚めた。[p]
 まだ、ドクドクと心臓が鳴っている。[r]
 視界には、金髪の少女――――――――――有栖川千秋が大きく映っていた。[p]
-
+@live2d_show name="chiaki" x=-3
 #蛍
 「ん………」[p]
-
+[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #千秋
 「ん…。じゃないですよ！学祭でのクラスの出し物の報告、先輩の番ですよ！」[p]
-
+[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 #
 重い体で、何とか立ち上がる。[p]
 
@@ -96,39 +97,39 @@
 「…あぁ…、ええっと、2年B組のクラス企画は、演劇に決まりました」[p]
 
 
-
+[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #千秋
 「もう！先輩！委員会中に寝るのはやめてください！」[p]
-
+[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 #蛍
 「…それぐらい、いいだろ。ちゃんと委員会に出席してるし」[p]
-
+[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #千秋
 「それは当たり前です！しっかり話を聞いてください！」[p]
-
+[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 #蛍
 「はいはい…」[p]
 
 #
 ぞんざいに返事をすると、声を荒げる。[p]
-
+[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
 #千秋
 「もう、真面目に聞いてくださいよ！[r]
 大体、先輩、うなされていましたよ…、すごく、苦しそうだったから…」[p]
-
+[live2d_motion storage="chclose.mtn" name="chiaki" idle="ON"]
 #蛍
 「心配しなくても、大丈夫だ」[p]
-
+[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #千秋
 「はぁ！？…別に、心配なんかしてませんっ！[r]
 ただ、先輩の、寝言がうるさいから、私が、迷惑だから…っ！」[p]
-
+[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 #蛍
 「……はいはい」[p]
-
+[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #千秋
 「だ、だから、真面目に聞けって言ってるじゃないですかっ～～～！！！！」[p]
-
+[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 
 
 

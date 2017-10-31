@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="room"]
+[bg_new name="background" storage="livingroom_evening"]
 [bg_show name="background"]
 
 ;メッセージ表示
@@ -17,10 +17,13 @@
 [playbgm wait=false time=1 storage="09_kurai"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
 [live2d_new name="sabalu" storage="sabalu"]
 
+@image_new name="redskull25" storage="redskull25"  scale=4
+
 足元に母さんが倒れている。[p]
+@image_show name="redskull25"
+@live2d_show name="sabalu" x=0
 そっと触れると、指に血がこびりつく。[r]
 息はまだある。[p]
 
@@ -29,7 +32,7 @@
 （そうだ…、そうだ…、）[p]
 
 
-[live2d_show name="haru" x=3]
+
 #蛍
 「病院、病院に電話しなきゃ…」[p]
 
@@ -43,7 +46,8 @@
 「お願いします！お母さんを…！」[p]
 「お母さんが、死にそうなんです…！」[p]
 「助けてください…！」[p]
-
+@live2d_hide name="sabalu" scale=4
+@image_hide name="redskull25"
 #
 気が付くと、薄暗い廊下に立っていた。[p]
 目の前の部屋の「手術中」と書かれた赤い文字が爛々と光っている。[p]
@@ -65,7 +69,8 @@
 
 #医者
 「残念ですが…、お母さんは………」[p]
-
+@image_new name="blackskull" storage="blackskull" scale=4
+@image_show name="blackskull"
 「助かりませんでした」[p]
 
 

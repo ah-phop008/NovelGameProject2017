@@ -17,7 +17,7 @@
 [playbgm wait=false time=1 storage="08_nitijou"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="haru"]
+[live2d_new name="Momiji" storage="Momiji"]
 [live2d_new name="sabalu" storage="sabalu"]
 
 
@@ -32,41 +32,42 @@
 #？？？
 「今日のホームルーム、教室にいなかったわよね？」[p]
 
-[live2d_show name="haru" x=3]
-[live2d_show name="sabalu" x=-3]
+[live2d_show name="Momiji" x=-3]
+[live2d_show name="sabalu" x=3]
 #蛍
 「え？ああ…」[p]
-
+[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #？？？
 「これ、プリント。園芸委員からの文化祭に関するアンケートだから」[p]
-
+[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 #蛍
 「あぁ、ありがとう」[p]
-
+[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #？？？
 「ここの席、よく景色が見えるのね」[p]
+[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 #
 集め終わったと思われるアンケートを抱えて窓の外を見つめながら言った。[p]
-
+[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #？？？
 「私、明るい空って好きじゃないの」[p]
-
+[live2d_motion storage="mosads.mtn" name="Momiji" idle="ON"]
 #？？？
 「どこまで続いているのかわからない空に[r]
 見透かされている感じがするから」[p]
-
 #？？？
 「なんだか怖くて」[p]
-
+[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 #蛍
 「特に何も考えてないかな。ここにいても暇だし」[p]
-
+[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #？？？
 「余計な話をしてしまってごめんなさい。[r]
 プリント、目を通しておいてもらえると嬉しい」[p]
-
+[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 #蛍
 「分かった」[p]
+@live2d_hide name="Momiji"
 #
 プリントを一枚だけ渡して、オレの席から離れていった。[p]
 

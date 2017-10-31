@@ -1,0 +1,10 @@
+diff a/Assets/JOKER_GAME/Resources/novel/data/scenario/wide/3chara05.txt.meta b/Assets/JOKER_GAME/Resources/novel/data/scenario/wide/3chara05.txt.meta	(rejected hunks)
+@@ -1,6 +1,6 @@
+ fileFormatVersion: 2
+-guid: e49147536c18e0042a705ca01fdaf03f
+-timeCreated: 1504236671
++guid: 61e967db7d6fd8d4fad7cd26a1ed5d16
++timeCreated: 1509068079
+ licenseType: Free
+ TextScriptImporter:
+   userData: 

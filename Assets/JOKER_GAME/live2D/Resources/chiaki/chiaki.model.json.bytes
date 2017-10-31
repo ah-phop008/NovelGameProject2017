@@ -11,8 +11,43 @@
 	{
 		"idle":
 			[
-				{"file":"chiaki/motions/idle1.mtn","fade_in":2000, "fade_out":2000}
+				{"file":"chiaki/motions/chidle.mtn","fade_in":2000, "fade_out":2000}
+			
+			],
+		"chidle":
+			[
+				{"file":"chiaki/motions/chidle.mtn","fade_in":500, "fade_out":500}
+			
+			],
+		"chidles":
+			[
+				{"file":"chiaki/motions/chidles.mtn","fade_in":500, "fade_out":500}
+			
+			],
+		"chclose":
+			[
+				{"file":"chiaki/motions/chclose.mtn","fade_in":500, "fade_out":500}
+			
+			],
+		"chcloses":
+			[
+				{"file":"chiaki/motions/chcloses.mtn","fade_in":500, "fade_out":500}
+			
+			],
+		"chhappy":
+			[
+				{"file":"chiaki/motions/chhappy.mtn","fade_in":500, "fade_out":500}
+			
+			],
+		"chhappys":
+			[
+				{"file":"chiaki/motions/chhappys.mtn","fade_in":500, "fade_out":500}
 			
 			]
-	}	
+
+	
+
+
+
+			}	
 }

@@ -1,6 +1,6 @@
 {
 	"type": "Live2D Model Setting",
-	"name": "53166_Mei2.model",
+	"name": "53166_Mei2",
 	"model": "Mei2/53166_Mei2.moc",
 	"textures": [
 		"Mei2/53166_Mei2.2048/texture_00.png"
@@ -19,6 +19,7 @@
 			[
 						{"file":"Mei2/motions/mecyas.mtn","fade_in":500,"fade_out":500}
 			]
+	}
 
 
 }

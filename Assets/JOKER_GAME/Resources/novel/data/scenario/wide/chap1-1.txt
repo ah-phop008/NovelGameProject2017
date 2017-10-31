@@ -1,4 +1,4 @@
-﻿@call file=wide/libs/utils
+﻿q@call file=wide/libs/utils
 [bg_new name="background" storage="room"]
 [bg_show name="background"]
 
@@ -21,7 +21,7 @@
 オレは霞ヶ丘高校の二年生に進級する。[p]
 
 ９歳の頃に起きたあの事件以来、
-[l]オレは幼馴染の光以外と新しい関係を[l][r]
+オレは幼馴染の光以外と新しい関係を[r]
 築くことはなくなった。[p]
 
 あの時から、代り映えはしないが、平和な毎日。[r]
@@ -39,7 +39,7 @@
 ;ここでキャラ表示
 
 ;Live2dテスト
-[live2d_new name="haru" storage="Mei" ]
+[live2d_new name="haru" storage="chiaki" ]
 [live2d_new name="sabalu" storage="sabalu"]
 [live2d_show name="haru" x=3]
 [live2d_show name="sabalu" x=-3]
@@ -48,12 +48,12 @@
 #蛍
 「ああ、光」[p]
 
-[live2d_motion storage="mesads.mtn" name="haru" idle="ON"]
+[live2d_motion storage="chidles.mtn" name="haru" idle="ON"]
 
 
 #光
 「クラス替え、どうだった？オレは、A組だったんだけど」[p]
-[live2d_motion storage="meidle.mtn" name="haru" idle="ON"]
+[live2d_motion storage="chidle.mtn" name="haru" idle="ON"]
 #蛍
 「オレは、B組。っていうことは、別々だな。」[p]
 #光

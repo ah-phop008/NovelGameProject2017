@@ -222,7 +222,7 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2104167268}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 5216b4455605fb949aaf61b00d9c0538, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 6f45073886aea744eb414dd2fe52b74f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera: {fileID: 922818281}
   m_TargetTexture: {fileID: 0}
@@ -234,7 +234,7 @@ VideoPlayer:
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
   m_TargetAudioSources:
-  - {fileID: 2104167272}
+  - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
   m_Url: 
@@ -337,7 +337,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

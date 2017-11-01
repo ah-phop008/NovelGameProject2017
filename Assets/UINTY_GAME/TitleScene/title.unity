@@ -16422,7 +16422,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -16442,7 +16442,7 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1974643900}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 5216b4455605fb949aaf61b00d9c0538, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 6f45073886aea744eb414dd2fe52b74f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera: {fileID: 1575386788}
   m_TargetTexture: {fileID: 0}

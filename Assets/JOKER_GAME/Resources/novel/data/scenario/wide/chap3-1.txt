@@ -18,19 +18,16 @@
 
 ;Live2dテスト
 [live2d_new name="chiaki" storage="chiaki" scale=4]
-[live2d_new name="sabalu" storage="sabalu"]
 
 
 朝
 [live2d_show name="chiaki" x=-3]
-;[live2d_show name="sabalu" x=3]
+
 [live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #光
 「おはよう、蛍」[p]
 [live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 
-;[live2d_show name="haru" x=3]
-[live2d_show name="sabalu" x=-3]
 #蛍
 「…はよ」[p]
 [live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]

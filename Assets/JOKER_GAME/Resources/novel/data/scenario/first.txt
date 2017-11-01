@@ -7,7 +7,7 @@
 ;@call file=libs/utils
 
 ;横バージョン読み込み
-@jump file=wide/3chara01
+@jump file=wide/chap2-2
 
 ;縦バージョン読み込み
 ;@jump file=tall/title

@@ -18,7 +18,6 @@
 
 ;Live2dテスト
 [live2d_new name="Momiji" storage="Momiji"]
-[live2d_new name="sabalu" storage="sabalu"]
 [live2d_new name="Ryou" storage="Ryou" scale=4]
 [live2d_new name="chiaki" storage="chiaki" scale=4]
 
@@ -30,7 +29,6 @@
 田舎の高地に建っているせいか、[r]
 薄いモヤのような霧が目の前を隠すように高校を覆っている。[p]
 [live2d_show name="Momiji" x=-3]
-[live2d_show name="sabalu" x=3]
 
 
 
@@ -95,6 +93,7 @@
 先生の机の上に置いてあるプリントを人数分数え、職員室を出る。[p]
 出ようとした、その瞬間、[p]
 
+[live2d_remove name="Ryou"]
 @bg_mod storage="rouka"
 
 [live2d_show name="chiaki" x=-3]
@@ -238,7 +237,7 @@
 [live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
 #千秋
 「はぁ…窓の外ばっかり見てると思ってたら、やっぱり話聞いてなかったんですね…」[p]
-「6月の文化祭に向けて、学級委員ではもう仕事を始めないといけないんです。[r]
+「6月の文化祭に向けて、学級委員ではもう仕事を始めないといけないんです。[p]
 それで、効率良く仕事を消化するために、先輩と後輩で、パートナーになって協力して[r]
 仕事を進めるんですよ」[p]
 [live2d_motion storage="chclose.mtn" name="chiaki" idle="ON"]

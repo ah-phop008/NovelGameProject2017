@@ -18,11 +18,9 @@
 
 ;Live2dテスト
 [live2d_new name="Ryou" storage="Ryou" scale=4]
-[live2d_new name="sabalu" storage="sabalu"]
 
 
 [live2d_show name="Ryou" x=-3]
-[live2d_show name="sabalu" x=3]
 
 #蛍
 「ごめん、光。昼食食べる時間、短くなって」[p]

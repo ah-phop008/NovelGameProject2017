@@ -18,7 +18,7 @@
 
 ;Live2dテスト
 [live2d_new name="Momiji" storage="Momiji"]
-[live2d_new name="sabalu" storage="sabalu"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 
 屋上から教室に戻ると、既にホームルームが終わっていた。[p]
@@ -33,7 +33,7 @@
 「今日のホームルーム、教室にいなかったわよね？」[p]
 
 [live2d_show name="Momiji" x=-3]
-[live2d_show name="sabalu" x=3]
+;[live2d_show name="sabalu" x=3]
 #蛍
 「え？ああ…」[p]
 [live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]

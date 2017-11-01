@@ -17,67 +17,67 @@
 [playbgm wait=false time=1 storage="04_sannbyousi"]
 
 ;Live2dテスト
-[live2d_new name="chiaki" storage="chiaki" scale=4]
+;[live2d_new name="chiaki" storage="chiaki" scale=4]
 
 
 朝
-[live2d_show name="chiaki" x=-3]
+;[live2d_show name="chiaki" x=-3]
 
-[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #光
 「おはよう、蛍」[p]
-[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 
 #蛍
 「…はよ」[p]
-[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #光
 「今日も学級委員の集まりがあるの？」[p]
-[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 
 #蛍
 「いや、今日はない[r]
 けど、ホームルームで学祭について話さないといけない」[p]
-[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
 #光
 「そっか。学祭ももう二か月後か。うちの学祭、六月だしね[r]
 そういえば、他のクラスが出し物を決めて準備しているところを見たな」[p]
-[live2d_motion storage="chclose.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chclose.mtn" name="chiaki" idle="ON"]
 
 #蛍
 「…学祭…めんどくさい…」[p]
 
-[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #光
 「あ、今日、昼に部活の集まりがあるみたいだから、一緒にご飯食べられないんだけど…」[p]
-[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 
 #蛍
 「ああ…、適当に食べるから、大丈夫」[p]
 
-[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
 #光
 「適当って、どうせまた一人で屋上で食べるつもりだろ」[p]
-[live2d_motion storage="chclose.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chclose.mtn" name="chiaki" idle="ON"]
 
 #蛍
 「……………」[p]
-[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #光
 「オレがいないときはいつも一人で弁当食べてるだろ」[p]
-[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 #蛍
 「うるさい…」[p]
-[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
 #光
 「ってもうこんな時間か。急がないと、一限に間に合わないな」[p]
-[live2d_motion storage="chclose.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chclose.mtn" name="chiaki" idle="ON"]
 #蛍
 「…別に間に合わなかったら、屋上にいればいいだけだろ」[p]
-[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #光
 「授業はちゃんと出ろって言ってるだろ…」[p]
-[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #蛍
 「間に合ったらな」[p]
 

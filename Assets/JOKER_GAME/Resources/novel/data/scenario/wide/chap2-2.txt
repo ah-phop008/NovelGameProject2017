@@ -17,7 +17,7 @@
 [playbgm wait=false time=1 storage="05_yuttari"]
 
 ;Live2dテスト
-[live2d_new name="Momiji" storage="Momiji"]
+;[live2d_new name="Momiji" storage="Momiji"]
 [live2d_new name="Ryou" storage="Ryou" scale=4]
 [live2d_new name="chiaki" storage="chiaki" scale=4]
 
@@ -28,21 +28,21 @@
 早歩きで来たお陰か、７時30分にはなんとか高校に着いた。[r]
 田舎の高地に建っているせいか、[r]
 薄いモヤのような霧が目の前を隠すように高校を覆っている。[p]
-[live2d_show name="Momiji" x=-3]
+;[live2d_show name="Momiji" x=-3]
 
 
 
 #蛍
 「光は野球部の練習があるんだっけ？」[p]
 
-[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #光
 「ああ。オレは校庭の方に行くから、[r]
 お前は学級委員の仕事、頑張れよ」[p]
-[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 
 
-[live2d_hide name="Momiji"]
+;[live2d_hide name="Momiji"]
 #
 下駄箱の前で、校庭に向かう光と別れた後、[r]
 オレは早速学級委員の仕事をこなすために、[r]
@@ -132,11 +132,11 @@
 いつの間にか昼食の時間になっていた。[p]
 
 昼食は、いつも光と食べている。[p]
-@live2d_show name="Momiji" x=-3
-[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
+;@live2d_show name="Momiji" x=-3
+;[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #光
 「いたいた、蛍。お昼、今日はどこで食べようか？」[p]
-[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 #
 いつも通り、教室のドアの間から、高身長の男がひょいっと顔を出す。[p]
 
@@ -151,34 +151,34 @@
 #モブ
 「今日のお昼の時間、学級委員の集まりがあるらしいぞ[r]
 先生に、雨宮くんに伝えろって言われて…」[p]
-[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #光
 「それって、どこの教室？」[p]
-[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 #モブ
 「114教室だってさ」[p]
-[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #光
 「そう。ありがとう。」[p]
-[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 #
 光はモブににっこり笑ってお礼を言うと、歩き出した。[p]
-[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #光
 「114教室まで送って行くよ。さ、行こう」[p]
-[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 
 #蛍
 「いや…一人で行くけど…。恥ずかしいだろ…」[p]
-[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidles.mtn" name="Momiji" idle="ON"]
 #光
 「まぁまぁ」[p]
-[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
+;[live2d_motion storage="moidle.mtn" name="Momiji" idle="ON"]
 #
 そう言って、光が隣を歩く。[p]
 こいつは昔から、オレに対してとても過保護だ。[r]
 そんなところに、助けられることも多いのだが。[p]
-@live2d_hide name="Momiji"
+;@live2d_hide name="Momiji"
 @bg_mod storage="room"
 #
 114教室に着くと、出遅れたのか、もう既に委員会が始まっていた。[p]

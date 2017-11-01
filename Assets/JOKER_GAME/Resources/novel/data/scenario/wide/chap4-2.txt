@@ -18,7 +18,7 @@
 
 ;Live2dテスト
 [live2d_new name="chiaki" storage="chiaki" scale=4]
-[live2d_new name="sabalu" storage="sabalu"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 
 汗でじっとりした畳の上で、目が覚める。[p]
@@ -60,7 +60,7 @@
 
 
 ;[live2d_show name="haru" x=3]
-[live2d_show name="sabalu" x=0]
+;[live2d_show name="sabalu" x=0]
 
 #蛍
 「母さん……………………………………？」[p]
@@ -75,7 +75,7 @@
 #千秋
 「先輩！せーーーんぱい！起きてくださいよ！」[p]
 @image_hide name="redskull25"
-@live2d_hide name="sabalu"
+;@live2d_hide name="sabalu"
 @bg_mod storage="seitokai_evening"
 @playbgm storage="08_nitijou"
 

@@ -18,7 +18,7 @@
 
 ;Live2dテスト
 [live2d_new name="Momiji" storage="Momiji"]
-[live2d_new name="sabalu" storage="sabalu"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 
 教室の中がいつになく慌ただしい。[p]
@@ -26,7 +26,7 @@
 
 
 ;[live2d_show name="haru" x-=3]
-[live2d_show name="sabalu" x=3]
+;[live2d_show name="sabalu" x=3]
 
 #モブ女
 「雨宮くん！暇なら衣装係を手伝ってくれない？」[p]

@@ -17,13 +17,13 @@
 [playbgm wait=false time=1 storage="09_kurai"]
 
 ;Live2dテスト
-[live2d_new name="sabalu" storage="sabalu"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 @image_new name="redskull25" storage="redskull25"  scale=4
 
 足元に母さんが倒れている。[p]
 @image_show name="redskull25"
-@live2d_show name="sabalu" x=0
+;@live2d_show name="sabalu" x=0
 そっと触れると、指に血がこびりつく。[r]
 息はまだある。[p]
 
@@ -46,7 +46,7 @@
 「お願いします！お母さんを…！」[p]
 「お母さんが、死にそうなんです…！」[p]
 「助けてください…！」[p]
-@live2d_hide name="sabalu" scale=4
+;@live2d_hide name="sabalu" scale=4
 @image_hide name="redskull25"
 #
 気が付くと、薄暗い廊下に立っていた。[p]

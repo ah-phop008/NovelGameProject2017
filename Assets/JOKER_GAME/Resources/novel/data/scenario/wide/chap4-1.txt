@@ -18,14 +18,14 @@
 
 ;Live2dテスト
 [live2d_new name="Ryou" storage="Ryou" scale=4]
-[live2d_new name="sabalu" storage="sabalu"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 
 今日も授業をサボろうと、屋上を目指して廊下を進む。[p]
 
 
 
-[live2d_show name="sabalu" x=3]
+;[live2d_show name="sabalu" x=3]
 
 #瞭
 「おい、雨宮」[p]

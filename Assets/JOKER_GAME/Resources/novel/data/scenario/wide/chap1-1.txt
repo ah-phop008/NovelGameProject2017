@@ -39,49 +39,49 @@
 ;ここでキャラ表示
 
 ;Live2dテスト
-[live2d_new name="chiaki" storage="chiaki" scale=4]
-[live2d_new name="sabalu" storage="sabalu"]
-[live2d_show name="chiaki" x=3]
-[live2d_show name="sabalu" x=-3]
+;[live2d_new name="chiaki" storage="chiaki" scale=4]
+;[live2d_new name="sabalu" storage="sabalu"]
+;[live2d_show name="chiaki" x=3]
+;[live2d_show name="sabalu" x=-3]
 
 
 #蛍
 「ああ、光」[p]
 
-[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 
 
 #光
 「クラス替え、どうだった？オレは、A組だったんだけど」[p]
-[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 #蛍
 「オレは、B組。っていうことは、別々だな。」[p]
 
-[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidles.mtn" name="chiaki" idle="ON"]
 #光
 「そうか…。クラスがお前と別になるの、初めてだな」[p]
 
-[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chidle.mtn" name="chiaki" idle="ON"]
 #蛍
 「…心配なのか？」[p]
 
-[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
 #光
 「心配だよ。お前、オレ以外に友達つくろうとしないから…」[p]
 
-[live2d_motion storage="chclose.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chclose.mtn" name="chiaki" idle="ON"]
 #蛍
 「大丈夫だって。友達なんてお前以外に必要ないし…」[p]
 
-[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
 #光
 「はぁ…」[p]
 
-[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
+;[live2d_motion storage="chcloses.mtn" name="chiaki" idle="ON"]
 #
 光は大きくため息をついた。[p]
 
-[live2d_hide name="chiaki"]
+;[live2d_hide name="chiaki"]
 #モブ先生
 「それでは、みなさん、自己紹介してください」[p]
 #

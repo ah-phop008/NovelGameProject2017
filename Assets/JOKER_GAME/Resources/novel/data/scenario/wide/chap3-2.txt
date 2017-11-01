@@ -18,7 +18,7 @@
 
 ;Live2dテスト
 [live2d_new name="Mei" storage="Mei"]
-[live2d_new name="sabalu" storage="sabalu"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 
 一人で屋上への階段を上る。[r]
@@ -27,7 +27,7 @@
 
 
 [live2d_show name="Mei" x=-3 scale=4]
-[live2d_show name="sabalu" x=3]
+;[live2d_show name="sabalu" x=3]
 [live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
 #芽依
 「あれ、先客がいた」[p]

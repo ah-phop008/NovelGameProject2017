@@ -19,30 +19,30 @@
 ;Live2dテスト
 
 
-[live2d_new name="Mei" storage="Mei" scale=4]
-[live2d_new name="sabalu" storage="sabalu"]
+;[live2d_new name="Mei" storage="Mei" scale=4]
+;[live2d_new name="sabalu" storage="sabalu"]
 文化祭当日[p]
 
 
 
-[live2d_show name="Mei" x=-3]
-[live2d_show name="sabalu" x=3]
-[live2d_motion storage="mehappys.mtn" name="Mei" idle="ON"]
+;[live2d_show name="Mei" x=-3]
+;[live2d_show name="sabalu" x=3]
+;[live2d_motion storage="mehappys.mtn" name="Mei" idle="ON"]
 #光
 「おはよう、蛍」[p]
-[live2d_motion storage="mehappy.mtn" name="Mei" idle="ON"]
+;[live2d_motion storage="mehappy.mtn" name="Mei" idle="ON"]
 #蛍
 「…はよ」[p]
-[live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
+;[live2d_motion storage="meidles.mtn" name="Mei" idle="ON"]
 #光
 「ついに文化祭だな。蛍のクラスは演劇だっけ？」[p]
-[live2d_motion storage="meidle.mtn" name="Mei" idle="ON"]
+;[live2d_motion storage="meidle.mtn" name="Mei" idle="ON"]
 #蛍
 「あぁ」[p]
-[live2d_motion storage="mehappys.mtn" name="Mei" idle="ON"]
+;[live2d_motion storage="mehappys.mtn" name="Mei" idle="ON"]
 #光
 「今日、オレと色々周らないか？」[p]
-[live2d_motion storage="mehappy.mtn" name="Mei" idle="ON"]
+;[live2d_motion storage="mehappy.mtn" name="Mei" idle="ON"]
 
 
 
@@ -70,22 +70,22 @@
 
 
 *select_b2
-[live2d_hide name="Mei"]
-[live2d_hide name="sabalu"]
+;[live2d_hide name="Mei"]
+;[live2d_hide name="sabalu"]
 @image_show name="114"
 瞭ルート[p]
 @jump target=*char1
 
 *select_b3
-[live2d_hide name="Mei"]
-[live2d_hide name="sabalu"]
+;[live2d_hide name="Mei"]
+;[live2d_hide name="sabalu"]
 @image_show name="113"
 雪雫ルート[p]
 @jump target=*char3
 
 *select_b4
-[live2d_hide name="Mei"]
-[live2d_hide name="sabalu"]
+;[live2d_hide name="Mei"]
+;[live2d_hide name="sabalu"]
 @image_show name="112"
 芽依ルート[p]
 @jump target=*commonbase

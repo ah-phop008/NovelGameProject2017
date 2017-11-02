@@ -1,7 +1,7 @@
 ﻿@call file=wide/libs/utils
 [bg_new name="background" storage="room"]
 [bg_show name="background"]
-
+@font color=#000000
 ;メッセージ表示
 [showmessage]
 [call file=wide/system target="*system_setting_buttons"]
@@ -66,7 +66,7 @@
 
 *select_b1
 光ルート[p]
-@jump target=*commonbase
+@jump target=*hikari
 
 
 *select_b2
@@ -86,14 +86,14 @@
 *select_b4
 ;[live2d_hide name="Mei"]
 ;[live2d_hide name="sabalu"]
-@image_show name="112"
+@image_show name="116"
 芽依ルート[p]
 @jump target=*commonbase
 
 
 *select_b5
 千秋ルート[p]
-@jump target=*commonbase
+@jump target=*chiaki
 
 
 
@@ -110,3 +110,10 @@
 
 @jump file=wide/3chara01 scene=new
 
+*hikari
+
+@jump file=wide/hikari1-1 scene=new
+
+*chiaki
+
+@jump file=wide/chiaki1-1 scene=new

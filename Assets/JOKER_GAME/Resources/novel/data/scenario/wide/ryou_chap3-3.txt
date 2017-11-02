@@ -1,13 +1,15 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="syujinnkoukaisou_dairi"]
+[bg_new name="background" storage="livingroom_evening"]
 [bg_show name="background"]
-
+@font color=#000000
 ;メッセージ表示
 [showmessage]
 [call file=wide/system target="*system_setting_buttons"]
 [text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
 [text_show name="_sp_chara_name"] 
+@live2d_new name="Ryou" storage="Ryou" scale=4
 
+[playbgm wait=false time=1 storage="09_kurai"]
 ;ここから回想
 #蛍
 「オレが9歳の時なので、もう8年前のことです。[r]
@@ -18,7 +20,8 @@
 
 「あの日、その人はオレたち家族と一緒に夕飯を食べるため、[r]
 家を訪ねてきました」[p]
-
+@image_new name="red" storage="redskull25" scale=4
+@image_show name="red"
 「インターホンが鳴って、父は喜んで玄関を開けました。[r]
 次の瞬間、父の首から血が噴き出して．．．それで．．．[r]
 そこから先はあまり覚えていません」[p]
@@ -26,12 +29,12 @@
 「でも、母がオレをかばって殺されたことと、[r]
 その人が母を殺した後、笑っていたことだけは、[r]
 鮮明に覚えています」[p]
-
+@image_hide name="red"
 ;回想終わり
 [bg_hide wait=false]
 [wait time=1.5]
-
-[bg_new name="background" storage="room_yuugata_dairi"]
+@live2d_show name="Ryou" x=0
+[bg_new name="background" storage="room"]
 [bg_show ]
 
 「その事件の後、身寄りがなくなってしまったオレは[r]
@@ -46,13 +49,15 @@
 #
 言い切ってしまった後オレは黙り込んでしまった[r]
 数秒の静寂ののち、先生が静かに言葉を紡ぐ[p]
-
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
+@stopbgm time=0.5
+@playbgm storage="10_OP(3)"
 #瞭
 「．．．辛いことを思い出させてしまってすまない。[r]
 だが、ここにはお前を裏切るものはいない」[p]
 
 「だから、泣いてもいいんだぞ」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 #蛍
 「．．．っ、オレは、泣いたりなんか」[p]
 
@@ -65,30 +70,27 @@
 するとガタッという音が聞こえ、[r]
 急に温かいものが体を覆った[p]
 
-;ここでイベントCG
-[bg_hide wait=false]
-[wait time=1]
-
-[bg_new name="background" storage="eventCG2_dairi"]
-[bg_show ]
+@image_new name="black" storage="blackskull" scale=4
+@image_show name="black"
 
 気が付くとオレは先生に抱きしめられていた[p]
-
+@image_hide name="black"
 #蛍
 「せん、せい．．．？」[p]
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「．．．私は、同じような経験をしたわけではない。[r]
 そこまで辛い思いをしたこともない。[r]
 だから無責任なことしか言えないが．．．」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 #
 その言葉と同時に先生の腕に力がこもる[p]
-
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「今まで、辛かっただろう。[r]
 よく頑張ったな、[r]
 ．．．もう一人で抱え込む必要はないんだ」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 #
 そう言って、先生はオレの頭を優しく撫でる[p]
 

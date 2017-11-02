@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/UINTY_GAME/LogoScene/Logo.unity
     guid: b2387a21411d1eb4aad565deac169ee7
   - enabled: 1
-    path: Assets/JOKER_GAME/Scenes/Player.unity
+    path: Assets/JOKER_GAME/Resources/Scenes/Player.unity
     guid: 9eb77fda2d132499da094ea11aa23f55
   - enabled: 1
     path: Assets/UINTY_GAME/test1.unity
@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/UINTY_GAME/TitleScene/title.unity
     guid: b14acbed440a58944b950225d3b7d321
+  - enabled: 1
+    path: Assets/UINTY_GAME/OPScene/movieingame.unity
+    guid: de668e9c45c6fb14ba82689515cd99db

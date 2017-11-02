@@ -1,14 +1,16 @@
 ﻿@call file=wide/libs/utils
 [bg_new name="background" storage="room"]
 [bg_show name="background"]
-
+@font color=#000000
 ;メッセージ表示
 [showmessage]
 [call file=wide/system target="*system_setting_buttons"]
 [text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
 [text_show name="_sp_chara_name"] 
-
+@live2d_new name="Ryou" storage="Ryou" scale=4
 ;ここから回想画面
+
+[playbgm wait=false time=1 storage="02_kanasii"]
 #瞭
 「私の通っていた高校は地元の、[r]
 そこそこ大きい共学だった」[p]
@@ -110,21 +112,23 @@
 [bg_hide wait=false]
 [wait time=1.5]
 
-[bg_new name="background" storage="room_yuugata_dairi"]
+[bg_new name="background" storage="room"]
 [bg_show ]
-
+@live2d_show name="Ryou" x=0
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 「それが私が教師を目指した理由だ」[p]
 
 「私は、なるべく生徒の異変に気づいて[r]
 相談に乗れる教師になりたいと思っている。[r]
 ．．．すまないな、こんな暗い話して」[p]
-
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 #蛍
 「．．．なら」[p]
-
+@live2d_motion name="Ryou" storage="ryhutu.mtn" idle="ON"
 #瞭
 「ん？」[p]
-
+@stopbgm time=0.5
+@playbgm storage="09_kurai"
 #蛍
 「先生の過去が暗いなら、オレの人生は。」[p]
 
@@ -136,22 +140,22 @@
 
 オレの過去は、オレの心の中だけにとどめておくべきだ[r]他人に話して楽になろうとしてはいけない[p]
 
-
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「．．．確かに、君の担任になってから[r]
 何度か心配になることはあった」[p]
 
 「君の様子を見ていると、[r]
 どうも女性に対して心を閉ざしてしまっているように見える」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 #蛍
 「．．．っ、それは．．．」[p]
-
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 #瞭
 「もし、君が嫌でなければ、何があったか話してくれないか。[r]
 私にとっては君も導くべき、一人の生徒だ。[r]
 私は、君の力になりたいんだ」[p]
-
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 #
 そう言われて、何かが決壊した[r]
 口が、意思と関係なく言葉を紡ぎ出す[p]

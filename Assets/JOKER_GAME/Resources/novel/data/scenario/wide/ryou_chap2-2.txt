@@ -1,14 +1,16 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="seimon_yoru_dairi"]
+[bg_new name="background" storage="schoolroad_evening"]
 [bg_show name="background"]
-
+@font color=#000000
 ;メッセージ表示
 [showmessage]
 [call file=wide/system target="*system_setting_buttons"]
 [text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
 [text_show name="_sp_chara_name"] 
-
+@live2d_new name="Ryou" storage="Ryou" scale=4
 ;暗転　からの門の前の背景に移動
+
+[playbgm wait=false time=1 storage="08_nitijou"]
 #蛍
 「．．．遅いな」[p]
 
@@ -24,7 +26,7 @@
 [bg_hide wait=false]
 [wait time=2]
 
-[bg_new name="background" storage="getabako_dairi"]
+[bg_new name="background" storage="getabako_night"]
 [bg_show ]
 
 心配になって下駄箱まで来たはいいが、[r]
@@ -34,15 +36,16 @@
 やはりおとなしく門の前で待っているべきか。[r]
 そう思いなおして引き返そうとした時、[r]
 微かに先生の声が聞こえてきた[p]
-
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「はあ．．．[r]
 自分から言い出しておいて全く考えてなかったな．．．」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 #
 聞こえてきた言葉が気になって[r]
 オレはこっそり先生のほうを覗き込んだ[p] 
-;ここでイベントCG表示
+@image_new name="114" storage="114" scale=0.86
+@image_show name="114"
 [bg_hide wait=false]
 [wait time=0.5]
 
@@ -66,22 +69,24 @@
 少しして靴を履き終えた先生の目線は[r]
 いつもと同じ高さだった[p]
 
-;イベントCGから立ち絵に戻す
+@image_hide name="114"
 [bg_hide wait=false]
 [wait time=0.5]
 
-[bg_new name="background" storage="getabako_dairi"]
+[bg_new name="background" storage="getabako_night"]
 [bg_show ]
+@live2d_show name="Ryou" x=0
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「はあ、さてと門のほうに向かうか．．．」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 #
 そういって顔を上げた先生と目が合った[r]
 少しぽかんとした後、先生の顔が一気に赤くなった[p]
-
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 #瞭
 「．．．いつから見てたんだ？」[p]
-
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 #
 震える声で先生がそう聞いてくる[p]
 
@@ -93,14 +98,15 @@
 
 #
 オレの言葉を聞いて先生の顔はさらに赤くなった[p]
-
+@live2d_motion name="Ryou" storage="ryhutus.mtn" idle="ON"
 #瞭
 「す、すまない！今、急ぎの用事を思い出したから、[r]
 私は帰る！一緒に帰れなくなってすまないな！」[p]
 
 「じゃあ、また明日！気をつけて帰れよ！」[p]
-
+@live2d_motion name="Ryou" storage="ryhutu.mtn" idle="ON"
 #
+@live2d_hide name="Ryou"
 そう言い残して、先生は[r]
 走って行ってしまった[p]
 
@@ -124,7 +130,7 @@
 その一瞬は先生を見失うには十分な時間だった[p]
 
 ;ここで夜道の背景に切り替え
-[bg_mod storage="yomiti_dairi"]
+@bg_mod storage="schoolroad_night"
 何が起こったかよくわからないまま[r]
 その日は家に帰るしかなかった[p]
 
@@ -146,14 +152,15 @@
 [bg_new name="background" storage="room"]
 [bg_show ]
 
-;先生の立ち絵表示
+@live2d_show name="Ryou"
 #蛍
 「先生あの、少し話したいことが．．．」[p]
-
+@live2d_motion name="Ryou" storage="ryhutus.mtn" idle="ON"
 #瞭
 「す、すまないな。[r]
 今からちょっと面談しなきゃいけない子がいるんだ。[r]
 また、時間があるときにな！」[p]
+@live2d_hide name="Ryou"
 ;立ち絵が消える　暗転
 [bg_hide wait=false]
 [wait time=0.3]
@@ -161,12 +168,13 @@
 [bg_new name="background" storage="rouka"]
 [bg_show ]
 
-;背景　廊下　先生の立ち絵表示
+@live2d_show name="Ryou" x=0
 #蛍
 「先生あの．．．」[p]
-
+@live2d_motion name="Ryou" storage="ryhutus.mtn" idle="ON"
 #瞭
 「いまちょっと急いでるんだ！また後でな！」[p]
+@live2d_hide name="Ryou"
 ;立ち絵が消える　暗転
 [bg_hide wait=false]
 [wait time=0.75]
@@ -189,27 +197,27 @@
 
 そう考えたオレは絶対に会えるであろう場所で待つことにした[p]
 
-;教員用更衣室前　立ち絵表示
+@live2d_show name="Ryou" x=0
 [bg_hide wait=false]
 [wait time=1]
 
 [bg_new name="background" storage="rouka"]
 [bg_show ]
-
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 #瞭
 「．．．ふう」[p]
-
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 #蛍
 「やっぱり、ここにいれば会えると思いましたよ」[p]
 
 #
 そう声をかけると先生の方がびくっと跳ねた[r]
 先生が恐る恐る振り向き、オレと目が合う[p]
-
+@live2d_motion name="Ryou" storage="ryhutus.mtn" idle="ON"
 #瞭
 「な、なんで君がここにいるんだ。[r]
 いつもならとっくに帰っているはずだろう？」[p]
-
+@live2d_motion name="Ryou" storage="ryhutu.mtn" idle="ON"
 #蛍
 「なぜって、今日一日先生が俺を避けてたからですよ。[r]
 こうでもしないと話をしてくれないでしょう？」[p]
@@ -220,19 +228,19 @@
 #
 そう言うオレを見て先生は何か言いたげに口を開きかけたが[r]
 何も言わずに口を閉じ、諦めたようにため息をついた[p]
-
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「はあ．．．そうだよなあ。[r]
 あの状態を見られたらもう、[r]
 何を言ってもごまかせないよなぁ．．．」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 #
 そういって先生は、少し照れたように話し始めた[p]
-
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「恥ずかしい話だが、昔から身長が低いのが悩みでな．．．[r]
 ここに勤め始めた時から身長をごまかしていたんだ、ずっと。」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 #
 昨日目の当たりにして一応察しはついていたはずなのに[r]
 改めて本人の口から聞くと驚きが隠せない[p]
@@ -241,22 +249,22 @@
 そのくらい自然だったのだ[p]
 オレが驚いた顔をして固まっているのに気が付いた先生は[r]
 少しだけ得意げに笑って、そのまま話を続ける[p]
-
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 #瞭
 「今まで誰にもばれたことなかったんだがなあ。[r]
 やはり欲を出すとな．．．今回のことは完全に自業自得だ」[p]
-
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 そこまで話を聞いて、[r]
 ずっと感じていた疑問を先生にぶつけてみる[p]
 
 #蛍
 「でも普段から身長を盛ってるなら、[r]
 なんで昨日の帰り、あんなに苦労してたんですか？」[p]
-
+@live2d_motion name="Ryou" storage="ryhutus.mtn" idle="ON"
 #瞭
 「ああ、普段は帰るときはごまかしてないよ。[r]
 そのためにあまり帰宅者がいない時間を選んで帰っているんだ」[p]
-
+@live2d_motion name="Ryou" storage="ryhutu.mtn" idle="ON"
 #
 今の言葉を聞いてようやく事態が把握できた[r]
 他の先生はたいてい19時半ころまで残っているのに[r]
@@ -268,10 +276,11 @@
 
 「オレと帰ることにならなければ、[r]
 わざわざごまかさなくても帰れたでしょう？」[p]
-
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 #瞭
 「昨日も言ったろう、心配だったからだ。[r]
 まあ．．．．．．．．．．」[p]
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 ;上の点々の部分に小声で「ほんとは一緒に帰りたかっただけなんだがな」を入れる　文字表示はなし
 
 #
@@ -280,12 +289,12 @@
 
 そんなことを考えていると[r]
 先生が少し恥ずかしそうに続けた[p]
-
+@live2d_motion name="Ryou" storage="ryhutus.mtn" idle="ON"
 #瞭
 「君にはばれてしまったから素直に話したが、[r]
 一応この話はみんな知らないんだ。[r]
 だから二人だけの秘密ということで、な？」[p]
-
+@live2d_motion name="Ryou" storage="ryhutu.mtn" idle="ON"
 #蛍
 「わかっています。[r]
 絶対口外しませんよ」[p]
@@ -306,16 +315,16 @@
 ;すぐ追いかけた場合
 
 *select_rr2
-[bg_mod storage="seimon_yoru_dairi"]
+@bg_mod storage="schoolroad_night"
 俺はすぐに追いかけた[r]
 一瞬見失ったかと思ったが、[r]
 先生は、校門を出たところでしゃがみ込んでいた[p]
 
 静かに近づき、そっと話しかける[p]
-
+@live2d_show name="Ryou" x=0
 #蛍
 「．．．先生？」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 #瞭
 「．．．」[p]
 
@@ -326,22 +335,22 @@
 
 #蛍
 「．．．先生、あの」[p]
-
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「．．．言わなくても要件はわかっている。[r]
 さっきのことだろう？」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 「はあ．．．[r]
 あの状態を見られたらもう、[r]
 何を言ってもごまかせないよなぁ．．．」[p]
 
 #
 そう言って先生は、少し照れたように話し始めた[p]
-
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「恥ずかしい話だが、昔から身長が低いのが悩みでな．．．[r]
 ここに勤め始めた時からずっと、身長をごまかしていたんだ」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 #
 数分前に目の当たりにして一応察しはついていたはずなのに[r]
 改めて本人の口から聞くと驚きが隠せない[p]
@@ -351,21 +360,21 @@
 
 オレが驚いた顔をして固まっているのに気が付いた先生は[r]
 少しだけ得意げに笑って、そのまま話を続ける[p]
-
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 #瞭
 「今まで誰にもばれたことなかったんだがなあ。[r]
 やはり欲を出すとな．．．今回のことは完全に自業自得だ」[p]
-
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 #蛍
 「でも普段から身長を盛ってるなら、[r]
 なんでさっきは、あんなに苦労してたんですか？」[p]
 
 オレはふと感じた疑問をそのまま口にする[p]
-
+@live2d_motion name="Ryou" storage="ryhutus.mtn" idle="ON"
 #瞭
 「ああ、普段は帰るときはごまかしてないよ。[r]
 そのためにあまり帰宅者がいない時間を選んで帰っているんだ」[p]
-
+@live2d_motion name="Ryou" storage="ryhutu.mtn" idle="ON"
 #
 今の言葉を聞いてようやく事態が把握できた[r]
 他の先生はたいてい19時半ころまで残っているのに[r]
@@ -377,20 +386,20 @@
 
 「オレと帰ることにならなければ、[r]
 わざわざごまかさなくても帰れたでしょう？」[p]
-
+@live2d_motion name="Ryou" storage="ryhutus.mtn" idle="ON"
 #瞭
 「教室でも言ったろう、心配だったからだ。[r]
 まあ．．．．．．．．．．」[p]
 ;上の点々の部分に小声で「ほんとは一緒に帰りたかっただけなんだがな」を入れる　文字表示はなし
-
+@live2d_motion name="Ryou" storage="ryhutu.mtn" idle="ON"
 そう言ってから[r]
 先生が少し恥ずかしそうに続けた[p]
-
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 #瞭
 「君にはばれてしまったから素直に話したが、[r]
 一応この話はみんな知らないんだ。[r]
 だから二人だけの秘密ということで、な？」[p]
-
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 #蛍
 「わかっています。[r]
 絶対口外しませんよ」[p]

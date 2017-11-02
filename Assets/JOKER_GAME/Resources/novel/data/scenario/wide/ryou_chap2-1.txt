@@ -1,17 +1,17 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="gaikann_yuugata_dairi"]
+[bg_new name="background" storage="nakaniwa_evening"]
 [bg_show name="background"]
-
+@font color=#000000
 ;メッセージ表示
 [showmessage]
 [call file=wide/system target="*system_setting_buttons"]
 [text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
 [text_show name="_sp_chara_name"] 
-
+@live2d_new name="Ryou" storage="Ryou" scale=4
 ;7月中旬、夏休み前くらい　放課後　教室　２０時くらい
 ;学校の外観を表示している状態
 もうすぐ夏休みというある日の夕方[p]
-
+@playbgm wait=false time=1 storage="06_asa"
 ;教室内に移動
 [bg_hide wait=false]
 [wait time=1]
@@ -29,10 +29,12 @@
 教室の入り口に先生が立っていた[p]
 
 ;ここで瞭の立ち絵を表示
+@live2d_show name="Ryou" x=0
+@live2d_motion name="Ryou" storage="ryhutus.mtn" idle="ON"
 #瞭
 「お、君はまだ残ってたのか。[r]
 もう２０時だぞ」[p]
-
+@live2d_motion name="Ryou" storage="ryhutu.mtn" idle="ON"
 #
 そう言われて窓の外を見ると[r]
 あたりはすっかり暗くなっていた[p]
@@ -57,45 +59,45 @@
 
 #
 すると先生は一瞬驚いた顔をした後、少し照れたように笑った[p]
-
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「あはは、[r]
 恥ずかしいことに時間内に仕事が終わらなくてな．．．[r]
 家に持ち帰らない主義だから残ってやっていたんだ」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 「今日一番遅くまで残るのは私だったから、[r]
 戸締りも頼まれた、というわけだ」[p]
 
 #
 そう言って先生はカギを持ち上げてみせる[p]
-
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 #瞭
 「だからすべての教室を見回っていたんだが、[r]
 まさか君が居残っているとはな．．．」[p]
 
 「君一人に仕事を任せてしまってすまないな」[p]
-
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 #蛍
 「いえ、オレが引き受けるといったので。[r]
 では、オレはそろそろ帰ります。失礼します」[p]
 
 #
 そういって荷物をまとめ始める[p]
-
+@live2d_motion name="Ryou" storage="ryhutus.mtn" idle="ON"
 #瞭　
 ;アップになる
 「ちょっと待て。外は真っ暗だ。[r]
 私が頼んだ仕事で遅くなってしまったんだ、[r]
 家まで送ってやろう」[p]
-
+@live2d_motion name="Ryou" storage="ryhutu.mtn" idle="ON"
 #蛍
 「え、それは申し訳ないですし、[r]
 オレは高２です。一人で帰れますよ」[p]
-
+@live2d_motion name="Ryou" storage="rysads.mtn" idle="ON"
 #瞭
 「私が心配なだけなんだが．．．[r]
 なら、方向が同じだし私もちょうど仕事が終わったところだ」[p]
-
+@live2d_motion name="Ryou" storage="rysad.mtn" idle="ON"
 「私と一緒に帰ってくれないか？[r]
 それなら文句はないだろう？」[p]
 
@@ -114,17 +116,19 @@
 [bg_show ]
 他愛もない話をしながら戸締りをする先生を手伝い[r]
 職員室にカギを返した後、下駄箱に向かう[p]
-
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 #瞭
 「ではお前は靴を履き替えたら門の前で待っていてくれ。[r]
 私も履き替えたらすぐに向かおう」[p]
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 #蛍
 「え？下駄箱の前で待つか、[r]
 先に履き替えた人が合流したほうが早くないですか？」[p]
-
+@live2d_motion name="Ryou" storage="ryidles.mtn" idle="ON"
 #瞭
 「いや、先に門の前に行っててくれ。[r]
 教員用の下駄箱には絶対来るな。いいな？」[p]
+@live2d_motion name="Ryou" storage="ryidle.mtn" idle="ON"
 
 #
 かたくなに拒否する先生を見て違和感を覚えたが[r]

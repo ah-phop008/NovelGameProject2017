@@ -1,7 +1,7 @@
 ﻿@call file=wide/libs/utils
 [bg_new name="background" storage="rouka"]
 [bg_show name="background"]
-
+@font color=#000000
 ;メッセージ表示
 [showmessage]
 [call file=wide/system target="*system_setting_buttons"]
@@ -18,7 +18,7 @@
 
 ;Live2dテスト
 [live2d_new name="haru" storage="Momiji"]
-[live2d_new name="sabalu" storage="sabalu"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 
 ;タイトル　小さな変化

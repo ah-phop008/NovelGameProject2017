@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
+using Novel;
 
-public class opManaer : MonoBehaviour {
+public class op2ndm : MonoBehaviour {
 
 	VideoPlayer v;
 	// Use this for initialization
@@ -15,6 +16,6 @@ public class opManaer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0))
-			SceneManager.LoadScene ("title");
+			NovelSingleton.StatusManager.callJoker("wide/chap4-1","");
 	}
 }

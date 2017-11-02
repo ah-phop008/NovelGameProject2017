@@ -1,13 +1,17 @@
 ﻿@call file=wide/libs/utils
 [bg_new name="background" storage="room"]
 [bg_show name="background"]
-
+@font color=#000000
 ;メッセージ表示
 [showmessage]
 [call file=wide/system target="*system_setting_buttons"]
 [text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
 [text_show name="_sp_chara_name"] 
 
+
+[playbgm wait=false time=1 storage="06_asa"]
+
+@live2d_new name="Ryou" storage="Ryou" scale=4
 ;廊下の背景
 オレは一人で学園祭を回ることにした[r]
 一緒に回りたいと思える人がいなかったのだ[p]
@@ -85,7 +89,7 @@
 [bg_hide wait=true]
 [wait time=0.5]
 
-[bg_new name="background" storage="okujyou_hiru_dairi"]
+[bg_new name="background" storage="rooftop_noon"]
 [bg_show ]
 
 やはりここは人がいなくて楽だ[r]
@@ -128,13 +132,14 @@
 それにたまには眠気に身を任せてみるのも悪くはない[r]
 そう思ったオレはゆっくりと目を閉じ[r]
 意識が薄れていくのに身を任せた[p]
-
+@image_new name="black" storage="blackskull" scale=4
+@image_show name="black"
+@wait time=1
+@bg_mod storage="rooftop_evening"
+@image_hide name="black"
 ;暗転　2秒ほどしてから明転　屋上　暮れ方
-[bg_hide wait=false]
-[wait time=2]
 
-[bg_new name="background" storage="okujyou_yuugata_dairi"]
-[bg_show ]
+
 
 
 涼しい風が頬をなでるのを感じて[r]
@@ -158,7 +163,7 @@
 
 *select_r2
 ;眠気に抵抗してみるを選んだシナリオ
-[bg_mod storage="okujyou_hiru_dairi"]
+
 
 抗いがたいほどの眠気が襲ってくるのはいつぶりだろう[r]
 もし今日が普通の日なら身を任せていたことだろう[p]
@@ -171,14 +176,16 @@
 
 とそんなことを考えているとどこからか[r]
 歓声が聞こえた気がした[p]
-
-[bg_mod storage="playground_dairi"]
+@stopbgm time=0.5
+@playbgm storage="04_sannbyousi"
+[bg_mod storage="nakaniwa_noon"]
 不思議に思って校庭のほうを覗き込むと[r]
 ちょうど陸上部の模擬試合をやっているところだった[p]
 
 選手が続々と並び始めていたが[r]
 その中でも一際大きな歓声を浴びている人がいた[p]
 
+@live2d_show name="Ryou" x=0
 先生だった。[r]
 いつものスーツとは違う陸上の選手といった感じの格好だ[p]
 
@@ -201,12 +208,10 @@
 走り終えて汗をぬぐっている先生はとてもかっこよく[r]
 それ以上に美しいと思った[p]
 
-;暗転　屋上の背景　暮れ方
-[bg_hide wait=false]
-[wait time=1.5]
-
-[bg_new name="background" storage="okujyou_yuugata_dairi"]
-[bg_show ]
+@image_new name="black" storage="blacksull" scale=4
+@image_show name="black"
+@image_hide name="black"
+@bg_mod storage="nakaniwa_evening"
 
 今日はいろいろな出来事があった[r]
 疲れた．．．と独り言をつぶやきながら大きな伸びをする[p]

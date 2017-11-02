@@ -206,8 +206,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1796991159}
   - component: {fileID: 1796991158}
-  - component: {fileID: 1796991157}
   - component: {fileID: 1796991156}
+  - component: {fileID: 1796991157}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -282,7 +282,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1796991155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06a04b8a0824dd143b0a29684d51eb40, type: 3}
+  m_Script: {fileID: 11500000, guid: 3998f06d860b70645aec844f8df12c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!328 &1796991158
@@ -313,9 +313,9 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1796991155}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 5216b4455605fb949aaf61b00d9c0538, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 6f45073886aea744eb414dd2fe52b74f, type: 3}
   m_TargetCameraAlpha: 1
-  m_TargetCamera: {fileID: 0}
+  m_TargetCamera: {fileID: 1510567557}
   m_TargetTexture: {fileID: 0}
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
@@ -325,7 +325,7 @@ VideoPlayer:
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
   m_TargetAudioSources:
-  - {fileID: 1796991156}
+  - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
   m_Url: 

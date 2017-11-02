@@ -1,7 +1,7 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="simpleroom_dairi"]
+[bg_new name="background" storage="darkroom"]
 [bg_show name="background"]
-
+@font color=#000000
 ;メッセージ表示
 [showmessage]
 [call file=wide/system target="*system_setting_buttons"]
@@ -9,6 +9,8 @@
 [text_show name="_sp_chara_name"] 
 
 ;暗転 ２秒後明転 誰かの部屋
+@live2d_new name="Ryou" storage="Ryou" scale=4
+
 #蛍
 「．．．っ[r]
 頭が、いたい．．．」[p]
@@ -17,13 +19,15 @@
 ゆっくりと目を開ける[r]
 目の前には見知らぬ天井が広がっていた[p]
 
+[playbgm wait=false time=1 storage="09_kurai"]
 慎重に身体を起こす[r]
 いつの間にかオレはベッドの上に寝かされていたようだ[p]
-
+@image_new name="red" storage="redskull25" scale=4
+@image_show name="red"
 ベッドから降りようとしたが、右肩が痛い[r]
 だんだんと意識がはっきりしてくる[r]
 どうやら、倒れた時に強く打ってしまったようだ[p]
-
+@image_hide name="red"
 服を脱いで肩を確認すると湿布が貼ってあった[r]
 誰かが手当てをしてくれたらしい[p]
 
@@ -136,7 +140,8 @@
 #蛍
 「先生、待ってください、[r]
 先生．．．！」[p]
-
+@image_new name="black" storage="blackskull" scale=4
+@image_show name="black"
 #
 必死に呼びかけたが[r]
 先生には届かなかったようで、[r]完全に足音が聞こえなくなってしまった[p]
@@ -147,4 +152,4 @@
 #
 オレはただ、座り込んで叫ぶことくらいしか出来なかった[p]
 
-@jump file=wide/ryou_chap4-3 scene=new
+@jump file=wide/chap7-1 scene=new

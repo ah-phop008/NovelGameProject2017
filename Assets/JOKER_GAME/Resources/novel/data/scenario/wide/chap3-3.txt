@@ -1,7 +1,7 @@
 ﻿@call file=wide/libs/utils
 [bg_new name="background" storage="room"]
 [bg_show name="background"]
-
+@font color=#000000
 ;メッセージ表示
 [showmessage]
 [call file=wide/system target="*system_setting_buttons"]
@@ -82,4 +82,4 @@
 
 
 
-@jump file=wide/chap4-1 scene=new
+@scene file="movieingame"

@@ -1,13 +1,15 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="miti_dairi"]
+[bg_new name="background" storage="schoolroad_noon"]
 [bg_show name="background"]
-
+@font color=#000000
 ;メッセージ表示
 [showmessage]
 [call file=wide/system target="*system_setting_buttons"]
 [text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
 [text_show name="_sp_chara_name"] 
+@live2d_new name="Ryou" storage="Ryou" scale=4
 
+[playbgm wait=false time=1 storage="08_nitijou"]
 ;商店街　夕方　4月初め　桜があるとなおいい
 季節が廻り、[r]
 また桜の季節がやってきた[p]
@@ -38,7 +40,7 @@
 
 あと一年。[r]
 高校を卒業したら絶対に。[p]
-
+@stopbgm time=0.5
 #？？？
 「あら、蛍じゃない。[r]
 見ない間にずいぶんと大きくなったわね。」[p]
@@ -49,7 +51,7 @@
 
 ．．．聞き間違いかと思った[r]
 そんなことあり得るわけない[p]
-
+@playbgm storage="09_kurai"
 #？？？
 「聞こえなかったのかしら．．．[r]
 久しぶりね、蛍。元気にしてた？」[p]
@@ -153,9 +155,9 @@
 
 「そして、あの先生に取られてしまうと思ったから、[r]
 その前に言っておきたいことがあるの」[p]
-
+@stopbgm time=0.5
 「．．．私とお付き合いしてくれないかしら？」[p]
-
+@playbgm storage="07_string"
 #
 ．．．頭が働かない。[r]
 この人は一体何を言っているんだ？[p]
@@ -213,12 +215,8 @@
 見ていられるだけの心の強さはないから．．．」[p]
 
 ;暗転　1秒後明転　背景変わらず
-[bg_hide wait=false]
-[wait time=1.5]
-
-[bg_new name="background" storage="miti_dairi"]
-[bg_show ]
-
+@image_new name="black" storage="blackskull25" scale=4
+@image_hide name="black"
 #貴子
 「じゃあ、また明日。[r]
 来てくれるのを待ってるわ」[p]
@@ -230,7 +228,7 @@
 まあ、今深く考えても結論は出ないだろう[r]
 さっさと帰ろう。[r]
 そう思って歩き始めた[p]
-
+@live2d_show name="Ryou" x=-6
 体の向きを変えた瞬間、[r]
 建物の陰にひらりとスーツの裾が見えた気がした[p]
 

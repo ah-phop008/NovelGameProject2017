@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="rouka"]
+[bg_new name="background" storage="rooftop_noon"]
 [bg_show name="background"]
 @font color=#000000
 ;メッセージ表示
@@ -14,23 +14,23 @@
 
 
 
-[playbgm wait=false time=1 storage="07_string"]
+[playbgm wait=false time=1 storage="08_nitijou"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="Momiji"]
-[live2d_new name="sabalu" storage="sabalu"]
+[live2d_new name="Momiji" storage="Momiji"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 
 ;タイトル　ヒロインの体調の悪化
 
 ;背景　屋上
-
+@live2d_show name="Momiji"
 #蛍
 「おはよう」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「珍しく先に来ているのね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「別にそういう気分だっただけ」[p]
 
@@ -50,50 +50,50 @@
 だけど今は、ヒロインと２人で話せる。なんだか特別な時間だ。[p]
 
 いつも通り弁当をひろげて、少しの会話と食事をする。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「楽しそうね。体育祭の時、ほんの少しだったけど楽しかったわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「うん」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「そういえば今日、定期検診があるの。[r]
 突然体調がよくなったりしていないかしら」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そうなっていることが本望だよ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ありがとう。私も」[p]
 
 「体調はあれだけど、ご飯はよく食べられるの。[r]
 私食べることが大好きだからよかったわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「お祭りであれだけの量を買ってる人、初めて見た」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「あれくらい普通よ。[r]
 昔友達がいたときにお祭りへ行ったら、みんなそうだったわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 友達が少なすぎるオレの認識が間違ってるのか？[r]
 いや、日ごろから雪雫は女子なのによく食べている方だと思う。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「というわけで、今日は一緒に帰れないの。ごめんなさい」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「全然気にしないで。光にも伝えておく」[p]
 
 #雪雫
 「ありがとう」[p]
-
+@live2d_hide name="Momiji"
 ;雪雫の表示消す	
 
 ;背景　校門
-
+@bg_mod storage="schoolroad_noon"
 ;光表示
 
 #光
@@ -123,7 +123,8 @@
 この間のことかな。[p]
 
 ;背景　昼間の道
-
+@stopbgm time=0.5
+@playbgm storage="09_kurai"
 #蛍
 「それで、話って何？」[p]
 
@@ -177,13 +178,14 @@
 「そんなのオレに分かるわけないだろ」[p]
 
 ;回想シーンはじめ
+@bg_mod storage="livingroom_evening"
 
 #石田　貴子
 「蛍くんがいなければ、こんなことにはならなかったの。[r]
 だけど、あなたを大切にしてたみたいだから殺さないであげる」[p]
 
 ;回想シーン終わり
-
+@bg_mod storage="schoolroad_noon"
 #
 嫌なことを思い出してしまった。[p]
 
@@ -217,7 +219,7 @@
 そう言ってすぐに走り出した。[p]
 
 …足速すぎてついていけないんだけど。[p]
-
+@bg_mod storage="houseroom_noon"
 ;背景　主人公の部屋
 
 腹痛い…[p]
@@ -266,9 +268,12 @@
 しょうがないだろ。メールする相手なんていないし。[p]
 
 ;暗転
-
+@image_new name="black" storage="blackskull" scale=4
+@image_show name="black"
+@wait time=1
+@image_hide name="black"
 ;背景　昼間の教室
-
+@bg_mod storage="room"
 ;学校のチャイムの音
 
 もう１限が始まる時間なのに雪雫の姿がない。[r]
@@ -278,13 +283,16 @@
 
 昨日のメールの様子だと元気そうだったし[r]
 珍しく遅刻してくるだけかもしれない。[p]
-
+@image_show name="black"
+@wait time=1
+@image_hide name="black"
 ;一回暗転とか（日付が変わるので）
 
 ;背景　昼間の教室
 
 #雪雫
 「遅れてすみません」[p]
+@live2d_show name="Momiji" x=0
 
 #
 静まりかえっている授業中の教室に入ってきたのは雪雫だった。[p]
@@ -305,35 +313,35 @@
 ;背景　昼間の教室
 
 ;雪雫表示
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「なんだか久しぶりな感じがするわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「昨日休んでたから心配した」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「別に大丈夫よ。心配ありがとう」[p]
 
 「それじゃあ、帰りましょう」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「ごめん、委員会の書類点検を任されちゃったから[r]
 もう少し時間かかりそう」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「それなら手伝うわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 オレの返事を待たないでオレの机に隣の机をくっつけた。[p]
 
 これくらい1人ですぐに終わらせちゃうのに。[p]
 
 ;ちょっとだけ間
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「本当に少なかったわね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「だから言ったでしょ」[p]
 
@@ -342,34 +350,35 @@
 
 #蛍
 「でも手伝ってくれてありがとう」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「思ったより早く終わってしまったわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「じゃあ帰ろっか」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「もう帰るの？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「だって、もうやることないし」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「そうね、じゃあ帰りましょう」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 なにかやりたいことでもあったのかな。[p]
-
+@live2d_hide name="Momiji"
 ;雪雫非表示
 
 ;背景　夕方の道
 
 ;雪雫表示
-
+@live2d_show name="Momiji" x=0
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「少しずつ日が落ちるスピードがはやくなってきたわね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そうかな」[p]
 
@@ -380,12 +389,12 @@
 
 #蛍
 「じゃあね」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「もう別れるところに着いたのね、時間が短く感じたわ」[p]
 
 「それじゃあ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「うん」[p]
 
@@ -395,10 +404,10 @@
 
 #蛍
 「どうしたの？」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「別に何でもないわ」[p]
-
+@live2d_hide name="Momiji"
 ;雪雫の表示消す
 
 #
@@ -410,7 +419,7 @@
 なにかつまらない予定でもあるのかな。[p]
 
 ;背景　主人公の家のリビング
-
+@bg_mod storage="livingroom_night"
 やばい。今何時だろ…[p]
 
 もう８時を過ぎていた。[p]
@@ -422,7 +431,7 @@
 
 商店街に行って何か買ってこようかな。[r]
 めんどくさいけど。[p]
-
+@bg_mod storage="town_night"
 ;背景　商店街
 
 #和菓子屋
@@ -443,14 +452,15 @@
 
 #
 袋からちらちら団子が見えていて、食欲をそそられる。[p]
-
+@bg_mod storage="schoolroad_night"
 ;背景　夜の道
 
 …腹が減ったので歩きながら食べちゃおう。[p]
 
 もうあたりは真っ暗で、人の気配も感じられないくらい静かだ。[p]
-
-;主人公の携帯の着信音
+@stopbgm time=0.5
+@playbgm storage="07_string"
+(主人公の携帯の着信音)[p]
 
 きっと雪雫からだ。[p]
 
@@ -540,7 +550,7 @@
 とりあえず行ってみるしかない。[p]
 
 ;背景　裏山
-
+@bg_mod storage="park_night"
 #蛍
 「はぁ…」[p]
 
@@ -563,10 +573,12 @@
 …もしかしたら。[p]
 
 ;回想シーン　音声だけ
+@image_new name="black" storage="blackskull"
+@image_show name="black"
 
 #雪雫
 「疲れたときは、よくここで休んでいるの」[p]
-
+@image_hide name="black"
 ;回想シーン終わり
 
 #
@@ -575,7 +587,7 @@
 足が速いのも、たまには役に立ちそうだ。[p]
 
 ;背景　校舎の裏
-
+@bg_mod storage="nakaniwa_night"
 #蛍
 「はぁ…はぁ…」[p]
 
@@ -589,10 +601,11 @@
 頼む。返事をしてくれ…[p]
 
 ;雪雫　表示
-
+@live2d_show name="Momiji" x=0
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「雨宮くん？どうしてここにいるの？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 後ろから雪雫の声が聞こえた。[p]
 
@@ -601,21 +614,21 @@
 
 #蛍
 「なんでこんなところにいるんだよ」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「えっと、特に理由があるわけではないけれど。[r]
 うーん…なんとなく疲れてしまって」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 ;雪雫は苦笑いって感じの顔にする
 
 #蛍
 「携帯忘れていったんでしょ。電話がかかってきた。[r]
 すごい心配してたけど」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「そうだった…申し訳ないことをしてしまったわね。[r]
 雨宮君にも心配をかけてしまってごめんなさい。私は大丈夫よ」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #
 もうわかってる。大丈夫っていうときは大丈夫じゃないんだ。[p]
 
@@ -627,10 +640,10 @@
 
 #蛍
 「定期検診のこと、さっき電話で聞いた」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「あぁ、そのことね。言わなくてよかったのに」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 まるでどうでもいいことを話しているような口調だ。[p]
 
@@ -648,7 +661,7 @@
 
 #雪雫
 「ありがとう」[p]
-
+@live2d_hide name="Momiji"
 ;雪雫の表示消す
 
 ;電話をかけてる時の音
@@ -665,17 +678,18 @@
 ;少しだけ間
 
 ;雪雫表示
-
+@live2d_show name="Momiji" x=0
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「あ。ありがとう」[p]
 
 「あの…ごめんなさい」[p]
 
 「自分でもびっくりするくらい落ち着いているの」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「それならなんでこんなところに来てるんだよ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「悲しいわけではないけれど、[r]
 少し疲れてしまったのかもしれない」[p]
@@ -685,14 +699,14 @@
 もうそのタイミングがきちゃったのか、って。受け入れられたわ」[p]
 
 「切り出しにくくて。重たい話だったから」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「…」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「どうしても行きたいところがあるのだけれど、[r]
 ほんの少しだけでいいから付き合ってもらえないかしら」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「オレはいいけど、もう夜遅いし帰った方がいい」[p]
 
@@ -712,18 +726,18 @@
 
 #蛍
 「…携帯貸すから、自分で連絡してみて」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ええ、ありがとう」[p]
 
 「えっと、これは番号を押すだけ？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「あぁ。ロックは解除しておくから、[r]
 番号の後に発信ボタンを押して」[p]
 
 ;↓のテロップ出てるのと同じくらいのタイミングで雪雫の表示消す
-
+@live2d_hide name="Momiji"
 #
 携帯を渡すと、電話をするために校庭の端の方へ行ってしまい[r]
 姿が見えなくなった。[p]
@@ -733,18 +747,18 @@
 店か？こんな時間にやってるわけないよな。[p]
 
 この数時間で、１週間分の考える頭は使った。[p]
-
+@live2d_show storage="Momiji"
 ;雪雫表示
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「お待たせ。携帯ありがとう。少しならいいと言われたわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「それならいいけど」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「それでは行きましょう。ついてきてもらってもいいかしら」[p]
-
+@live2d_hide name="Momiji"
 ;雪雫の表示消す
 
 #
@@ -755,42 +769,43 @@
 …なんか不気味だ。[p]
 
 ;背景　裏山
-
+@bg_mod storage="urayama"
 通ってきた道からまさかとは思っていたけど、やっぱりここか…[p]
 
 こんな時間に来たのは初めてだ。[p]
-
+@live2d_show name="Momiji"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ここが、来てもらいたかったところ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「オレもよく来る、最近はあんまりだったけど」[p]
 
 #
 疲れたときに、だが。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「そうなの、同じね」[p]
 
 「少し疲れてしまったから」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 理由まで同じだ。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「定期検診のこと、黙っていてごめんなさい。[r]
 心配してくれちゃうと思って言わなかったのだけれど[r]
 いつも裏目に出てしまう」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「無理にとは言わないけど、話してもらえると嬉しい」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ほら、すごく気を遣わせてしまうでしょう」[p]
 
 「みんなより順番が少し早かっただけだから。[r]
 私自身が落ち着いているわけだし、あまり深く考えないで」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そんなこと言われたって、素直に、はい、って言えるわけ[r]
 ないだろ」[p]
@@ -800,47 +815,47 @@
 
 #
 こんなの、優しさというよりこう考えない方がおかしい。[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「そういえばお腹が減ったわ」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #
 そういえば、食べていない団子の袋をずっとかけたままだった。[p]
 
 #蛍
 「８時ごろ買った団子でよければあるけど」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「食べていいの…？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そっちがいいなら」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「喜んでいただくわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「はい、これ」[p]
 
 #
 雪雫は、袋を受け取り団子を取り出して、それを見ながら[r]
 難しい表情をしている。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「この三食団子、変わっているわね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「俺も思った」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「冬がないわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「どういうこと？」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ピンクが春、緑が夏、オレンジが秋、白が冬」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 そうなんだ、知らなかった。[p]
 
@@ -849,76 +864,76 @@
 
 #蛍
 「どうしたの？」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「…私みたいね」[p]
 
 「ほら、冬まで生きていられるかわからないから。[r]
 …って、ちっとも面白くないわね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そんなこと…」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「それでは、いただきます。[r]
 …うん、美味しい。やっぱり甘いものっていいわね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 大好きな甘いものを食べているはずなのに、少しつらそうな表情だ。[r]
 やっぱり…[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「勢いよく食べたら、のどにお団子を詰まらせてしまうわね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「…」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「えっと…甘いものが食べられなくなってしまうのは[r]
 本当に残念だわ」[p]
 
 「あ、それでね。ここに来てもらった理由なんだけど、噂があって」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「噂？」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「クラスの子が話していたのだけれど、このくらいの時間になって[r]
 運がいいと蛍が見えるんですって」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 こんな時期にか？[r]
 もう秋だ。ただな噂な気がするけど…[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ほら、いつ私の体調が急激に悪化するかもわからないし、[r]
 こうでもしないと夜遅くなんて出歩かせてもらえないから」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 残念だけど、見れない気がする。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「たまには珍しいものを見てみたいわ。[r]
 あ。雨宮くんも、名前が蛍だったわね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「うん」[p]
 
 #
 そういえば、どうして蛍って名前なんだろう。[r]
 一度も聞いたことがないな。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「蛍、見られないかしら…」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 風が吹くと木々が少しだけ騒がしくなるが、そのあとの沈黙は[r]
 より静かに感じる。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「あの、知ってる？[r]
 蛍って………[l]やっぱり何でもない」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 ;少しだけ間
 
 #
@@ -926,10 +941,10 @@
 
 #蛍
 「あのさ、そろそろ…」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ねえ見て！あの光！」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 指さす方を見てみると、かすかな光が見える。[p]
 
@@ -940,12 +955,12 @@
 
 #
 裏山って、こんなに綺麗に見えたっけ。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「蛍、やっぱりきてくれた。だけど…」[p]
 
 「どうして、この季節になんだろうな」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 ;かなしそうな表情にする
 
 #蛍
@@ -957,12 +972,14 @@
 ;少しだけ間
 
 ;背景　夜の道
-
+@bg_mod storage="schoolroad_night"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
+#雪雫
 「家まで送ってもらっちゃってごめんなさい。[r]
 ついてきてくれてありがとう」[p]
 
 「それと…出てきてくれてありがとう、蛍」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 蛍って、オレのことではないよな。[p]
 
@@ -974,27 +991,27 @@
 
 #蛍
 「じゃあおやすみ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「おやすみなさい」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 そういえば夜ご飯食べてなかった。[r]
 今はそんなに食べたい気分じゃないけど。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「…秋の蛍って、…」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「え？」[p]
 
 #
 今何か言われたような気がする。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「あ、違うの。何でもないわ。[r]
 おやすみなさい」[p]
-
+@live2d_hide name="Momiji"
 ;雪雫の表示消す
 
 #

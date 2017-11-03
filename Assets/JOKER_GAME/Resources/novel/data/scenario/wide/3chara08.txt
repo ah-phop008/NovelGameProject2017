@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="rouka"]
+[bg_new name="background" storage="nakaniwa_noon"]
 [bg_show name="background"]
 @font color=#000000
 ;メッセージ表示
@@ -14,11 +14,11 @@
 
 
 
-[playbgm wait=false time=1 storage="07_string"]
+[playbgm wait=false time=1 storage="06_asa"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="Momiji"]
-[live2d_new name="sabalu" storage="sabalu"]
+[live2d_new name="Momiji" storage="Momiji"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 
 
@@ -37,49 +37,50 @@
 去年から雪雫は花壇を守ってきたのだろう。[p]
 
 ;背景　教室
-
+@bg_mod storage="room"
+@live2d_show name="Momiji"
 ;雪雫表示
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「おはよう。今日はぎりぎりじゃないのね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「夏休みにちゃんと訓練してたからかもしれない」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「訓練？なにかの部隊にでも入っているの？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 突拍子もないことを言われた。[p]
 
 #蛍
 「違うよ、夏休みに早く学校に行く日が多かったから」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「当たり前なはずだけど確かにあなたにしてみたらすごいことね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 うすうす思っていたが、よく光みたいにオレを[r]
 バカにしてくるよな。[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「でも、朝早いのに来てもらっちゃって[r]
 無理をさせてしまったかしら」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「いや、こちらが感謝することたくさんあるから」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「そう？じゃあまたお願いしようかしら。ありがとう」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 :ドアの音
 
 #担任
 「席についてー」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「じゃあまたお昼の時間に」[p]
-
+@live2d_hide name="Momiji"
 :雪雫の表示を消す
 
 #
@@ -88,7 +89,7 @@
 あー、はやく屋上で寝たい…[p]
 
 ;場面　体育の時間
-
+@bg_mod storage="nakaniwa_noon"
 :背景　校庭
 
 ２学期が始まったということは、体育祭が近づいてきた[r]
@@ -127,20 +128,22 @@
 ;雪雫表示
 
 ;背景　夜の神社
-
+@bg_mod storage="park_evening"
+@live2d_show name="Momiji" x=0
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「走れる足があるのに走りたくないって言っている人を見て、[r]
 嫌になって罪のないその人たちを恨んだりもしたわ」[p]
 
 「今では現実を受け入れられるようになったけれど。[r]
 私、最低だから誰かに当たっていたのよ」[p]
-
+@live2d_hide name="Momiji"
 ;雪雫の表示消す
 
 ;回想シーン終わり
 
 ;背景　校庭
-
+@bg_mod storage="nakaniwa_noon"
 #
 この言葉がすごく印象に残っている。[p]
 
@@ -155,28 +158,28 @@
 
 #蛍
 「暑くない？」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「動いているあなたよりは暑くないわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 そうかもしれないが、この気温じゃ日陰でも十分な暑さだ。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ムカデ競争ってとても難しいわよね。[r]
 中学の時にやったのだけれど、私の友達は骨折していたわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「骨折？！」[p]
 
 #
 そんな話を聞かされたらなおさらやりたくなくなってしまう。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「でも雨宮くんは運動神経いいし、大丈夫だと思うわ」[p]
 
 「ここから応援しているから」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 自分は参加できないのに、温かく声をかけてもらえるのは嬉しい。[r]
 なんか頑張れそうな気がする。[p]
@@ -185,7 +188,7 @@
 「ありがとう」[p]
 
 ;雪雫の表示消す
-
+@live2d_hide name="Momiji"
 ;少しだけ間
 
 #
@@ -194,25 +197,25 @@
 校庭の中央に集合させられたが、そこには雪雫がいた。[p]
 
 ;雪雫表示
-
+@live2d_show name="Momiji" x=0
 #蛍
 「どうしたの？」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「あのね、全員リレーは出させてもらえることになったの。[r]
 病院の先生も、それくらいならいいって」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そっか、おめでとう」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「久しぶりに走れるわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 やっぱり１人だけ出られないのはつまらないよな。[p]
 
 体育の時間で、雪雫が日に当たっているところを初めて見た。[p]
-
+@live2d_hide name="Momiji"
 ;雪雫の表示消す
 
 #体育教師
@@ -245,39 +248,40 @@
 済んだが、それでも困ったものだ…[p]
 
 ;雪雫表示
-
+@live2d_show name="Momiji"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫　
 「アンカーなんてすごいわ！」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そんなことないよ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「私なんて、久しぶりすぎて全然走れなかったから」[p]
 
 「でも大丈夫。無理していたわけではないわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 顔もそんなに赤くないし、平気そうでよかった。[p]
 
 #光
 「オレはこのあと部活だから、一緒に帰れないんだ。すまない」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「私は水やりをしてから帰ることにするわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「じゃあ手伝うよ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ありがとう。でも今日は祖父のジャージ持ってきていないわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「この服のままやるから平気」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「それもそうね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 丁度ジャージを着ているので、着替える必要はないな。[p]
 
@@ -288,10 +292,10 @@
 「またね」[p]
 
 ;光の表示消す
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「では私たちも行きましょう」[p]
-
+@live2d_hide name="Momiji"
 ;雪雫の表示消す
 
 #
@@ -304,17 +308,18 @@
 横断幕や応援団など、とても活気づいている。[p]
 
 出場しない種目の時は、クラスごとに決められた席で待機する。[p]
-
+@live2d_show name="Momiji"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「もうすぐムカデ競争ね。応援しているわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 
 「そろそろゲートの方に行ってくる。[r]
 怪我はしないように気を付けるよ」
 
 ;雪雫の表示消す
-
+@live2d_hide name="Momiji"
 #体育教師
 「よーい！」][p]
 
@@ -327,34 +332,34 @@
 
 このあとすぐに全員リレーがあるので待機列で座っていると[r]
 雪雫がやってきた。[p]
-
+@live2d_show name="Momiji"
 ;雪雫表示
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「１番だったわね。おめでとう」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「ぎりぎりだったけどね」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「頑張って声を出して応援したわよ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「ありがとう」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「このあとはすぐ全員リレーね。私はこれだけしか出ないし[r]
 気合い入れていくわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 そういいながらガッツポーズをしてみせる。[p]
 
 #蛍
 「一緒に頑張ろうね」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ええ、もちろん」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 ;間
 
 ;がんばれーみたいな音声、あとガヤ
@@ -373,7 +378,7 @@
 その嫌な予感が的中してしまった。[p]
 
 ;コケる音、ドシャって感じ
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 コーナーの半分を切ったところで雪雫が転んでしまった。[r]
 足がもつれたみたいだ。[p]
 
@@ -400,70 +405,70 @@
 結果よりも雪雫が心配だ。[p]
 
 ;背景　保健室
-
+@bg_mod storage="hokenshitu"
 保健室へ行くと、椅子で休んでいる雪雫がいた。[p]
 
 #蛍
 「大丈夫！？」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「私は、擦り傷ができてしまっただけ」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「くらくらするとかは？」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「それはない、けど…」[p]
 
 「みんなに迷惑をかけてしまったから。やっぱりでなければよかった」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「そんなことないよ。一緒に走れてよかった」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「雨宮くんはすごいわね。カバーしてもらえてよかったわ。[r]
 私なんて役に立つどころかただでさえ遅いのに」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「走るのは楽しかった？」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ええ…もちろん」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「それだけで十分だよ。いつもは見てるだけなのに今日はその輪に[r]
 入れたんだ。みんなだって気にしてないと思う」[p]
 
 「精一杯頑張ったならそれでいい。[r]
 あとは、体調」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ありがとう。私、出られてよかったわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 よかった。笑ってくれた。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「なんだか、雨宮くん少し前と変わった気がするわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そうかな。自分じゃわからない」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「それでいいと思う。そのままでいいの」[p]
 
 「懐かしいわね、保健室」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「ここから始まって仲良くなったみたいなものだからね」[p]
 
 #
 あの時は何となくあけていた距離も、[r]
 今なら気にしないでいられる。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「もう席に戻るわ。先に行っていてくれて大丈夫よ」[p]
-
+@live2d_hide name="Momiji"
 ;間
 
 #

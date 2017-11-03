@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="rouka"]
+[bg_new name="background" storage="nakaniwa_noon"]
 [bg_show name="background"]
 @font color=#000000
 ;メッセージ表示
@@ -14,11 +14,11 @@
 
 
 
-[playbgm wait=false time=1 storage="07_string"]
+[playbgm wait=false time=1 storage="04_sannbyousi"]
 
 ;Live2dテスト
 [live2d_new name="haru" storage="Momiji"]
-[live2d_new name="sabalu" storage="sabalu"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 
 
@@ -77,6 +77,9 @@
 ;走ってる音と間
 
 ;光表示
+@image_new storage="blackskull" name="black"
+@image_show name="black"
+@image_hide name="black"
 
 #光
 「やっぱり足速いな。[r]
@@ -101,7 +104,7 @@
 
 呼吸が整ってきて校庭を見回していると[r]
 まだ木陰に座っている雪雫の姿があった。[p]
-
+@live2d_show name="Momiji" x=-5
 #蛍
 「あそこに座っている子って、いつもああやって見学してる？」[p]
 
@@ -138,9 +141,10 @@
 
 声をかけようと思ったが、何を言えばいいのかわからないし[r]
 俺なんかに話しかけられても嬉しくないだろう。[p]
-
+@live2d_hide name="Momiji"
 光が走る順番が来たため、[r]
 男子たちの輪に戻ることにした。[p]
+
 
 雪雫がこちらに気づいたような気がしたが、[r]
 オレは何故か振り返ることが出来なかった。[p]

@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="rouka"]
+[bg_new name="background" storage="room"]
 [bg_show name="background"]
 @font color=#000000
 ;メッセージ表示
@@ -17,8 +17,8 @@
 [playbgm wait=false time=1 storage="07_string"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="Momiji"]
-[live2d_new name="sabalu" storage="sabalu"]
+[live2d_new name="Momiji" storage="Momiji"]
+;[live2d_new name="sabalu" storage="sabalu"]
 
 
 
@@ -50,7 +50,9 @@
 その空席が教室の中で1番気になって仕方がなかった。[p]
 
 ;背景　屋上
-
+@bg_mod storage="rooftop_noon"
+@stopbgm
+@playbgm storage="05_yuttari"
 ;光表示
 
 #光
@@ -117,7 +119,7 @@
 １人しかいなかった友達が、いいやつでよかった。[p]
 
 ;背景　ケーキ屋さんの外観
-
+@bg_mod storage="town_evening"
 雪雫におみやげ持っていくなら、やっぱりここだよな。[p]
 
 ;ドアを開ける音
@@ -187,7 +189,7 @@
 
 #
 でも、そんな正直な返事をすることはできなかった。[p]
-
+@bg_mod storage="hokenshitu"
 ;背景　病院
 
 ;ノック音
@@ -201,87 +203,88 @@
 「こんにちは」[p]
 
 ;雪雫表示
-
+@live2d_show name="Momiji"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「まだそんなに経っていないのにもう来てくれたのね。[r]
 ありがとう。久しぶりね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「久しぶりって程じゃないと思うけど」[p]
 
 「今日も光と２人でご飯食べてたんだけどやっぱり寂しく感じて」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「久しぶりって程じゃないのに、もう寂しくなってしまったの？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 笑いながらからかうように話す。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「でも、そういってもらえると嬉しいわ。ありがとう」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「これ、お見舞いに」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「そのパッケージ！」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「新作のケーキの試し作りだって」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「いいわね、わざわざありがとう。[r]
 さっそくいただきましょう。お皿を出してもらってもいい？[r]
 そこの棚に入っているわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「わかった」[p]
 
 #
 お皿を渡すと、雪雫がその上にケーキを乗せた。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「では、いただきます」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #ほたる
 「いただきます」[p]
 
 #
 新作ケーキも最高の味だ。甘さも丁度いい。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「これ、すごく美味しいわ」
 
 「普段は、チョコケーキって１つだけで[r]
 おなかにずっしりたまってしまうから食べないけれど、[r]
 これならいくつでも食べられる」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 好きなものを食べているときの雪雫の笑顔は[r]
 見ているこっちにまでその嬉しさが伝わってくる。[p]
 
 #蛍
 「いつもの店員さんが、また遊びに来てって言ってたよ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「そう。行けるように頑張るわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「オレも楽しみにしてる」[p]
 
 ;間
 
 「それじゃあそろそろ帰るね」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「そうね。あんまり遅くまで引きとめてしまうのもよくないわね。[r]
 今日はありがとう。いつでも遊びに来て」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「ありがとう」[p]
-
+@live2d_hide name="Momiji"
 ;ドアを閉める音
-
+@bg_mod storage="schoolroad_night"
 ;背景　夜の道
 
 #
@@ -301,7 +304,7 @@
 あなたが待っている二人はもう店には行けないかもしれません。[p]
 
 ;時間　しばらく経ってから
-
+@wait time=1
 ;背景　校庭
 
 そういえば雪雫が入院してから花壇を放置してしまっている。[p]
@@ -318,7 +321,7 @@
 少しくらいは避けたい道が存在してしまうものだ。[p]
 
 ;背景　昼間の道
-
+@bg_mod storage="schoolroad_noon"
 １人で帰る感覚は取り戻せたと思う。[p]
 
 前まで当たり前だったつまらない時間にも慣れた。[p]
@@ -328,7 +331,7 @@
 なんか、裏山に行きたい気分だ。[p]
 
 ;背景　裏山
-
+@bg_mod storage="urayama"
 #蛍
 「はぁ…」[p]
 
@@ -389,7 +392,7 @@
 ような明かりだと思った。[p]
 
 ;背景　夜の道
-
+@bg_mod storage="park_night"
 暗くて寒い外の道には、ついこの間まで遅くまで公園にいた[r]
 子供たちの姿すら追い払った。[p]
 
@@ -416,7 +419,8 @@
 
 #？？？
 「ん…あれ、私こんなところで…」[p]
-
+@stopbgm
+@playbgm storage="09_kurai"
 #
 聞き覚えのある、オレが１番聞きたくない声だった。[p]
 
@@ -437,15 +441,16 @@
 #蛍
 「…は？」[p]
 
-;回想シーンはじめ
-
+;回想シーンはじめ 
+@image_new name="black" storage="blackskull" scale=7
+@image_show name="black"
 #光
 「あいつの中で、“あの日”から時間が止まってる」[p]
 
 「お前のことをまだ九歳だと思ってるんだよ」[p]
 
 ;回想シーン終わり
-
+@image_hide name="black"
 #
 そういえば、光が言っていたような気がする。[p]
 
@@ -466,10 +471,10 @@
 こいつは何を言っているんだ…？[p]
 
 ;回想シーン　はじめ
-
+@image_show name="black"
 #石田 貴子
 「蛍くんがいなければ、こんなことにはならなかったの」[p]
-
+@image_hide name="black"
 ;回想シーン終わり
 
 #蛍
@@ -511,7 +516,7 @@
 母さん？[p]
 
 ;回想シーン　はじめ
-
+@bg_mod storage="livingroom_noon"
 #蛍の母
 「ねえ、貴ちゃん。どうして蛍っていう名前にしたか知ってる？」[p]
 
@@ -524,7 +529,7 @@
 
 「でもね、いざというときには強い気持ちで頑張れる子なんだ。[r]
 私の希望の光なの」[p]
-
+@bg_mod storage="park_night"
 ;回想シーン終わり
 
 #
@@ -552,7 +557,7 @@
 背を向けて、全力で走った。[p]
 
 ;背景　主人公の部屋
-
+@bg_mod storage="houseroom_night"
 #蛍
 「はぁ…」[p]
 

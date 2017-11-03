@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="rouka"]
+[bg_new name="background" storage="town_noon"]
 [bg_show name="background"]
 @font color=#000000
 ;メッセージ表示
@@ -14,10 +14,10 @@
 
 
 
-[playbgm wait=false time=1 storage="07_string"]
+[playbgm wait=false time=1 storage="05_yuttari"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="Momiji"]
+[live2d_new name="Momiji" storage="Momiji"]
 ;[live2d_new name="sabalu" storage="sabalu"]
 
 
@@ -114,7 +114,7 @@
 次に行くときには椛の笑顔の写真でも持っていかないとな。[p]
 
 ;背景　病院の中
-
+@bg_mod storage="hokenshitu"
 ろうそく用のライターや装飾品などを買いに行っていたら[r]
 いつもより遅くなってしまった。[p]
 
@@ -122,7 +122,8 @@
 
 #蛍
 「…椛？」[p]
-
+@stopbgm
+@playbgm storage="09_kurai"
 #
 まさか、倒れてたり…[p]
 
@@ -152,51 +153,54 @@
 １人で行ってるのか？心配だ…[p]
 
 ;背景　病院の屋上
-
+@bg_mod storage="rooftop_night"
 ;ドアを開ける音
 
 #蛍
 「椛」[p]
-
+@live2d_show name="Momiji" x=-3
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #椛
 「あ…雨宮くん」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #
 外はもう真っ暗だ。[p]
 
 ドアから少し進むと、ブランケットを羽織って柵によりかかる[r]
 椛が見えた。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「今日はもうこないのかと思った」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「ごめん。よるところがあったから」[p]
 
 「部屋に行ったら、ここにいるって言われた」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #椛
 「外の空気を吸いたくなって」[p]
-
+@stopbgm
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #
 オレに背を向けたまま話を続ける。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
+@playbgm storage="10_OP(3)"
 #椛
 「夜景が綺麗。クリスマスだし、イルミネーションかしら」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 屋上には外灯がないのに、全体が明るく照らされている。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「１つ１つの光は小さいのに、たくさん集まると町全体を[r]
 飾ってくれる。当たり前なことに感動するわね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 本当にきれいな夜景だ。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「誰かがプレゼントしてくれたみたい…」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 プレゼント…[p]
 
@@ -204,10 +208,10 @@
 
 #蛍
 「いつ部屋に戻る？」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「うーん…今日はここにいたい気分なの」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そっか」[p]
 
@@ -215,29 +219,29 @@
 
 #
 振り返った椛に、ずっと手に持っていた袋を渡した。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「これは？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「いつもの店のケーキ。お誕生日おめでとう」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「…！どうして知っているの？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「メールアドレス。そうかなと思って」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「…そういえば」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「お願いして、モンブランの新作のホールケーキにしてもらった。[r]
 ケーキだけしか用意できなかったけど…」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「今日、用事ってこれのこと？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「うん」[p]
 
@@ -246,12 +250,12 @@
 
 #
 食欲ないって言ってたし、迷惑だったかもしれない。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「ありがとう」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 「ごめんなさい」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #
 椛は、肩をすくめて突然謝った。[p]
 
@@ -259,27 +263,27 @@
 
 #蛍
 「どうして謝るの」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #椛
 「私、なにも返せていない」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「何度も言ってるだろ。それは違う」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「たくさん会いに来てくれるだけでも十分嬉しかったのに、[r]
 ケーキまでもらって誕生日をお祝いしてもらえて。[r]
 良かった。こんな素敵な日を迎えられて」[p]
 
 「もうやり残したことはないわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そんなこと言わないでよ。[r]
 ずっとお祝いするよ。来年はまた新作を作ってもらって…」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #椛
 「ええ、できるといいわね」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「…」[p]
 
@@ -288,7 +292,7 @@
 オレはこの笑顔を知っている。[p]
 
 母さんが最期の時に見せた——本当に苦しい時の笑顔だ。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「次に眠ったら、目覚めることが出来ないかもしれない。[r]
 そういうぎりぎりのラインなの」[p]
@@ -296,7 +300,7 @@
 「今までありがとう」[p]
 
 「私、雨宮くんに迷惑かけることしかできなかった」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #蛍
 「そんなことない！」[p]
 
@@ -312,39 +316,39 @@
 
 「あの話と同じだ。オレは椛に救われてばかりだった。[r]
 もう十分だ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「そっか…私、役に立てたの？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「あぁ。たくさん助けられた。[r]
 感謝してもしきれないほどだ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「よかった…」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 全部本心だ。ずっと伝えたかった。[r]
 だから…[p]
 
 #蛍
 「だから、そんな辛そうな笑顔をしないでほしい」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「いえ、それはできないわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「じゃあ無理して笑わなくていい」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「それではだめなの」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「オレのせいで、最期まで辛い思いをしてほしくないんだ！」[p]
 
 #
 笑顔を作る椛の瞳には、涙が溢れていた。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「苦しくても、言葉だけじゃ伝えきれないから…」[p]
 
@@ -355,14 +359,15 @@
 私に…」[p]
 
 「美しい最期をプレゼントしてくれてありがとう」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 ;少し間
-
+@wait time=1
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 「あなたのことが…雨宮 蛍くんのことが好きです」[p]
 
 「私、ここから見える光に紛れても１番光輝いているあなたのもとへ[r]
 散ることが出来てよかった」[p]
-
+@live2d_hide name="Momiji"
 #
 椛は泣きながら話した。[p]
 
@@ -373,6 +378,8 @@
 ;翌日
 
 ;背景　病院の中
+@bg_mod storage="hokenshitu"
+@stopbgm
 
 結局オレは病院の待合室に泊まることにした。[r]
 出来る限り一緒にいたいからだ。[p]
@@ -398,10 +405,11 @@
 「椛！」[p]
 
 ;椛表示
-
+@live2d_show name="Momiji" x=0
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「…おはよう」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「おはよう」[p]
 
@@ -409,18 +417,21 @@
 返事が返ってきてよかった。[r]
 安堵感と同時に、毎日のように聞いていたこの声を[r]
 もう聞けないのかと思うと、涙が込み上げてきた。[p]
-
+@playbgm storage="02_kanasii"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「いい天気ね。散歩にでも行きたくなるくらい」[p]
 
 「ねぇ」[p]
 
-#蛍
+#蛍@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 「？」[p]
 
 #椛
 「初めて話した日のこと、覚えてる？」[p]
-
+@live2d_hide name="Momiji"
+@image_new name="black" storage="blackskull" scale=7
+@image_show name="black"
 #
 窓の向こうに広がる青い空を見つめながら続けた。[p]
 
@@ -428,29 +439,30 @@
 でも、今は好き」[p]
 
 「雨宮くんと過ごした楽しい時間を思い出せるから」[p]
-
+@image_hide name="black"
+@live2d_show name="Momiji" x=0
 #蛍
 「うん」[p]
 
 #
 何も言えなかった。[r]
 何かを口に出しただけで、我慢できなくなる気がした。[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #椛
 「ゲホ…ッ…」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「椛！？病院の先生呼ぶ！？」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「ッ…大丈夫。隣、座って」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 ベッドの横にある椅子まで来るように手招きした。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「手、握ってほしい。安心するから」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「あぁ」[p]
 
@@ -459,16 +471,16 @@
 
 #蛍
 「大丈夫だ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「ええ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「椛…」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「なに？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「オレも、椛が好きだ」[p]
 
@@ -478,31 +490,31 @@
 #蛍
 「自分だけが辛いと思ってた。ずっと殻に閉じこもってた。[r]
 椛がいなかったら、オレは…」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「泣かないで」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 椛は、反対側の手を伸ばしてオレの涙を拭ってくれた。[p]
 
 #蛍
 「いなくなるなんて嫌だ…これ以上大切な人を失いたくない…」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「私のこと、忘れないでいて」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「うん、絶対忘れない」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「見て」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 ベッドのそばにある小さな机に置かれていた携帯を手に取った。[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「1秒たりとも忘れたことないわ」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 携帯を開くと、2人で初めてあのケーキ屋に行った時の写真が[r]
 待ち受けにされていた。[p]
@@ -510,12 +522,12 @@
 オレも椛も、幸せそうないい笑顔をしていた。[p]
 
 そっか。オレ、こんな風に笑えるようになったんだ…[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「ね、輝いているでしょう？」[p]
 
 「あなたは、私の…」[p]
-
+@live2d_hide name="Momiji"
 #
 そこまで言いかけて、話さなくなってしまった。[p]
 
@@ -532,34 +544,40 @@
 だが、椛は返事をしてくれない。[p]
 
 ;少しだけ間
-
+@live2d_show name="Momiji"
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #椛
 「雨宮くん…」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「…！」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「好きって言ってくれて…ありがとう」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 それはオレが求めていた、満開の笑顔だった。[p]
 
 #蛍
 「こっちの台詞だよ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「ふふ…なんだか、いい夢が見れそうだわ」[p]
-
+@live2d_hide name="Momiji"
+@image_new name="white" storage="whiteskull" scale=7
+@image_show name="white"
+@stopbgm
 ;ピー
-
+@wait time=2
+@image_hide name="white"
+@bg_mod storage="nakaniwa_noon"
 ;白いもやみたいなので、背景とか消す
 
 
 ;春
 
 ;背景　校庭
-
+@playbgm storage="10_OP(3)"
 #
 不気味なほど綺麗な桜が、今年もオレを見下ろしている。[p]
 
@@ -578,9 +596,10 @@
 
 #蛍
 「『マーガレット』。花言葉は…」[p]
+@image_show name="white"
+@wait time=3
 
 
 
-
-@jump file=wide/3chara02 scene=new
+@jump file=wide/chap7-1 scene=new
 

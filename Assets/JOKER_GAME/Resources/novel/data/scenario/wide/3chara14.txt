@@ -1,5 +1,5 @@
 ﻿@call file=wide/libs/utils
-[bg_new name="background" storage="rouka"]
+[bg_new name="background" storage="schoolroad_noon"]
 [bg_show name="background"]
 @font color=#000000
 ;メッセージ表示
@@ -14,10 +14,10 @@
 
 
 
-[playbgm wait=false time=1 storage="07_string"]
+[playbgm wait=false time=1 storage="08_nitijou"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="Momiji"]
+[live2d_new name="Momiji" storage="Momiji"]
 ;[live2d_new name="sabalu" storage="sabalu"]
 
 
@@ -39,17 +39,17 @@
 風の音より心地よかったと思い返す。[p]
 
 ;背景　校庭
-
+@bg_mod storage="nakaniwa_noon"
 校庭に茂っていた木々の服がなくなり、脇で構える真っ赤な[r]
 レンガがよく目立つ。[p]
 
 その中にあるのは、“枯れた”花と土だけだ。[p]
 
 ;回想シーン始め
-
+@image_new name="black" storage="blackskull" scale=7
 #雪雫
 「私、もうすぐ枯れてしまうでしょ？」[p]
-
+@image_hide name="black"
 ;回想シーン終わり
 
 #
@@ -61,7 +61,7 @@
 帰りに花屋に寄ってみよう。[p]
 
 ;背景　花屋
-
+@bg_mod storage="town_noon"
 商店街に花屋があったけど、初めて来た。[p]
 
 #花屋
@@ -104,7 +104,7 @@
 学校に戻るか。[p]
 
 ;背景　夕方の校庭
-
+@bg_mod storage="nakaniwa_evening"
 #蛍
 「寒いな…」[p]
 
@@ -193,7 +193,7 @@
 ;翌日
 
 ;背景　教室
-
+@bg_mod storage="room"
 教室の窓から花壇が見える。[p]
 
 昨日植えたパンジーがしっかり上を向いて咲いている。[p]
@@ -201,7 +201,7 @@
 数日分の善行をした気分だ。[p]
 
 ;背景　病院
-
+@bg_mod storage="hokenshitu"
 最近毎日ここにきているな。[p]
 
 ;ドアをノックする音
@@ -213,10 +213,13 @@
 「お邪魔します」[p]
 
 ;雪雫表示
-
+@live2d_show name="Momiji" x=0
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「いらっしゃい」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
+@stopbgm
+@playbgm storage="07_string"
 #
 そう笑って答える雪雫が今日は少しやつれている感じがする。[p]
 
@@ -225,25 +228,25 @@
 
 #
 毎日のように来ちゃってるしな。[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「大丈夫よ。少し食欲がわかなくて」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #
 全然大丈夫じゃないだろ。[p]
 
 #蛍
 「今日、雪雫の好きな和菓子買ってきたよ」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「あ…ありがとう。そこに置いておいてもらってもいいかしら」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「これも食べられない？」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「今はそういう気分じゃないの。ごめんなさい」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「全然いいよ」[p]
 
@@ -253,10 +256,10 @@
 
 #蛍
 「最近暖房ついてても夜なんか寒いよね」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「ええ、そうね」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #
 ベッドの横にある小さな机に、この前まではなかった[r]
 ３冊の本が置いてあった。[p]
@@ -280,44 +283,44 @@
 
 #蛍
 「昨日、パンジーを買って花壇に植えたんだ」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「雨宮くんが…？」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 よし、ようやく食いついてくれた。[p]
 
 #蛍
 「ちゃんと育てられるかはわからないけど」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「そっか。私が手入れできてないから…」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「いや、自分がただやりたくて」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ありがとう。何から何まで」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そんなことない。こちらこそだ」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「どうして？たくさんここへ来てくれて、たくさん話してくれて、[r]
 私ばかりよくしてもらってしまっているじゃない」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「雪雫…」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「…椛、って呼んでほしいの」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「え？でもずっと雪雫って呼んでたし…」[p]
-
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「どうしてもお願い。雪雫って良くないの」[p]
-
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #
 よくない、ってどういうことだ？[p]
 
@@ -325,10 +328,10 @@
 
 #蛍
 「わかった…椛」[p]
-
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #椛
 「ありがとう。少し照れくさいわね」[p]
-
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 オレはそれよりも、無理して作っているように見える笑顔が[r]
 気になった。[p]

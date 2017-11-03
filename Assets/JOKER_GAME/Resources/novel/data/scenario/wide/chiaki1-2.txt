@@ -855,14 +855,17 @@ bg_mod storage="schoolroad"
 「こちらこそ」[p]
 #
 お互い、そう言い合うと妙に恥ずかしくなって顔をそらした。[p]
+@live2d_hide name="chiaki"
+@image_new name="cg2" storage="1509677780763" scale=0.86
+@image_show name="cg2"
 しばらく黙っていると、ドーンという音ともに花火がー[p]
 そういえば、きょうだったっけ。[p]
 ふと、手に暖かいものを感じた。[p]
 有栖川千秋が、オレの手を握ったのだ[p]
-@live2d_motion name="chiaki" storage="chcloses.mtn"
+
 #千秋
 「すいません…いやならやめます…」[p]
-@live2d_motion name="chiaki" storage="chclose.mtn"
+
 #
 オレはいや、大丈夫という小さな声で言うのが精一杯だった。[p]
 喧騒から離れた場所でお互い、黙ったまま、花火を見ている。[p]

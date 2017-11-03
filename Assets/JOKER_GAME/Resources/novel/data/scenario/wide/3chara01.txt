@@ -46,7 +46,7 @@
 #蛍
 「あっ…」[p]
 
-[live2d_show name="momiji" x=0]
+[live2d_show name="Momiji" x=0]
 
 #
 そっと肩を触られ振り返ると、[r]
@@ -70,7 +70,7 @@
 特にやることもないし、とりあえずついて行ってみるか。[p]
 
 ;雪雫の表示消す
-[live2d_hide name="momiji"]
+[live2d_hide name="Momiji"]
 
 #生徒A
 「いらっしゃいませ！」[p]
@@ -89,7 +89,7 @@
 木の茂った校舎の裏に着いた。[p]
 
 ;雪雫表示
-[live2d_show name="momiji"]
+[live2d_show name="Momiji"]
 @live2d_motion name="Momiji" storage="mosads.mtn"  idle="ON"
 #雪雫
 「はあ…」[p]
@@ -278,7 +278,7 @@
 嬉しそうだし、よかったかな。[p]
 
 ;雪雫の表示消す
-[live2d_hide name="momiji"]
+[live2d_hide name="Momiji"]
 
 学校で話しかけられるなんて久しぶりだったな。[p]
 

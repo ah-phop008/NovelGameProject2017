@@ -835,10 +835,12 @@
 普段なら、こんなことは言わない。でも今日のオレはどこか、[r]
 おかしい。[p]
 多分女装、で頭が飛んでるのだろう。[p]
-@live2d_motion name="chiaki" storage="chhappys.mtn" idle="ON"
+@live2d_hide name="chiaki"
+@image_new name="cg1" storage="1509677782191" scale=0.86
+@image_show name="cg1"
 #千秋
 「買ってきました！」[p]
-@live2d_motion name="chiaki" storage="chhappy.mtn" idle="ON"
+
 #オレ
 「じゃあ・・・文化祭の一応の成功を祝って乾杯」[p]
 #

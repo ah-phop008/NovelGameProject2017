@@ -17,7 +17,7 @@
 [playbgm wait=false time=1 storage="04_sannbyousi"]
 
 ;Live2dテスト
-[live2d_new name="haru" storage="Momiji"]
+[live2d_new name="Momiji" storage="Momiji"]
 ;[live2d_new name="sabalu" storage="sabalu"]
 
 
@@ -77,7 +77,7 @@
 ;走ってる音と間
 
 ;光表示
-@image_new storage="blackskull" name="black"
+@image_new storage="blackskull" name="black" scale=7
 @image_show name="black"
 @image_hide name="black"
 

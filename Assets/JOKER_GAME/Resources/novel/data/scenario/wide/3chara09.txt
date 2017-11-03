@@ -14,7 +14,7 @@
 
 
 
-[playbgm wait=false time=1 storage="04_sannbyuosi"]
+[playbgm wait=false time=1 storage="04_sannbyousi"]
 
 ;Live2dテスト
 [live2d_new name="Momiji" storage="Momiji"]
@@ -24,15 +24,16 @@
 ;背景　昼間の道
 
 ;雪雫と光表示
-@live2d_show name="Momiji" x=0
+
 
 #
 みんなに仕事があってゆっくり帰れる時は少ないので[r]
 久しぶりの3人での下校だ。[p]
-@live2d_motion name="Momiji" storage="moidles" idle="ON"
+@live2d_show name="Momiji" x=0
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「委員会って忙しいの？」[p]
-@live2d_motion name="Momiji" storage="moidle" idle="ON"
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「そんなでもないけど、文化祭の前は少しだけ」[p]
 
@@ -41,7 +42,7 @@
 
 #蛍
 「まあ、結構さぼったけど」[p]
-@live2d_motion name="Momiji" storage="moidles" idle="ON"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「最近はこちらの仕事も手伝ってくれていて、助かるわ」[p]
 @live2d_hide name="Momiji"
@@ -106,10 +107,10 @@
 
 #光
 「オレはこいつに用があるんだよ」[p]
-@live2d_motion name="Momiji" storage="mosads" idle="ON"
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「ちょっとどうなっているの…？」[p]
-@live2d_motion name="Momiji" storage="mosad" idle="ON"
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「ごめん、とりあえずついてきてもらってもいい？」[p]
 @live2d_hide name="Momiji"
@@ -123,10 +124,10 @@
 ;背景　昼間の道
 @live2d_show name="Momiji"
 ;雪雫表示
-@live2d_motion name="Momiji" storage="mosads" idle="ON"
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「はぁはぁ…ねえ、どういうことなの？」[p]
-@live2d_motion name="Momiji" storage="mosad" idle="ON"
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「あ、ごめん」[p]
 
@@ -138,10 +139,10 @@
 
 #
 光を１人置いてきちゃったけど、大丈夫かな。[p]
-@live2d_motion name="Momiji" storage="mosads" idle="ON"
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「ねえ、あの人はいったい誰なの？」[p]
-@live2d_motion name="Momiji" storage="mosad" idle="ON"
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #
 雪雫にはまだオレのことについてほとんど話していない。[p]
 
@@ -153,18 +154,18 @@
 
 #蛍
 「今からオレの過去のこと、話すね」[p]
-@live2d_motion name="Momiji" storage="mosads" idle="ON"
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「話したくないことならば別に大丈夫だから」[p]
-@live2d_motion name="Momiji" storage="mosad" idle="ON"
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「話を聞いて、オレのことが嫌になったら[r]
 離れていってもらって構わないから」[p]
-@live2d_motion name="Momiji" storage="mosads" idle="ON"
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「私のことたくさん聞いてもらったから。[r]
 話してくれるのならちゃんと聞くわ」[p]
-@live2d_motion name="Momiji" storage="mosad" idle="ON"
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「オレが九歳の時、両親が殺された。[r]
 殺したのが、あの石田　貴子という女なんだ」[p]
@@ -315,7 +316,7 @@
 
 すみません、あなたの笑顔を守れなくて…[p]
 @image_hide name="red"
-@b_mod storage="schoolroad_noon"
+@bg_mod storage="schoolroad_noon"
 ;回想シーン終わり
 
 ;背景　昼間の道
@@ -324,10 +325,10 @@
 「オレのせいで両親が死んだんだ。オレが生まれてきていなければ[r]
 あの人は殺すという手段をとっていなかったと思う」[p]
 @live2d_show name="Momiji" x=0
-@live2d_motion name="Momiji" storage="moidles" idle="ON"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「生まれてきていなければなんて言わないで」[p]
-@live2d_motion name="Momiji" storage="moidle" idle="ON"
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「あの人は、母さんを奪った父さんに恨みを抱いていたらしい。[r]
 警察にも相談したんだけど、まだ幼かったし[r]
@@ -336,7 +337,7 @@
 #蛍
 「どうしてあんなやつがのうのうと生きているんだ。[r]
 でも、あの人の言う通りすべてオレのせいなんだよ」[p]
-@live2d_motion name="Momiji" storage="moidles" idle="ON"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「ありがとう、私と一緒にいてくれて」[p]
 
@@ -344,7 +345,7 @@
 
 「あなたのお母さんは、あなたがいなければよかったなんて[r]
 思っていないはずよ」[p]
-@live2d_motion name="Momiji" storage="moidle" idle="ON"
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「どうしてそんなことがわかるんだよ！[r]
 オレが助けに行かなかったから…オレが邪魔ものだったから！」[p]
@@ -356,7 +357,7 @@
 #
 もう止まらなかった。こんなこと人に話してもしょうがないのに。[p]
 
-:回想シーン　始まり
+;回想シーン　始まり
 @live2d_hide name="Momiji"
 @bg_mod storage="livingroom_noon"
 ;背景　主人公の家の居間
@@ -369,47 +370,47 @@
 #蛍
 「こんなの、思い出したくないのに何度も夢に出てくるんだ。[p]
 きっと恨んでいるんだ」[p]
-@live2d_motion name="Momiji" storage="moidles" idle="ON"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「あなたのお母さんは、あなたのことを恨んでいたわけでは[r]
 ないと思うわ」[p]
-@live2d_motion name="Momiji" storage="moidle" idle="ON"
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「オレのせいで殺されたんだ。オレのことなんて…」[p]
-@live2d_motion name="Momiji" storage="mosads" idle="ON"
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「あなたは、痛くて、苦しくて、[r]
 そんなときに笑顔を作ることの大変さがわからないの？」[p]
-@live2d_motion name="Momiji" storage="mosad" idle="ON"
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「母さんはいつも笑ってくれる人だったから」[p]
-@live2d_motion name="Momiji" storage="mosads" idle="ON"
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 #雪雫
 「ならどうして少しだけでも笑った顔をしてくれたのか[r]
 考えてみるべきだわ」[p]
-@live2d_motion name="Momiji" storage="mosad" idle="ON"
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #
 どうしてオレが怒られなくちゃいけないんだ。[p]
-@live2d_motion name="Momiji" storage="moidles" idle="ON"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「私は、何か伝えたい大切なことがあったのだと思う。[r]
 死に際に、どうしても言っておきたかったこと」[p]
-@live2d_motion name="Momiji" storage="moidle" idle="ON"
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 ;少しだけ間
 @wait time=1
-@live2d_motion name="Momiji" storage="mosads" idle="ON"
+@live2d_motion name="Momiji" storage="mosads.mtn" idle="ON"
 「偉そうなことを言ってしまってごめんなさい。辛い思いを[r]
 しているのは雨宮くんなのに」[p]
-@live2d_motion name="Momiji" storage="mosad" idle="ON"
+@live2d_motion name="Momiji" storage="mosad.mtn" idle="ON"
 #蛍
 「いや、こちらこそごめん」[p]
 
 #
 オレもついかっとなってしまった。[p]
-@live2d_motion name="Momiji" storage="moidles" idle="ON"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「でも、話してもらえてよかった」[p]
-@live2d_motion name="Momiji" storage="moidle" idle="ON"
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 オレも話さなくちゃと思っていたし、ちょうどよかった。[p]
 
@@ -418,19 +419,19 @@
 #蛍
 「もし石田　貴子のことで何かあったらすぐに教えてほしい。[r]
 あの人、何をするかわからないから」[p]
-@live2d_motion name="Momiji" storage="moidles" idle="ON"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「私は別に特定もされていない気がするけれど…」[p]
-@live2d_motion name="Momiji" storage="moidle" idle="ON"
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #
 それならいいのだが。[p]
 
 #蛍
 「変な道につれてきちゃってごめん」[p]
-@live2d_motion name="Momiji" storage="moidles" idle="ON"
+@live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
 「気にしないで。それではまた明日」[p]
-@live2d_motion name="Momiji" storage="moidle" idle="ON"
+@live2d_motion name="Momiji" storage="moidle.mtn" idle="ON"
 #蛍
 「またね」[p]
 @live2d_hide name=Momiji

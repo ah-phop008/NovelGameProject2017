@@ -315,7 +315,7 @@
 人間関係は恐ろしくて、その結末を知っている。[p]
 
 もし出来ることなら———[p]
-@image_new name="black" storage="blackskull"
+@image_new name="black" storage="blackskull" scale=7
 @image_show name="black"
 
 @wait time=1
@@ -798,7 +798,7 @@
 「わかった」[p]
 
 ;間
-
+@live2d_hide name="Momiji"
 ;イベントCG
 @image_new name="113" storage="113" scale=0.86
 @image_show name="113"

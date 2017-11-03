@@ -573,7 +573,7 @@
 …もしかしたら。[p]
 
 ;回想シーン　音声だけ
-@image_new name="black" storage="blackskull"
+@image_new name="black" storage="blackskull" scale=7
 @image_show name="black"
 
 #雪雫
@@ -747,7 +747,7 @@
 店か？こんな時間にやってるわけないよな。[p]
 
 この数時間で、１週間分の考える頭は使った。[p]
-@live2d_show storage="Momiji"
+@live2d_show name="Momiji" x=0
 ;雪雫表示
 @live2d_motion name="Momiji" storage="moidles.mtn" idle="ON"
 #雪雫
@@ -1028,6 +1028,4 @@
 
 
 
-
 @jump file=wide/3chara11 scene=new
-
